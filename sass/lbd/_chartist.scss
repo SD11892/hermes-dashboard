@@ -1,0 +1,140 @@
+.ct-series-a{
+	.ct-slice-pie{
+	fill:#1dc7ea;
+	}
+	.ct-area{
+		fill:rgba(29, 199, 234, 0.8);;
+	}
+	.ct-bar{
+	stroke: #1DC7EA;
+	stroke-width:10px;
+	}
+}
+.ct-series-b{
+	.ct-slice-pie{
+		fill:#FB404B;
+	}
+	.ct-area{
+		fill:#FB404B;
+	}
+	.ct-bar{
+	stroke: #FB404B;
+	stroke-width:10px;
+	}
+}
+
+.ct-series-c{
+	.ct-slice-pie{
+		fill:#fba440;
+	}
+	.ct-area{
+		fill:#fba440;
+	}
+}
+
+.ct-label{
+	font-size: 10px;
+	fill: rgba(0,0,0,0.4);
+	color: rgba(0,0,0,0.4);
+}
+
+.ct-chart{
+	margin:10px 0 40px 0;
+}
+.ct-chart-line{
+	padding: 10px 0;
+}
+.ct-chart-bar{
+	padding: 10px 0;
+}
+.ct-grid{
+	stroke:rgba(0, 0, 0, 0.2);
+	stroke-dasharray: 2px;
+}
+
+#chartPreferences{
+	.ct-line{
+		fill: none;
+		stroke: #0098ff;
+		stroke-width:4px;
+	}
+
+	.ct-circle{
+		stroke: white;
+		fill: #0084de;
+		stroke-width: 3px;
+	}
+
+	.ct-grid{
+		stroke: #bbb9b9;
+		stroke-dasharray: 0;
+		stroke-width: 0.5px;
+		&:nth-child(even){
+			display: none;
+		}
+	}
+	foreignObject{
+		//font-size: 25px;
+		&:nth-child(14),&:nth-child(16),&:nth-child(18){
+			display: none;
+		}
+	}
+}
+
+#chartHours{
+		.ct-line{
+		fill: none;
+		stroke: #0098ff;
+		stroke-width:3px;
+	}
+
+	.ct-circle{
+		stroke: white;
+		fill: #0084de;
+		stroke-width: 3px;
+	}
+
+	.ct-grid{
+		stroke: #bbb9b9;
+		stroke-dasharray: 0;
+		stroke-width:0.5px;
+		&:nth-child(odd){
+			display: none;
+		}
+	}
+	foreignObject{
+		font-size: 20px;
+		&:nth-child(odd){
+			display: none;
+		}
+	}
+}
+
+#chartActivity{
+	.ct-line{
+		fill: none;
+		stroke: #0098ff;
+		stroke-width:3px;	}
+
+	.ct-circle{
+		stroke: white;
+		fill: #0084de;
+		stroke-width: 3px;
+	}
+
+	.ct-grid{
+		stroke: #bbb9b9;
+		stroke-dasharray: 0;
+		stroke-width:0.5px;
+		&:nth-child(odd){
+			display: none;
+		}
+	}
+	foreignObject{
+		font-size: 20px;
+		&:nth-child(even){
+			display: none;
+		}
+	}
+
+}

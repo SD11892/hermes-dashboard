@@ -1,0 +1,58 @@
+label{
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #ababab;
+	font-weight: 400;
+	position: relative;
+}
+.form-control::-moz-placeholder{
+   @include placeholder($input-grey);
+}
+.form-control:-moz-placeholder{
+   @include placeholder($input-grey);
+}  
+.form-control::-webkit-input-placeholder{
+   @include placeholder($input-grey); 
+} 
+.form-control:-ms-input-placeholder{
+   @include placeholder($input-grey);
+}
+
+.form-control{
+	color: grey;
+	&:focus{
+		border-color: #b9b9b9;
+	}
+	&:placeholder{
+		color: red;
+	}
+
+	.has-success &,
+    .has-error &,
+    .has-success &:focus,
+    .has-error &:focus{
+        border-color: $light-gray;
+        @include box-shadow(none);
+    }
+    
+    .has-success &{
+        color: $success-color;
+    }
+    .has-success &:focus{
+        border-color: $success-color;
+    }
+    .has-error &{
+        color: $danger-color;
+    }
+    .has-error &:focus{
+        border-color: $danger-color;
+    }
+}
+
+form{
+	button{
+		float: right;
+	}
+
+}
