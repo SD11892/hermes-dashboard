@@ -1,3 +1,4 @@
+
 ## Short summary
 
 Besides giving the existing Bootstrap elements a new look, we added new ones, so that the interface is consistent and homogenous.
@@ -8,7 +9,10 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
 
 We worked over the original Bootstrap classes, choosing a different, slightly intense color pallete:
 
+<button class="btn btn-default">Default</button>
 ![alt text](img/button_colors.png)
+
+<button class="btn btn-default">Default</button>
 
 ```html
 <button class="btn btn-default">Default</button>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Montserrat:400,500|Pacifico|Lobster|Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Cookie|Noto+Sans|Montserrat:400,500|Pacifico|Lobster|Roboto:300,400,500,700');
 body{
 	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 }
@@ -54,13 +54,16 @@ body > .navbar-collapse{
 	.nav{
 			display: block;
 			margin-top: 25px;
-			z-index: 1000; li{
+			z-index: 1000; 
+			li{
 				padding: 2px;
 				margin: 10px 15px;
 				transition: 0.2s ease;
 				a{
 				text-decoration: none;
 				color: white;
+				border-radius: 6px;
+				transition: 0.1s ease;
 					i{
 						float: left;
 						font-size: 18px;
@@ -68,41 +71,6 @@ body > .navbar-collapse{
 						line-height: 30px;
 						width: 30px;
 						text-align: center;
-					}
-					.nc-ic_dashboard_24px{
-						color: $primary-color;
-					}
-
-					.nc-badge-13{
-						color: $info-color;
-					}
-
-					.nc-ic_event_note_24px{
-						color: $text-pink;
-					}
-
-					.nc-single-folded-content{
-						color: $warning-color;
-					}
-
-					.nc-bear-2{
-						color: $new-purple;
-					}
-
-					.nc-world{
-						color: $danger-color;
-					}
-
-					.nc-ic_notifications_24px{
-						color: $success-color;
-					}
-
-					.nc-pencil{
-						color: $red-color-bottom;
-					}
-
-					.nc-ic_sim_card_24px{
-						color: $bottom-purple-gradient;
 					}
 					p{
 						color: $grey-text-main-panel;
@@ -113,51 +81,115 @@ body > .navbar-collapse{
 						margin-left: 45px;
 						font-family: 'Montserrat';
 					}
-				}
-				&:hover{
-					p,i{
-					color: $grey-text-main-panel;
-					}
-				}
 
-				&.active{
-					border-radius: 6px;
-					color: white;
-					a{
-						p,i{
-						color: white;
+					&.nav-link-blue{
+						//background: $primary-color;
+						opacity: 1;
+						i{
+							color: $primary-color;
+						}
+
+						&:hover{
+							background: rgba($primary-color, 0.2);
+						}
+
+					}
+
+					&.nav-link-light-blue{
+						//background: $info-color;
+							i{
+							color: $info-color;
+						}
+
+						&:hover{
+							background: rgba($info-color, 0.2);
 						}
 					}
-				}
-				&.active-blue{
-						background-color: $primary-color;
-				}
 
-				&.active-light-blue{
-					background-color: $info-color;
-				}
+					&.nav-link-purple{
+						//background: $text-purple;
+						i{
+							color: $text-purple;
+						}
 
-				&.active-purple{
-					background-color: $text-purple;					
-				}
-				&.active-pink{
-					background-color: $text-pink;
-				}
-				&.active-orange{
-					background-color: $warning-color;
-				}
-				&.active-red{
-					background-color: $danger-color;
-				}
-				&.active-green{
-					background-color: #6ad233;				
-				}
+						&:hover{
+							background: rgba($text-purple, 0.2);
+						}
+					}
 
-				&.active-dark-red{
-					background-color: $red-color-bottom;
-				}
-				&.active-light-purple{
-					background-color: $bottom-purple-gradient;
+					&.nav-link-pink{
+						//background: $text-pink;
+						i{
+							color: $text-pink;
+						}
+
+						&:hover{
+							background: rgba($text-pink, 0.2);
+						}
+					}
+
+					&.nav-link-orange{
+						//background: $warning-color;
+						i{
+							color: $warning-color;
+						}
+
+						&:hover{
+							background: rgba($warning-color, 0.2);
+						}
+					}
+
+					&.nav-link-red{
+						//background: $danger-color;
+						i{
+							color: $danger-color;
+						}
+
+						&:hover{
+							background: rgba($danger-color, 0.2);
+						}
+					}
+
+					&.nav-link-green{
+						//background: $success-color;
+						i{
+							color: $success-color;
+						}
+
+						&:hover{
+							background: rgba($success-color, 0.2);
+						}
+					}
+
+					&.nav-link-dark-red{
+						//background: $red-color-bottom;
+						i{
+							color: $red-color-bottom;
+						}
+
+						&:hover{
+							background: rgba($red-color-bottom, 0.2);
+						}
+					}
+
+					&.nav-link-light-purple{
+						//background: $bottom-purple-gradient;
+						i{
+							color: $bottom-purple-gradient;
+						}
+
+						&:hover{
+							background: rgba($bottom-purple-gradient, 0.2);
+						}
+					}
+
+					&.active{
+						opacity: 1;
+						background: grey;
+						i,p{
+							color: white;
+						}
+					}
 				}
 		
 			}
@@ -253,7 +285,7 @@ body > .navbar-collapse{
 				font-size: 21px;
 			}
 			&:hover{
-				color: red;
+				color: $light-gray;
 			}
 		}
 		li{
@@ -338,7 +370,7 @@ body > .navbar-collapse{
 		border: none;
 		color: rgba(255, 255, 255, 0.7);
 		i{
-			font-size: 20px;
+			font-size: 16px;
 		}
 	}
 	input{

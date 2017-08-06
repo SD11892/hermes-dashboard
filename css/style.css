@@ -1,13 +1,13 @@
 /*--------------------------------
 
-myicons Web Font - built using nucleoapp.com
+hermes-dashboard-icons Web Font - built using nucleoapp.com
 License - nucleoapp.com/license/
 
 -------------------------------- */
 @font-face {
-  font-family: 'myicons';
-  src: url('../fonts/myicons.eot');
-  src: url('../fonts/myicons.eot') format('embedded-opentype'), url('../fonts/myicons.woff2') format('woff2'), url('../fonts/myicons.woff') format('woff'), url('../fonts/myicons.ttf') format('truetype'), url('../fonts/myicons.svg') format('svg');
+  font-family: 'hermes-dashboard-icons';
+  src: url('../fonts/hermes-dashboard-icons.eot');
+  src: url('../fonts/hermes-dashboard-icons.eot') format('embedded-opentype'), url('../fonts/hermes-dashboard-icons.woff2') format('woff2'), url('../fonts/hermes-dashboard-icons.woff') format('woff'), url('../fonts/hermes-dashboard-icons.ttf') format('truetype'), url('../fonts/hermes-dashboard-icons.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@ License - nucleoapp.com/license/
 -------------------------*/
 .nc-icon {
   display: inline-block;
-  font: normal normal normal 14px/1 'myicons';
+  font: normal normal normal 14px/1 'hermes-dashboard-icons';
   font-size: inherit;
   speak: none;
   text-transform: none;
@@ -162,76 +162,332 @@ License - nucleoapp.com/license/
 	font icons
 -------------------------*/
 
-.nc-badge-13::before {
+.nc-active-40::before {
     content: "\ea01";
 }
 
-.nc-bear-2::before {
+.nc-air-baloon::before {
     content: "\ea02";
 }
 
-.nc-bell-53::before {
+.nc-align-center::before {
     content: "\ea03";
 }
 
-.nc-email-84::before {
+.nc-align-left-2::before {
     content: "\ea04";
 }
 
-.nc-eye-19::before {
+.nc-ambulance::before {
     content: "\ea05";
 }
 
-.nc-grid-45::before {
+.nc-app::before {
     content: "\ea06";
 }
 
-.nc-ic_dashboard_24px::before {
+.nc-atom::before {
     content: "\ea07";
 }
 
-.nc-ic_date_range_24px::before {
+.nc-badge::before {
     content: "\ea08";
 }
 
-.nc-ic_event_note_24px::before {
+.nc-bag-17::before {
     content: "\ea09";
 }
 
-.nc-ic_import_contacts_24px::before {
+.nc-bars::before {
     content: "\ea0a";
 }
 
-.nc-ic_notifications_24px::before {
+.nc-bell-55::before {
     content: "\ea0b";
 }
 
-.nc-ic_search_24px::before {
+.nc-bold-down::before {
     content: "\ea0c";
 }
 
-.nc-ic_sim_card_24px::before {
+.nc-bold-left::before {
     content: "\ea0d";
 }
 
-.nc-ic_tag_faces_24px::before {
+.nc-bold-right::before {
     content: "\ea0e";
 }
 
-.nc-pencil::before {
+.nc-bold-up::before {
     content: "\ea0f";
 }
 
-.nc-single-01::before {
+.nc-bold::before {
     content: "\ea10";
 }
 
-.nc-single-folded-content::before {
+.nc-book-bookmark::before {
     content: "\ea11";
 }
 
-.nc-world::before {
+.nc-books::before {
     content: "\ea12";
+}
+
+.nc-box-2::before {
+    content: "\ea13";
+}
+
+.nc-briefcase-24::before {
+    content: "\ea14";
+}
+
+.nc-building::before {
+    content: "\ea15";
+}
+
+.nc-bulb-61::before {
+    content: "\ea16";
+}
+
+.nc-bullet-list-67::before {
+    content: "\ea17";
+}
+
+.nc-bus-front-12::before {
+    content: "\ea18";
+}
+
+.nc-button-pause::before {
+    content: "\ea19";
+}
+
+.nc-button-play::before {
+    content: "\ea1a";
+}
+
+.nc-button-power::before {
+    content: "\ea1b";
+}
+
+.nc-calendar-grid-58::before {
+    content: "\ea1c";
+}
+
+.nc-camera-compact::before {
+    content: "\ea1d";
+}
+
+.nc-caps-small::before {
+    content: "\ea1e";
+}
+
+.nc-chart-bar-32::before {
+    content: "\ea1f";
+}
+
+.nc-chart-pie-35::before {
+    content: "\ea20";
+}
+
+.nc-chat-round::before {
+    content: "\ea21";
+}
+
+.nc-check-bold::before {
+    content: "\ea22";
+}
+
+.nc-circle-08::before {
+    content: "\ea23";
+}
+
+.nc-compass-04::before {
+    content: "\ea24";
+}
+
+.nc-controller::before {
+    content: "\ea25";
+}
+
+.nc-credit-card::before {
+    content: "\ea26";
+}
+
+.nc-delivery-fast::before {
+    content: "\ea27";
+}
+
+.nc-diamond::before {
+    content: "\ea28";
+}
+
+.nc-email-83::before {
+    content: "\ea29";
+}
+
+.nc-fat-add::before {
+    content: "\ea2a";
+}
+
+.nc-fat-delete::before {
+    content: "\ea2b";
+}
+
+.nc-fat-remove::before {
+    content: "\ea2c";
+}
+
+.nc-favourite-28::before {
+    content: "\ea2d";
+}
+
+.nc-glasses-2::before {
+    content: "\ea2e";
+}
+
+.nc-hat-3::before {
+    content: "\ea2f";
+}
+
+.nc-headphones::before {
+    content: "\ea30";
+}
+
+.nc-html5::before {
+    content: "\ea31";
+}
+
+.nc-istanbul::before {
+    content: "\ea32";
+}
+
+.nc-key-25::before {
+    content: "\ea33";
+}
+
+.nc-laptop::before {
+    content: "\ea34";
+}
+
+.nc-like-2::before {
+    content: "\ea35";
+}
+
+.nc-lock-circle-open::before {
+    content: "\ea36";
+}
+
+.nc-map-big::before {
+    content: "\ea37";
+}
+
+.nc-mobile-button::before {
+    content: "\ea38";
+}
+
+.nc-money-coins::before {
+    content: "\ea39";
+}
+
+.nc-note-03::before {
+    content: "\ea3a";
+}
+
+.nc-notification-70::before {
+    content: "\ea3b";
+}
+
+.nc-palette::before {
+    content: "\ea3c";
+}
+
+.nc-pin-3::before {
+    content: "\ea3d";
+}
+
+.nc-planet::before {
+    content: "\ea3e";
+}
+
+.nc-refresh-02::before {
+    content: "\ea3f";
+}
+
+.nc-ruler-pencil::before {
+    content: "\ea40";
+}
+
+.nc-satisfied::before {
+    content: "\ea41";
+}
+
+.nc-scissors::before {
+    content: "\ea42";
+}
+
+.nc-send::before {
+    content: "\ea43";
+}
+
+.nc-settings-gear-65::before {
+    content: "\ea44";
+}
+
+.nc-settings::before {
+    content: "\ea45";
+}
+
+.nc-single-02::before {
+    content: "\ea46";
+}
+
+.nc-single-copy-04::before {
+    content: "\ea47";
+}
+
+.nc-sound-wave::before {
+    content: "\ea48";
+}
+
+.nc-spaceship::before {
+    content: "\ea49";
+}
+
+.nc-support-16::before {
+    content: "\ea4a";
+}
+
+.nc-tablet-button::before {
+    content: "\ea4b";
+}
+
+.nc-time-alarm::before {
+    content: "\ea4c";
+}
+
+.nc-trophy::before {
+    content: "\ea4d";
+}
+
+.nc-tv-2::before {
+    content: "\ea4e";
+}
+
+.nc-umbrella-13::before {
+    content: "\ea4f";
+}
+
+.nc-user-run::before {
+    content: "\ea50";
+}
+
+.nc-watch-time::before {
+    content: "\ea51";
+}
+
+.nc-zoom-split-in::before {
+    content: "\ea52";
 }
 
 
