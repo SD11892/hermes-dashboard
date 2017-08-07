@@ -4,6 +4,8 @@ var navbar_initialized = false;
 $(document).ready(function(){
 	window_width = $(window).width();
 
+	lbd.checkHeaderImage();
+	
 	if(window_width <= 991){
 		lbd.initRightMenu();
 	}
@@ -19,6 +21,16 @@ lbd = {
 
 	misc:{
 		navbar_menu_visible: 0 
+	},
+
+	checkHeaderImage: function(){
+		$pageheader = $('.page-header');
+		image_src = $pageheader.data('image');
+
+		if(image_src !== undefined){
+			pageheader_container = '<div class="page-header-background" style="background-image: url(' + image_src + ') "/>'
+			$pageheader.append(pageheader_container);
+		}
 	},
 
 	initRightMenu: function(){

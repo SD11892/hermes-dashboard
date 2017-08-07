@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie|Noto+Sans|Montserrat:400,500|Pacifico|Lobster|Roboto:300,400,500,700');
 body{
-	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+	font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+	font-size: 14px;
 }
 .sidebar,
 body > .navbar-collapse{
@@ -93,6 +94,10 @@ body > .navbar-collapse{
 							background: rgba($primary-color, 0.2);
 						}
 
+						.active{
+							background: $primary-color;
+						}
+
 					}
 
 					&.nav-link-light-blue{
@@ -183,13 +188,13 @@ body > .navbar-collapse{
 						}
 					}
 
-					&.active{
+					/*&.active{
 						opacity: 1;
 						background: grey;
 						i,p{
 							color: white;
 						}
-					}
+					}*/
 				}
 		
 			}
@@ -215,7 +220,7 @@ body > .navbar-collapse{
 
 .page-header{
 		background-color: white;
-		height: 310px;
+		padding: 0 0 150px 0;
 		position: relative;
 	&:after,
 	&:before{
@@ -237,6 +242,10 @@ body > .navbar-collapse{
 		@include icon-gradient($black-color-top, $black-color-bottom);
 		z-index: 2;
 		opacity: 0.9;
+	}
+	&[data-image]:after,
+	&.has-image:after{
+		opacity: .77;
 	}
 	&[data-color="blue"]:after{
 		@include icon-gradient($top-blue-gradient, $bottom-blue-gradient);
@@ -268,6 +277,18 @@ body > .navbar-collapse{
 
 	&[data-color="light-purple"]:after{
 		@include icon-gradient($bottom-purple-gradient, white);
+	}
+
+	.page-header-background{
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	background-position: center center;
+	background-size: cover;
 	}
 }
 .navbar{
@@ -394,7 +415,6 @@ body > .navbar-collapse{
 .info{
 	position: relative;
 	z-index: 4;
-	margin-left: 40px;
 	margin-right: 300px;
 	.info-title{
 		color: white;
@@ -414,3 +434,4 @@ body > .navbar-collapse{
 .over-header{
 	margin-top: -210px;
 }
+
