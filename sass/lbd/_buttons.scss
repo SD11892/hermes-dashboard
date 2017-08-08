@@ -1,17 +1,23 @@
 .btn{
-	border-width: $border-thin;
+	border-width: $border-thick;
 	background-color: $transparent-bg;
-	font-weight: $font-weight-normal;
+	font-weight: $font-weight-bold;
 	opacity: .8;
+    line-height: 1.75;
+    cursor: pointer;
 	padding: $padding-base-vertical $padding-base-horizontal;
     margin-bottom: 5px;
-    border-radius: 6px;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
 	@include btn-styles($default-color, $default-states-color);
 
 	&:hover,
 	&:focus{
 		opacity: 1;
 		outline: 0 !important;
+        box-shadow: none;
+        -webkit-box-shadow: none;
 	}
 
 	&:active,
@@ -61,7 +67,7 @@
     }
 }
 .btn-round{
-    border-width: $border-thin;
+    border-width: $border-thick;
     border-radius: $btn-round-radius !important;
     padding: $padding-round-vertical $padding-round-horizontal;
     
@@ -71,7 +77,7 @@
 }
 .btn-simple{
     border: none;
-    font-size: $font-size-medium;
+    font-size: $font-size-base;
     padding: $padding-base-vertical $padding-base-horizontal;
     
     &.btn-icon{
@@ -90,6 +96,9 @@
 }
 .btn-wd {
     min-width: 140px;
+}
+.btn-group .btn{
+    border-width: $border-thin;
 }
 
 .btn-group.select{

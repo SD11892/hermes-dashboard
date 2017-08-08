@@ -7,23 +7,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/lbd-newdesign.css">
+	<link rel="stylesheet" type="text/css" href="css/hd.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/chartist-plugin-tooltip.css">
 </head>
 <body>
 	<div class="wrapper">
 		<div class="sidebar">
-			<div class="sidebar-wrapper ps-container ps-theme-default ps-active-y">
+			<div class="sidebar-wrapper">
 				<div class="logo">
-					<a href="http://www.creative-tim.com">
+					<a href="#">
 						Hermes
 					</a>
 				</div><!--logo-->
 
 				<ul class="nav">
 					<li class="nav-item">
-						<a href="dashboard.html" class="nav-link nav-link-blue">
+						<a href="dashboard.html" class="nav-link nav-link-blue active">
 							<i class="nc-icon nc-bullet-list-67"></i>
 							<p>Dashboard</p>
 						</a>
@@ -86,15 +86,11 @@
 						</a>
 					</li>
 				</ul>
-				<div class="ps-scrollbar-y-rail">
-					<div class="ps-scrollbar-y" tabindex="0"></div>
-				</div>
 			</div><!--sidebar-wrapper-->
 		</div><!--sidebar-->
 
 		<div class="main-panel">
-			<div class="page-header" data-color="blue" data-image="images/freedom.jpg">
-				<nav class="navbar navbar-toggleable-md">
+			<nav class="navbar navbar-toggleable-md">
 				 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse">
 				   	<i class="fa fa-bars"></i>
 				  </button>
@@ -157,6 +153,7 @@
 				  	</ul><!--navbar right-->
 				  </div>  
 				</nav>
+			<div class="page-header" data-color="blue" data-image="images/freedom.jpg">
 				<div class="info">
 					<div class="container">
 						<div class="row">
@@ -265,7 +262,7 @@
 				</ul>
 			</nav>
 			<p class="float-right">
-				&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com" class="text-info">Hermes </a>
+				&copy; <script>document.write(new Date().getFullYear())</script> <a href="#" class="text-info">Hermes </a>
 				, made with love for a better web
 			<p>
 		  </div>
@@ -275,7 +272,7 @@
 
 
 </div><!--wrapper-->
-
+	<script src="js/hd.js"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -283,12 +280,18 @@
 	<script src="js/chartist-plugin-tooltip.js"></script>
 	<script src="js/spec-tooltip.js"></script>
 	<script src="js/demo.js"></script>
-	<script src="js/lbd.js"></script>
 	<script>
 		$(document).ready(function(){
 
 			demo.initChartist();
 
+			window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.main-panel > .page-header');
+
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+			}
 		});
 
 	</script>

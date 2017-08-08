@@ -33,7 +33,7 @@ $light-black:       #333333;
 
 $card-green:		#35b351;
 $card-purple:		#ce95d6;
-$card-blue:			#58a7bf;
+$card-blue:			#58a7bf;	
 
 
 $navbar-padding-a:				10px 15px;
@@ -183,3 +183,16 @@ $bottom-orange-gradient:			#ffe9ca;
 
 $top-green-gradient:				#84dc56;
 $bottom-green-gradient:				#c2e8c5;
+
+$general-transition-time:  300ms !default;
+
+$slow-transition-time:           370ms !default; 
+
+$fast-transition-time:           150ms !default;
+
+$transition-linear:                                   linear !default;
+$transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
+$transition-ease:           ease 0s;
+$ultra-fast-transition-time:     100ms  !default;
+$transition-ease-in:              ease-in !default;
+$transition-ease-out:             ease-out !default;

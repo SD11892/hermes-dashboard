@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Cookie|Noto+Sans|Montserrat:400,500|Pacifico|Lobster|Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Montserrat:400,500,600|Pacifico|Lobster|');
 body{
-	font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+	font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
 	font-size: 14px;
 }
 .sidebar,
@@ -55,7 +55,8 @@ body > .navbar-collapse{
 	.nav{
 			display: block;
 			margin-top: 25px;
-			z-index: 1000; 
+			z-index: 1000;
+			position: absolute;
 			li{
 				padding: 2px;
 				margin: 10px 15px;
@@ -64,7 +65,6 @@ body > .navbar-collapse{
 				text-decoration: none;
 				color: white;
 				border-radius: 6px;
-				transition: 0.1s ease;
 					i{
 						float: left;
 						font-size: 18px;
@@ -94,10 +94,9 @@ body > .navbar-collapse{
 							background: rgba($primary-color, 0.2);
 						}
 
-						.active{
+						&.active{
 							background: $primary-color;
 						}
-
 					}
 
 					&.nav-link-light-blue{
@@ -108,6 +107,10 @@ body > .navbar-collapse{
 
 						&:hover{
 							background: rgba($info-color, 0.2);
+						}
+
+						&.active{
+							background: $info-color;
 						}
 					}
 
@@ -120,6 +123,10 @@ body > .navbar-collapse{
 						&:hover{
 							background: rgba($text-purple, 0.2);
 						}
+
+						&.active{
+							background: $text-purple;
+						}
 					}
 
 					&.nav-link-pink{
@@ -130,6 +137,10 @@ body > .navbar-collapse{
 
 						&:hover{
 							background: rgba($text-pink, 0.2);
+						}
+
+						&.active{
+							background: $text-pink;
 						}
 					}
 
@@ -142,6 +153,10 @@ body > .navbar-collapse{
 						&:hover{
 							background: rgba($warning-color, 0.2);
 						}
+
+						&.active{
+							background: $warning-color;
+						}
 					}
 
 					&.nav-link-red{
@@ -153,6 +168,11 @@ body > .navbar-collapse{
 						&:hover{
 							background: rgba($danger-color, 0.2);
 						}
+
+						&.active{
+							background: $danger-color;
+						}
+
 					}
 
 					&.nav-link-green{
@@ -163,6 +183,10 @@ body > .navbar-collapse{
 
 						&:hover{
 							background: rgba($success-color, 0.2);
+						}
+
+						&.active{
+							background: $success-color;
 						}
 					}
 
@@ -175,6 +199,9 @@ body > .navbar-collapse{
 						&:hover{
 							background: rgba($red-color-bottom, 0.2);
 						}
+						&.active{
+							background:$red-color-bottom;
+						}
 					}
 
 					&.nav-link-light-purple{
@@ -186,21 +213,26 @@ body > .navbar-collapse{
 						&:hover{
 							background: rgba($bottom-purple-gradient, 0.2);
 						}
+
+						&.active{
+							background: $bottom-purple-gradient;
+						}
+
 					}
 
-					/*&.active{
-						opacity: 1;
-						background: grey;
+
+					&.active{
 						i,p{
 							color: white;
 						}
-					}*/
+					}
 				}
 		
 			}
 	}
 	.nav-link{
 		padding-left: 13px;
+		padding-right: 50px;
 	}
 }
 
@@ -220,7 +252,7 @@ body > .navbar-collapse{
 
 .page-header{
 		background-color: white;
-		padding: 0 0 150px 0;
+		padding: 70px 0 150px 0;
 		position: relative;
 	&:after,
 	&:before{
@@ -295,6 +327,7 @@ body > .navbar-collapse{
 	padding: 15px;
 	width: 100%;
 	z-index: 1000;
+	position: absolute;
 
 }
 
@@ -408,7 +441,7 @@ body > .navbar-collapse{
 	}
 	.form-control{
 		color: white;
-		//opacity: 1;
+		opacity: 1;
 	}
 }
 

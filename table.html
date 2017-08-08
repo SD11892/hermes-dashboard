@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/lbd-newdesign.css">
+	<link rel="stylesheet" type="text/css" href="css/hd.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 		<div class="sidebar hidden-md-down">
 			<div class="sidebar-wrapper">
 				<div class="logo">
-					<a href="http://www.creative-tim.com">
+					<a href="#">
 						Hermes
 					</a>
 				</div><!--logo-->
@@ -36,7 +36,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a href="table.html" class="nav-link nav-link-pink">
+						<a href="table.html" class="nav-link nav-link-pink active">
 							<i class="nc-icon nc-calendar-grid-58"></i>
 							<p>Table List</p>
 						</a>
@@ -90,8 +90,7 @@
 		</div><!--sidebar-->
 
 		<div class="main-panel">
-			<div class="page-header" data-color="pink" data-image="images/freedom.jpg">
-				<nav class="navbar navbar-toggleable-md">
+			<nav class="navbar navbar-toggleable-md">
 				 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse">
 				   	<i class="fa fa-bars"></i>
 				  </button>
@@ -154,6 +153,7 @@
 				  	</ul><!--navbar right-->
 				  </div>  
 				</nav>
+			<div class="page-header" data-color="pink" data-image="images/freedom.jpg">
 				<div class="info">
 					<div class="container">
 						<div class="row">
@@ -345,7 +345,7 @@
 						</ul>
 					</nav>
 					<p class="float-right">
-						&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com" class="text-info">Hermes </a>
+						&copy; <script>document.write(new Date().getFullYear())</script> <a href="#" class="text-info">Hermes </a>
 						, made with love for a better web
 					<p>
 				</div>
@@ -358,6 +358,18 @@
   
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/lbd.js"></script>
+	<script src="js/hd.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.main-panel > .page-header');
+
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+			}
+		});
+	</script>
 </body>
 </html>

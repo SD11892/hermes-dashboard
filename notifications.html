@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/lbd-newdesign.css">
+	<link rel="stylesheet" type="text/css" href="css/hd.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
@@ -18,7 +18,7 @@
 		<div class="sidebar hidden-md-down">
 			<div class="sidebar-wrapper">
 				<div class="logo">
-					<a href="http://www.creative-tim.com">
+					<a href="#">
 						Hermes
 					</a>
 				</div><!--logo-->
@@ -67,7 +67,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a href="notifications.html" class="nav-link nav-link-green">
+						<a href="notifications.html" class="nav-link nav-link-green active">
 							<i class="nc-icon nc-bell-55"></i>
 							<p>Notifications</p>
 						</a>
@@ -92,8 +92,7 @@
 		</div><!--sidebar-->
 
 		<div class="main-panel">
-			<div class="page-header" data-color="green" data-image="images/freedom.jpg">
-				<nav class="navbar navbar-toggleable-md">
+			<nav class="navbar navbar-toggleable-md">
 				 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse">
 				   	<i class="fa fa-bars"></i>
 				  </button>
@@ -156,6 +155,7 @@
 				  	</ul><!--navbar right-->
 				  </div>  
 				</nav>
+			<div class="page-header" data-color="green" data-image="images/freedom.jpg">
 			</div><!--page-header-->
 			<div class="content">
             <div class="card over-header">
@@ -177,12 +177,12 @@
                             </div>
                             <div class="alert alert-info alert-with-icon" data-notify="container">
                                 <button type="button" aria-hidden="true" class="close">×</button>
-                                <span data-notify="icon" class="pe-7s-bell"></span>
+                                <span data-notify="icon" class="nc-icon nc-bell-55"></span>
                                 <span data-notify="message">This is a notification with close button and icon.</span>
                             </div>
                             <div class="alert alert-info alert-with-icon" data-notify="container">
                                 <button type="button" aria-hidden="true" class="close">×</button>
-                                <span data-notify="icon" class="pe-7s-bell"></span>
+                                <span data-notify="icon" class="nc-icon nc-bell-55"></span>
                                 <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
 						</ul>
 					</nav>
 					<p class="float-right">
-						&copy; 2017 <a href="http://www.creative-tim.com" class="text-info">Hermes </a>
+						&copy; 2017 <a href="#" class="text-info">Hermes </a>
 						, made with love for a better web
 					<p>
 				</div>
@@ -281,7 +281,19 @@
 	<script src="js/bootstrap.min.js"></script>
   	<script src="js/bootstrap-notify.js"></script>
   	<script src="js/demo.js"></script>
-  	<script src="js/lbd.js"></script>
+  	<script src="js/hd.js"></script>
+  	<script>
+  		$(document).ready(function(){
+
+			window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.main-panel > .page-header');
+
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+			}
+		});
+  	</script>
 </body>
 </html>
 
