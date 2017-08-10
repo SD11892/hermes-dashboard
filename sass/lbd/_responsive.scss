@@ -1,3 +1,13 @@
+@media (max-width: 1200px){
+    .info{
+        margin-right: 0;
+    }
+    .input-group{
+        input{
+            width: 380px !important;
+        }
+    }
+}
 
 @media (min-width: 992px){
 
@@ -5,6 +15,18 @@
         display: none !important;
     }
 
+    .table-full-width{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .table-responsive{
+        overflow: visible;
+    }
+
+    .navbar-nav p{
+        line-height: normal;
+        margin: 0;
+    }
 }
 
 /*          Changes for small display      */
@@ -246,6 +268,7 @@
         .nav p{
             font-size: $font-size-base;
             margin: 0;
+            margin-left: 0;
         }
 
         [class^="pe-7s-"]{
@@ -259,28 +282,8 @@
             border-top: 1px solid rgba(123, 123, 123, 0.3);
         }
     }
-}
 
-//overwrite table responsive for 768px screens
-
-@media (min-width: 992px){
-    .table-full-width{
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-    .table-responsive{
-        overflow: visible;
-    }
-
-    .navbar-nav p{
-        line-height: normal;
-        margin: 0;
-    }
-
-}
-
-@media (max-width: 991px){
-    .table-responsive {
+      .table-responsive {
         width: 100%;
         margin-bottom: 15px;
         overflow-x: scroll;
@@ -289,7 +292,35 @@
         -webkit-overflow-scrolling: touch;
     }
 
+    .input-group{
+        margin-left: 5px;
+        border-bottom: 1px solid rgba($grey-text-main-panel,0.1);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 95%;
+        input{
+            width: 195px !important;
+            padding: 0;
+        }
+        .form-control{
+            color: $logo-gray;
+        }
+        .form-control::-moz-placeholder{
+           @include placeholder(rgba($grey-text-main-panel,0.4));
+        }
+        .form-control:-moz-placeholder{
+           @include placeholder(rgba($grey-text-main-panel,0.4));
+        }  
+        .form-control::-webkit-input-placeholder{
+           @include placeholder(rgba($grey-text-main-panel,0.4)); 
+        } 
+        .form-control:-ms-input-placeholder{
+           @include placeholder(rgba($grey-text-main-panel,0.4));
+        }
+    }
 }
+
+
 
 @media (min-width: 768px){
     form{
@@ -304,4 +335,23 @@
         }
         }
     }
+
+    .final-footer{
+        nav{
+            float: left;
+        }
+
+        p{
+            float: right;
+        }
+    }
 }
+
+@media (max-width: 768px){
+    .final-footer{
+        nav{
+            margin-bottom: 20px;
+        }
+    }
+}
+

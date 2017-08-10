@@ -108,11 +108,13 @@
 				  	<ul class="navbar-nav ml-auto">
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-					  			<div class="notification"></div>
-					  			<p>
-					  				<i class="nc-icon nc-notification-70"></i>
-					  				<b class="caret"></b>
-					  			</p>
+					  			<div class="notification hidden-md-down"></div>
+				  				<i class="nc-icon nc-notification-70"></i>
+				  				<b class="caret hidden-md-down"></b>
+					  			<p class="hidden-lg-up">
+									New Notifications
+									<b class="caret"></b>
+								</p>
 				  			</a>
 				  			<ul class="dropdown-menu">
 				  				<li><a href="#">Notification 1</a></li>
@@ -123,24 +125,28 @@
 				  			</ul>
 				  		</li>
 
-				  		<li class=" nav-item">
+				  		<li class="nav-item">
 				  			<a href="#" class="nav-link" data-toggle="dropdown">
-				  				<i class="nc-icon nc-map-big"></i>		
+				  				<i class="nc-icon nc-map-big"></i>	
+				  				<p class="hidden-lg-up">Contacts</p>	
 				  			</a>
 				  		</li>
 
 				  		<li class="nav-item">
 				  			<a href="#" class="nav-link">
 				  				<i class="nc-icon nc-bell-55"></i>
+				  				<p class="hidden-lg-up">Messages</p>
 				  			</a>
 				  		</li>
 
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-				  				<p>
-				  					<i class="nc-icon nc-circle-08"></i>
-				  					<b class="caret"></b>
-				  				</p>
+		  					<i class="nc-icon nc-circle-08"></i>
+		  					<b class="caret hidden-md-down"></b>
+		  					<p class="hidden-lg-up">
+									Log out
+									<b class="caret"></b>
+								</p>
 				  			</a>
 				  			<ul class="dropdown-menu menu-2">
 				  				<li><a href="#">Action</a></li>
@@ -160,22 +166,22 @@
 				<div class="info">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6" >
 								<h4 class="info-title text-center">7.300.000.000</h4>
 								<h6 class="info-category text-center">Population</h6>
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6" >
 								<h4 class="info-title text-center">7</h4>
 								<h6 class="info-category text-center">Continents</h6>
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6"> 
 								<h4 class="info-title text-center">195</h4>
 								<h6 class="info-category text-center">States</h6>
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6" >
 								<h4 class="info-title text-center">4.570.000.000</h4>
 								<h6 class="info-category text-center">Age of Terra</h6>
 							</div>
@@ -198,7 +204,7 @@
 
 				<footer class="final-footer">
 					<div class="container-fluid">
-						<nav class="float-left">
+						<nav>
 							<ul>
 							  <li>
 	                            <a href="#">
@@ -222,7 +228,7 @@
 	                        </li>
 						</ul>
 					</nav>
-					<p class="float-right">
+					<p>
 						&copy; 2017 <a href="#" class="text-info">Hermes </a>
 						, made with love for a better web
 					<p>
@@ -235,6 +241,7 @@
 	</div><!--wrapper-->
   
 	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/hd.js"></script>
 	<script>

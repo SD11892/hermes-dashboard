@@ -109,7 +109,7 @@ demo = {
 
         Chartist.Line('#chartPreferences', dataPreferences, optionsPreferences);*/
 
-        var chart = new Chartist.Line('#chartPreferences', {
+        var chart = new Chartist.Line('#chartPreferences1', {
          labels: ['JAN.', 'FEB.', 'MAR.', 'APR.', 'MAY.', 'JUN.', 'JUL.', 'AUG.', 'SEP.', 'OCT.', 'NOV.', 'DEC.'],
           series: [
             [0, 180, 80, 320, 220, 420, 190, {meta: '$570', value:570}, 440, 370, 420, 260]
@@ -152,7 +152,87 @@ demo = {
       }
     });
 
+      var chart = new Chartist.Line('#chartPreferences2', {
+         labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30'],
+          series: [
+            [12, 16, 21, 3, 12, 0, 22, 10, 6, 18, 9, 13, 36, 4, 12, 17, 19, 10, 10, 1, 8, 12, 2, 22, 50, 42, 2, 18, 10, 5]
+          ]
+        }, {
+            lineSmooth: Chartist.Interpolation.simple({
+                    divisor: 100
+                  }),
+                  showArea: false,
+                  showPoint: true,
+                  showLine: true,
+                  height: '200px',
+                  axisX: {
+                    showGrid: false
+                  }
+        });
 
+        chart.on('draw', function(data) {
+      if(data.type === 'point') {
+        var circle = new Chartist.Svg('circle', {
+          cx: [data.x], cy:[data.y], r:[7],
+        }, 'ct-circle');
+        data.element.replace(circle);
+      }
+    });
+
+    chart.on('draw', function(data) {
+      if(data.type === 'line' || data.type === 'area') {
+        data.element.animate({
+          d: {
+            begin: 400 * data.index,
+            dur: 1000,
+            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+            to: data.path.clone().stringify(),
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      }
+    });
+
+                var chart = new Chartist.Line('#chartPreferences3', {
+         labels: ['1', '2', '3', '4', '5', '6', '7'],
+          series: [
+            [12, 3, 22, 16, 17, 2, 4]
+          ]
+        }, {
+            lineSmooth: Chartist.Interpolation.simple({
+                    divisor: 100
+                  }),
+                  showArea: false,
+                  showPoint: true,
+                  showLine: true,
+                  height: '200px',
+                  axisX: {
+                    showGrid: false
+                  }
+        });
+
+          chart.on('draw', function(data) {
+      if(data.type === 'point') {
+        var circle = new Chartist.Svg('circle', {
+          cx: [data.x], cy:[data.y], r:[7],
+        }, 'ct-circle');
+        data.element.replace(circle);
+      }
+    });
+
+    chart.on('draw', function(data) {
+      if(data.type === 'line' || data.type === 'area') {
+        data.element.animate({
+          d: {
+            begin: 400 * data.index,
+            dur: 1000,
+            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+            to: data.path.clone().stringify(),
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      }
+    });
           var chart = new Chartist.Line('#chartHours', {
     series: [
         [7,9,7.3,7.7,8.6,10,9.1,8.9,9,8.6,7.3,7.8,8.2]
@@ -239,7 +319,7 @@ demo = {
     	color = Math.floor((Math.random() * 4) + 1);
     	
     	$.notify({
-        	icon: ".nc-bell-55",
+        	icon: "nc-icon nc-bell-55",
         	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
         	
         },{
@@ -254,4 +334,5 @@ demo = {
 
     
 }
+
 

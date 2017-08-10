@@ -105,11 +105,13 @@
 				  	<ul class="navbar-nav ml-auto">
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-					  			<div class="notification"></div>
-					  			<p>
-					  				<i class="nc-icon nc-notification-70"></i>
-					  				<b class="caret"></b>
-					  			</p>
+					  			<div class="notification hidden-md-down"></div>
+				  				<i class="nc-icon nc-notification-70"></i>
+				  				<b class="caret hidden-md-down"></b>
+					  			<p class="hidden-lg-up">
+									New Notifications
+									<b class="caret"></b>
+								</p>
 				  			</a>
 				  			<ul class="dropdown-menu">
 				  				<li><a href="#">Notification 1</a></li>
@@ -120,24 +122,28 @@
 				  			</ul>
 				  		</li>
 
-				  		<li class=" nav-item">
+				  		<li class="nav-item">
 				  			<a href="#" class="nav-link" data-toggle="dropdown">
-				  				<i class="nc-icon nc-map-big"></i>		
+				  				<i class="nc-icon nc-map-big"></i>	
+				  				<p class="hidden-lg-up">Contacts</p>	
 				  			</a>
 				  		</li>
 
 				  		<li class="nav-item">
 				  			<a href="#" class="nav-link">
 				  				<i class="nc-icon nc-bell-55"></i>
+				  				<p class="hidden-lg-up">Messages</p>
 				  			</a>
 				  		</li>
 
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-				  				<p>
-				  					<i class="nc-icon nc-circle-08"></i>
-				  					<b class="caret"></b>
-				  				</p>
+		  					<i class="nc-icon nc-circle-08"></i>
+		  					<b class="caret hidden-md-down"></b>
+		  					<p class="hidden-lg-up">
+									Log out
+									<b class="caret"></b>
+								</p>
 				  			</a>
 				  			<ul class="dropdown-menu menu-2">
 				  				<li><a href="#">Action</a></li>
@@ -241,7 +247,7 @@
 
 				<footer class="final-footer">
 					<div class="container-fluid">
-						<nav class="float-left">
+						<nav>
 							<ul>
 							  <li>
 	                            <a href="#">
@@ -265,7 +271,7 @@
 	                        </li>
 						</ul>
 					</nav>
-					<p class="float-right">
+					<p>
 						&copy; 2017 <a href="#" class="text-info">Hermes </a>
 						, made with love for a better web
 					<p>
@@ -278,6 +284,7 @@
 	</div><!--wrapper-->
   
 	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/hd.js"></script>
 	<script>

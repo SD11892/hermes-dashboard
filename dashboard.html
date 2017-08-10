@@ -105,11 +105,13 @@
 				  	<ul class="navbar-nav ml-auto">
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-					  			<div class="notification"></div>
-					  			<p>
-					  				<i class="nc-icon nc-notification-70"></i>
-					  				<b class="caret"></b>
-					  			</p>
+					  			<div class="notification hidden-md-down"></div>
+				  				<i class="nc-icon nc-notification-70"></i>
+				  				<b class="caret hidden-md-down"></b>
+					  			<p class="hidden-lg-up">
+									New Notifications
+									<b class="caret"></b>
+								</p>
 				  			</a>
 				  			<ul class="dropdown-menu">
 				  				<li><a href="#">Notification 1</a></li>
@@ -120,24 +122,28 @@
 				  			</ul>
 				  		</li>
 
-				  		<li class=" nav-item">
+				  		<li class="nav-item">
 				  			<a href="#" class="nav-link" data-toggle="dropdown">
-				  				<i class="nc-icon nc-map-big"></i>		
+				  				<i class="nc-icon nc-map-big"></i>	
+				  				<p class="hidden-lg-up">Contacts</p>	
 				  			</a>
 				  		</li>
 
 				  		<li class="nav-item">
 				  			<a href="#" class="nav-link">
 				  				<i class="nc-icon nc-bell-55"></i>
+				  				<p class="hidden-lg-up">Messages</p>
 				  			</a>
 				  		</li>
 
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-				  				<p>
-				  					<i class="nc-icon nc-circle-08"></i>
-				  					<b class="caret"></b>
-				  				</p>
+		  					<i class="nc-icon nc-circle-08"></i>
+		  					<b class="caret hidden-md-down"></b>
+		  					<p class="hidden-lg-up">
+									Log out
+									<b class="caret"></b>
+								</p>
 				  			</a>
 				  			<ul class="dropdown-menu menu-2">
 				  				<li><a href="#">Action</a></li>
@@ -157,22 +163,22 @@
 				<div class="info">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6">
 								<h4 class="info-title text-center">$145.00</h4>
 								<h6 class="info-category text-center">Last Transfer</h6>
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6">
 								<h4 class="info-title text-center">$785.00</h4>
 								<h6 class="info-category text-center">Next Transfer</h6>
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6">
 								<h4 class="info-title text-center">36</h4>
 								<h6 class="info-category text-center">Total Customers</h6>
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-sm-3 col-6">
 								<h4 class="info-title text-center">$23.00</h4>
 								<h6 class="info-category text-center">Total Volume</h6>
 							</div>
@@ -186,9 +192,9 @@
 						<h4 class="float-left">OVERVIEW</h4>
 						<div class="float-right">
 							<ul class="nav nav-tabs" role="tablist">
-								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-week">THIS WEEK</a></li>
-								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-month">THIS MONTH</a></li>
-								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#chartPreferences">THIS YEAR</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chartPreferences3">THIS WEEK</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chartPreferences2">THIS MONTH</a></li>
+								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#chartPreferences1">THIS YEAR</a></li>
 								<li class="nav-item"><a class="nav-link"><i class="fa fa-calendar"></i></a></li>
 							</ul>
 						</div>
@@ -199,8 +205,10 @@
 									<h4 class="title float-left text-green">GROSS VOLUME</h4>
 									<p class="category float-right text-blue">$3470.00 USD TOTAL</p>
 								</div><!--header-->
-								<div class="content">
-									<div id="chartPreferences" class="ct-chart ct-negative-labels"></div>
+								<div class="content tab-content">
+									<div id="chartPreferences1" class="ct-chart tab-pane active" role="tabpanel"></div>
+									<div id="chartPreferences2" class="ct-chart tab-pane" role="tabpanel"></div>
+									<div id="chartPreferences3" class="ct-chart tab-pane" role="tabpanel"></div>
 								</div><!--content-->
 							</div><!--card-->
 						</div>
@@ -237,7 +245,7 @@
 
 		<footer class="final-footer">
 			<div class="container-fluid">
-				<nav class="float-left">
+				<nav>
 					<ul>
 					  <li>
                         <a href="#">
@@ -261,7 +269,7 @@
                     </li>
 				</ul>
 			</nav>
-			<p class="float-right">
+			<p>
 				&copy; <script>document.write(new Date().getFullYear())</script> <a href="#" class="text-info">Hermes </a>
 				, made with love for a better web
 			<p>
@@ -280,8 +288,18 @@
 	<script src="js/spec-tooltip.js"></script>
 	<script src="js/demo.js"></script>
 	<script src="js/hd.js"></script>
+	
 	<script>
+
 		$(document).ready(function(){
+
+		/*$(document).foundation();
+
+		$('.nav-tabs').on('toggled', function(event, tab){
+			tab.find('.ct-chart').each(function(i, e){
+				e.__chartist__.update();
+			});
+		});*/
 
 			demo.initChartist();
 

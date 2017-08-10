@@ -1,6 +1,18 @@
 
 var navbar_initialized = false;
 
+(function(){
+
+       // if we are on windows OS we activate the perfectScrollbar function
+       $('.sidebar-wrapper').perfectScrollbar();
+
+       $('html').addClass('perfect-scrollbar-on');
+  	
+  		if($('body').hasClass('nav-open')){
+  			$('.collapse .sidebar-wrapper').perfectScrollbar();
+  		}
+})();
+
 $(document).ready(function(){
 	window_width = $(window).width();
 
@@ -9,6 +21,7 @@ $(document).ready(function(){
 	if(window_width <= 991){
 		hd.initRightMenu();
 	}
+
 });
 
 $(window).resize(function(){

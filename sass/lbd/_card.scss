@@ -347,7 +347,7 @@ hr{
 .card-blog{
 	@include card-transition;
 	width: 300px;
-	
+	margin: 10px auto;
 	&:hover{
 		@include card-hover;
 	}
@@ -366,6 +366,7 @@ hr{
 }
 
 .card[data-color]{
+	margin: 10px auto;
 	.card-category, .card-title{
 		color: white;
 	}
@@ -410,6 +411,7 @@ hr{
 	width: 250px;
 	@include card-transition;
 	margin-top: 70px;
+	margin: 70px auto 10px auto;
 
 	&:hover{
 		@include card-hover;
@@ -455,6 +457,7 @@ hr{
 .card-pricing{
 	@include card-transition;
 	width: 250px;
+	margin: 10px auto;
 	.card-icon{
 		max-width: 120px;
 		max-height: 120px;
