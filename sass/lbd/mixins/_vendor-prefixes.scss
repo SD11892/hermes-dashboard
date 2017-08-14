@@ -9,6 +9,16 @@
     background-size: 150% 150%;
 }
 
+@mixin icon-gradient-50 ($top-color, $middle-color, $bottom-color){
+    background: $top-color;
+    background: -moz-linear-gradient(top,  $top-color 0%, $middle-color 50%, $bottom-color 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop(50%, $middle-color), color-stop(100%,$bottom-color));
+    background: -webkit-linear-gradient(top,  $top-color 0%,$middle-color 50%,$bottom-color 100%);
+    background: -o-linear-gradient(top,  $top-color 0%,$middle-color 50%,$bottom-color 100%);
+    background: -ms-linear-gradient(top,  $top-color 0%,$middle-color 50%,$bottom-color 100%);
+    background: linear-gradient(to bottom,  $top-color 0%,$middle-color 50%,$bottom-color 100%);
+    
+}
 @mixin box-shadow($shadow...)
 {
 	-webkit-box-shadow: $shadow;

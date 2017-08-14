@@ -22,6 +22,17 @@ $(document).ready(function(){
 		hd.initRightMenu();
 	}
 
+	var scroll_start = 0;
+	var startchange=$('.wave');
+	var offset = startchange.offset();
+	$(document).scroll(function(){
+		scroll_start = $(this).scrollTop();
+		if(scroll_start > offset.top){
+			$(".navbar").css('background-color', '#6b6fe4');
+		} else {
+			$(".navbar").css('background-color', 'transparent');
+		}
+	});
 });
 
 $(window).resize(function(){

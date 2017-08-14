@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Montserrat:400,500,600|Pacifico|Lobster|');
 body{
 	font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
-	font-size: 14px;
+	//font-size: 14px;
 }
 .sidebar,
 body > .navbar-collapse{
@@ -331,6 +331,7 @@ body > .navbar-collapse{
 	padding: 15px;
 	width: 100%;
 	z-index: 1000;
+	min-height: 60px;
 	position: absolute;
 
 }

@@ -1,0 +1,417 @@
+.hermes-wrapper{
+	background: white;
+	.navbar{
+		position: fixed;
+	}
+
+}
+
+.hermes-title{
+	color: white !important;
+	text-transform: uppercase;
+}
+
+.social-icons{
+	[class*="btn-"]{
+		background-color: transparent;
+	}
+}
+
+.productPage{
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+}
+	.laptopWindow{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		top: 40%;
+		z-index: 10;
+		img{
+			width: 85%;
+		}
+		.productscreen{
+			position: absolute;
+			left: 18%;
+			width: 64%;
+			height: 78%;
+			top: 6%;
+		}
+	}
+
+
+.waves{
+	height: 5%;
+	width: 100%;
+	z-index: 5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: white;
+}
+
+.wave {
+  //background: url(http://tedmcdo.com/labs/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  z-index: 5;
+  width: 61400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+/*@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}*/
+
+.mainTitle{
+	z-index: 10;
+	position: absolute;
+	left: 50%;
+	top: 17%;
+	transform: translateX(-50%);
+	text-align: center;
+	.title, .category{
+		color: white;
+	}
+
+	.title{
+		margin-top: 15px;
+		text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
+	}
+
+	ul{
+		list-style-type: none;
+		display: inline-flex;
+		padding: 0;
+		margin: 0;
+		i{
+			@include icon-gradient(#dcb700, white);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+		}
+	}
+}
+
+.overviewPage{
+	margin-top: 100px;
+}
+
+.card-simple{
+	margin: 50px 0;
+	.header{
+		h1, i{
+			color: $primary-color;
+			margin: 0;
+			font-weight: 600;
+		}
+		p{
+			font-size: 22px;
+		}
+	}
+
+	.content{
+		color: $grey-text-main-panel;
+		padding-top: 0;
+	}
+}
+
+.responsivePage{
+	position: relative;
+	height: 1000px;
+	padding: 150px 0;
+	@include icon-gradient-50(white, rgba(112, 177, 202, 0.25), white);
+	img{
+		position: absolute;
+	}
+	
+	.screenSizes{
+		position: relative;
+		.desktopResponsive{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			.desktop{
+				width: 80%;
+				left: 20%;
+			}
+			.desktop-ps{
+				width: 74%;
+				height: 70%;
+				left: 23%;
+				top: 5%;
+			}
+		}
+		.iphoneResponsive{
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			.iphone{
+				width: 60%;
+				left: 60%;
+				top: 125%;
+				z-index: 3;
+			}
+			.iphone-ps{
+				width: 25%;
+				left: 77.4%;
+				z-index: 3;
+				top: 138%;
+			}
+		}
+
+		.ipadResponsive{
+			width: 70%;
+			height: 70%;
+			position: absolute;
+			.ipad{
+				width: 85%;
+				top: 12%;
+			}
+			.ipad-ps{
+				width: 42%;
+				left: 21%;
+				top: 36%;
+			}
+		}
+	}
+	.header{
+		margin-bottom: 10px;
+		i{
+			width: 50px;
+			font-size: 30px;
+			color: white !important;
+		}
+		p{
+			color: black;
+			margin-top: 5px;
+			font-size: 24px;
+		}
+	}
+
+	.content{
+		padding-left: 15px;
+		color: rgba(black, 0.7);
+		p{
+			font-size: 15px;
+		}
+	}
+}
+
+.iconsPage{
+	position: relative;
+	.card-simple{
+		max-width: 500px;
+		margin: auto;
+	}
+	i{
+		font-size: 30px;
+		position: absolute;
+		color: $logo-gray;
+		transition: 0.4s ease;
+		&:hover{
+			transform: translateY(5px);
+		}
+	}
+	.first-element-left{
+		left: 17%;
+	}
+
+	.second-element-left{
+		left: 20%;
+		top: 25%;
+		font-size: 55px;
+	}
+
+	.third-element-left{
+		left: 15%;
+		top: 45%;
+	}
+
+	.forth-element-left{
+		top: 50%;
+		left: 7%;
+		font-size: 25px;
+	}
+
+	.fifth-element-left{
+		left: 20%;
+		top: 65%;
+	}
+
+	.sixth-element-left{
+		left: 26%;
+		top: 50%;
+		font-size: 20px;
+	}
+
+	.seventh-element-left{
+		left: 12%;
+		top: 20%;
+	}
+
+	.eigth-element-left{
+		left: 7%;
+		top: 9%;
+		font-size: 20px;
+	}
+
+	.ninth-element-left{
+		left: 12%;
+		top: 75%;
+		font-size: 40px;
+	}
+	.first-element-right{
+		right: 10%;
+		top: 25%;
+	}
+
+	.second-element-right{
+		right: 15%;
+		font-size: 45px;
+	}
+
+	.third-element-right{
+		right: 20%;
+		top: 30%;
+		font-size: 20px;
+	}
+
+	.forth-element-right{
+		right: 21%;
+		top: 50%;
+	}
+
+	.fifth-element-right{
+		right: 15%;
+		top: 70%;
+	}
+
+	.sixth-element-right{
+		right: 13%;
+		top: 43%;
+		font-size: 40px;
+	}
+
+	.seventh-element-right{
+		right: 27%;
+		top: 34%;
+		font: 20px;
+	}
+
+	.eigth-element-right{
+		right: 24%;
+		top: 11%;
+	}
+
+	.ninth-element-right{
+		top: 70%;
+		right: 25%;
+		font-size: 45px;
+	}
+	.header{
+		p{
+			font-size: 40px;
+		}
+	}
+}
+
+.image{
+	height: 100vh;
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		@include icon-gradient(black, white);
+		opacity: 0.6;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		@include icon-gradient(blue, white);
+		opacity: 0.5;
+	}
+}
+
+.downloadPage{
+	padding-top: 150px;
+	@include icon-gradient(white, rgba(112, 177, 202, 0.25));
+	position: relative;
+	h1{
+		font-size: 35px;
+	}
+	.separator{
+		
+		color: black;
+	
+		&:after{
+			content: '';
+			width: 100px;
+			border-top: 2px solid black;
+			position: absolute;
+			margin-top: 11px;
+			transform: translateY(-50%);
+			margin-left: 10px;
+		}
+		&:before{
+			content: '';
+			width: 100px;
+			border-top: 2px solid black;
+			margin-top: 11px;
+			transform: translateY(-50%);
+			position: absolute;
+			margin-left: -110px;
+		}
+
+
+	}
+
+	a{
+		margin: 30px 0 80px;
+	}
+
+	h3{
+		margin-bottom: 20px;
+	}
+	.final-footer{
+		background: #e7f2f7;
+		border: none;
+		padding-top: 100px;
+	}
+
+}
