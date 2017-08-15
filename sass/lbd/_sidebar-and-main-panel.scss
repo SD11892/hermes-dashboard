@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Montserrat:400,500,600|Pacifico|Lobster|');
 body{
 	font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
-	//font-size: 14px;
+	font-size: 14px;
 }
 .sidebar,
 body > .navbar-collapse{
@@ -456,13 +456,13 @@ body > .navbar-collapse{
 	.info-title{
 		color: white;
 		font-weight: 500;
-		font-size: 25px;
+		font-size: 1.85em;
 		margin: 30px 0 10px 0;
 		font-family: 'Noto Sans';
 	}
 	.info-category{
 		color: rgba(255, 255, 255, 0.7);
-		font-size: 16px;
+		font-size: 1.2em;
 		font-weight: 400;
 		text-transform: capitalize;
 	}

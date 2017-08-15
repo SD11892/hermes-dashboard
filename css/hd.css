@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans|Montserrat:400,500,600|Pacifico|Lobster|");
 body {
-  font-family: 'Montserrat', 'Helvetica', Arial, sans-serif; }
+  font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
+  font-size: 14px; }
 
 .sidebar,
 body > .navbar-collapse {
@@ -401,12 +402,12 @@ body > .navbar-collapse {
   .info .info-title {
     color: white;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 1.85em;
     margin: 30px 0 10px 0;
     font-family: 'Noto Sans'; }
   .info .info-category {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
+    font-size: 1.2em;
     font-weight: 400;
     text-transform: capitalize; }
 
@@ -514,7 +515,7 @@ body > .navbar-collapse {
   background: white;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
   z-index: 4; }
   .card .content {
@@ -526,10 +527,10 @@ body > .navbar-collapse {
     margin: 0;
     font-style: normal;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 1.6em;
     color: #9A9A9A; }
   .card .category {
-    margin: 5px 0 0 0;
+    margin: 0.35em 0 0 0;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -537,12 +538,12 @@ body > .navbar-collapse {
   .card .text-green {
     color: #1cbf9b;
     letter-spacing: -1px;
-    font-size: 17px;
+    font-size: 1.2em;
     font-weight: 600; }
   .card .text-blue {
     color: #4cbaeb;
     font-weight: 600;
-    font-size: 18px; }
+    font-size: 1.3em; }
   .card .card-title {
     margin: 5px 0 0 0;
     color: #333333;
@@ -734,13 +735,13 @@ body > .navbar-collapse {
 .card-user a {
   text-decoration: none; }
 .card-user h4 {
-  font-size: 22px; }
+  font-size: 1.57em; }
 .card-user small {
   margin-left: 0;
   font-size: 75%;
   font-weight: 300; }
 .card-user .description {
-  font-size: 14px; }
+  font-size: 1em; }
 .card-user img {
   width: 100%; }
 
@@ -778,7 +779,7 @@ hr {
   -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
-  width: 300px;
+  max-width: 300px;
   margin: 10px auto; }
   .card-blog:hover {
     box-shadow: 0px 12px 19px -7px rgba(0, 0, 0, 0.3);
@@ -823,7 +824,7 @@ hr {
       font-size: 0.9em; }
 
 .card-profile {
-  width: 250px;
+  max-width: 250px;
   -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
@@ -868,7 +869,7 @@ hr {
   -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
   transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
-  width: 250px;
+  max-width: 250px;
   margin: 10px auto; }
   .card-pricing .card-icon {
     max-width: 120px;
@@ -911,7 +912,7 @@ hr {
   fill: #fba440; }
 
 .ct-label {
-  font-size: 10px;
+  font-size: 0.72em;
   fill: rgba(0, 0, 0, 0.4);
   color: rgba(0, 0, 0, 0.4); }
 
@@ -1010,30 +1011,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin: 30px 0 15px; }
 
 h1, .h1 {
-  font-size: 52px; }
+  font-size: 3.7em; }
 
 h2, .h2 {
-  font-size: 36px; }
+  font-size: 2.57em; }
 
 h3, .h3 {
-  font-size: 28px;
+  font-size: 2em;
   margin: 20px 0 10px; }
 
 h4, .h4 {
-  font-size: 22px;
+  font-size: 1.57em;
   line-height: 30px; }
 
 h5, .h5 {
-  font-size: 16px;
+  font-size: 1.14em;
   margin-bottom: 15px; }
 
 h6, .h6 {
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 600;
   text-transform: uppercase; }
 
 p {
-  font-size: 16px;
+  font-size: 1.14em;
   line-height: 1.5; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
@@ -1081,7 +1082,8 @@ h1 .subtitle {
   background-color: white;
   width: 100%;
   padding: 20px 0;
-  border-top: 1px solid #e7e7e7; }
+  border-top: 1px solid #e7e7e7;
+  bottom: 0; }
   .final-footer ul {
     list-style-type: none;
     display: flex;
@@ -1541,6 +1543,9 @@ h1 .subtitle {
 @media (max-width: 768px) {
   .final-footer nav {
     margin-bottom: 20px; } }
+@media (max-width: 480px) {
+  body {
+    font-size: 10px; } }
 label {
   text-transform: uppercase;
   font-size: 12px;
@@ -1665,7 +1670,7 @@ button.close[data-notify="dismiss"] {
   border-radius: 6px;
   margin: 15px 0; }
   .font-icon-detail i {
-    font-size: 40px; }
+    font-size: 2.85em; }
   .font-icon-detail input {
     margin: 25px auto 0;
     width: 100%;
@@ -1718,9 +1723,9 @@ th {
   cursor: pointer;
   padding: 8px 16px;
   margin-bottom: 5px;
-  border-radius: 0.25rem;
+  border-radius: 0.25em;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.85em;
   border-color: #888888;
   color: #888888; }
   .btn:hover, .btn:focus, .btn:active, .btn.active, .open > .btn.dropdown-toggle {
@@ -2032,7 +2037,7 @@ tr:hover [class*="fa"] {
 .pagination li {
   border: 1px solid #d4d4d4;
   margin: 0 2px;
-  padding: 5px 13px;
+  padding: 0.35em 0.9em;
   border-radius: 50%;
   transition: 0.2s ease; }
   .pagination li a {
@@ -2294,7 +2299,7 @@ input:focus {
   position: absolute;
   top: -198px;
   z-index: 5;
-  width: 61400px;
+  width: 400px;
   height: 198px;
   animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0); }
@@ -2510,10 +2515,10 @@ input:focus {
   .iconsPage .header p {
     font-size: 40px; }
 
-.image {
+.productPage .image {
   height: 100vh;
   position: relative; }
-  .image:after {
+  .productPage .image:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -2530,7 +2535,7 @@ input:focus {
     background: linear-gradient(to bottom, black 0%, white 100%);
     background-size: 150% 150%;
     opacity: 0.6; }
-  .image:before {
+  .productPage .image:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -2586,6 +2591,19 @@ input:focus {
   .downloadPage .final-footer {
     background: #e7f2f7;
     border: none;
-    padding-top: 100px; }
+    padding-top: 100px;
+    bottom: auto; }
+
+@media (max-width: 767px) {
+  .laptopWindow {
+    width: 70%; } }
+@media (max-width: 991px) {
+  .iconsPage i {
+    color: rgba(86, 84, 84, 0.2); }
+
+  .card-simple {
+    margin: 0; }
+    .card-simple:first-child {
+      margin-top: 50px; } }
 
 /*# sourceMappingURL=hd.css.map */

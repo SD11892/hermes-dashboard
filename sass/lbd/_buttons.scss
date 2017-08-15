@@ -7,9 +7,9 @@
     cursor: pointer;
 	padding: $padding-base-vertical $padding-base-horizontal;
     margin-bottom: 5px;
-    border-radius: 0.25rem;
+    border-radius: 0.25em;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.85em;
 	@include btn-styles($default-color, $default-states-color);
 
 	&:hover,

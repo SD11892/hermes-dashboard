@@ -17,7 +17,7 @@
 	background: white;
 	border: none;
 	border-radius: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 80px;
 	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
 	z-index: 4;
 	.content{
@@ -31,11 +31,11 @@
 		margin: 0;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 23px;
+		font-size: 1.6em;
 		color: $grey-text-main-panel;
 	}
 	.category{
-		margin:5px 0 0 0;
+		margin:0.35em 0 0 0;
 		font-weight: 500;
 		font-size: 14px;
 		text-transform: uppercase;
@@ -44,14 +44,14 @@
 	.text-green{
 		color: #1cbf9b;
 		letter-spacing: -1px;
-		font-size: 17px;
+		font-size: 1.2em;
 		font-weight: 600;
 	}
 
 	.text-blue{
 		color: $marine-blue;
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 1.3em;
 	}
 
 	.card-title{
@@ -298,7 +298,7 @@
     	text-decoration: none;
     }
     h4{
-    	font-size: 22px;
+    	font-size: 1.57em;
     }
     small{
     	margin-left: 0;
@@ -306,7 +306,7 @@
     	font-weight: 300;
     }
     .description{
-    	font-size: 14px;
+    	font-size: 1em;
     }
 
     img{
@@ -346,7 +346,7 @@ hr{
 
 .card-blog{
 	@include card-transition;
-	width: 300px;
+	max-width: 300px;
 	margin: 10px auto;
 	&:hover{
 		@include card-hover;
@@ -408,7 +408,7 @@ hr{
 }
 
 .card-profile{
-	width: 250px;
+	max-width: 250px;
 	@include card-transition;
 	margin-top: 70px;
 	margin: 70px auto 10px auto;
@@ -456,7 +456,7 @@ hr{
 
 .card-pricing{
 	@include card-transition;
-	width: 250px;
+	max-width: 250px;
 	margin: 10px auto;
 	.card-icon{
 		max-width: 120px;

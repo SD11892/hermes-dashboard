@@ -4,12 +4,12 @@ var navbar_initialized = false;
 (function(){
 
        // if we are on windows OS we activate the perfectScrollbar function
-       $('.sidebar-wrapper').perfectScrollbar();
+       $(' .sidebar-wrapper').perfectScrollbar();
 
        $('html').addClass('perfect-scrollbar-on');
   	
   		if($('body').hasClass('nav-open')){
-  			$('.collapse .sidebar-wrapper').perfectScrollbar();
+  			$('.collapse').perfectScrollbar();
   		}
 })();
 
