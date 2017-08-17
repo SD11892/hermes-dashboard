@@ -202,6 +202,54 @@ demo = {
       }
     });
 
+      var chart = new Chartist.Line('#chartPresentation', {
+    series: [
+        //[2, 5, 8, 10, 14, 16, 20, 18, 14, 10, 6, 2]
+        [2, 5, 4.5, 6, 5, 7, 6, 7, 5.5, 6, 5, 4, 2]
+      ]
+    }, {
+        lineSmooth: Chartist.Interpolation.simple({
+                divisor: 2
+              }),
+              low: 0,
+              showArea: true,
+              showPoint: true,
+              showLine: true,
+              height: "400px",
+              width: "2000px",
+              axisX: {
+                showGrid: false
+              },
+              axisY: {
+                showGrid: false
+              }
+    });
+      
+
+
+    chart.on('draw', function(data) {
+      if(data.type === 'point') {
+        var circle = new Chartist.Svg('circle', {
+          cx: [data.x], cy:[data.y], r:[6],
+        }, 'ct-circle');
+        data.element.replace(circle);
+      }
+    });
+
+     chart.on('draw', function(data) {
+      if(data.type === 'line' || data.type === 'area') {
+        data.element.animate({
+          d: {
+            begin: 400 * data.index,
+            dur: 1000,
+            from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+            to: data.path.clone().stringify(),
+            easing: Chartist.Svg.Easing.easeOutQuint
+          }
+        });
+      }
+    });
+
     },
     
     initGoogleMaps: function(){

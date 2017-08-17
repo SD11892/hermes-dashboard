@@ -4,7 +4,7 @@ var navbar_initialized = false;
 (function(){
 
        // if we are on windows OS we activate the perfectScrollbar function
-       $(' .sidebar-wrapper').perfectScrollbar();
+       $(' .sidebar-wrapper, .main-panel').perfectScrollbar();
 
        $('html').addClass('perfect-scrollbar-on');
   	
@@ -22,6 +22,9 @@ $(document).ready(function(){
 		hd.initRightMenu();
 	}
 
+	$(document).on('ps-scroll-x', function () {
+  		hermesdashboard.checkScrollForParallax();
+	});
 	var scroll_start = 0;
 	var startchange=$('.wave');
 	var offset = startchange.offset();
@@ -32,6 +35,10 @@ $(document).ready(function(){
 		} else {
 			$(".navbar").css('background-color', 'transparent');
 		}
+	});
+
+	$('a[data-toggle=tab').on('shown.bs.tab', function (e) {
+ 	 window.dispatchEvent(new Event('resize'));   
 	});
 });
 
@@ -140,12 +147,11 @@ hd = {
 }
  
 var big_image;
-var nos;
 hermesdashboard = {
 	checkScrollForParallax: debounce(function(){
-		var curent_scroll = $(this).scrollTop();
-
-		oVal = ($(window).scrollTop() / 3);
+		var curent_scroll = $('.main-panel').scrollTop();
+		console.log(curent_scroll);
+		oVal = ($('.main-panel').scrollTop() / 3);
 		big_image.css({
             'transform':'translate3d(0,' + oVal +'px,0)',
             '-webkit-transform':'translate3d(0,' + oVal +'px,0)',

@@ -142,61 +142,38 @@
 
 .responsivePage{
 	position: relative;
-	height: 1000px;
 	padding: 150px 0;
+	margin-bottom: 100px;
 	@include icon-gradient-50(white, rgba(112, 177, 202, 0.25), white);
+	overflow: hidden;
+	height: 700px;
 	img{
 		position: absolute;
 	}
 	
 	.screenSizes{
 		position: relative;
-		.desktopResponsive{
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			.desktop{
-				width: 80%;
-				left: 20%;
-			}
-			.desktop-ps{
-				width: 74%;
-				height: 70%;
-				left: 23%;
-				top: 5%;
-			}
+		.desktop{
+			width: 500px;
+			left: 190px;
 		}
-		.iphoneResponsive{
-			width: 50%;
-			height: 50%;
-			position: absolute;
-			.iphone{
-				width: 60%;
-				left: 60%;
-				top: 125%;
-				z-index: 3;
-			}
-			.iphone-ps{
-				width: 25%;
-				left: 77.4%;
-				z-index: 3;
-				top: 138%;
-			}
+		
+		.ipad{
+			width: 350px;
+			left: 100px;
+			top: 85px;
 		}
 
-		.ipadResponsive{
-			width: 70%;
-			height: 70%;
-			position: absolute;
-			.ipad{
-				width: 85%;
-				top: 12%;
-			}
-			.ipad-ps{
-				width: 42%;
-				left: 21%;
-				top: 36%;
-			}
+		.iphone{
+			width: 170px;
+			left: 280px;
+			top: 240px;
+		}
+
+		.responsive{
+			width: 900px;
+			margin-top: -50px;
+			margin-left: -50px;
 		}
 	}
 	.header{
@@ -220,10 +197,13 @@
 			font-size: 15px;
 		}
 	}
+
+	
 }
 
 .iconsPage{
 	position: relative;
+	margin-top: 200px;
 	.card-simple{
 		max-width: 500px;
 		margin: auto;
@@ -420,6 +400,18 @@
 	.laptopWindow{
 		width: 70%;
 	}
+
+	.responsivePage{
+		text-align: center;
+		.screenSizes{
+			.responsive{
+				width: 400px;
+				margin-top: -50px;
+				margin-left: -190px;
+			}
+		}
+	}
+
 }
 @media (max-width: 991px){
 	.iconsPage{

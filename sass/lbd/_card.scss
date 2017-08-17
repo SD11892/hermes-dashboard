@@ -4,6 +4,7 @@
 
 .main{
 	padding: 15px 5px;
+	margin-bottom: 60px;
 	&>.container-fluid{
 		margin: 0;
 	}
@@ -17,7 +18,7 @@
 	background: white;
 	border: none;
 	border-radius: 10px;
-	margin-bottom: 80px;
+	margin-bottom: 30px;
 	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
 	z-index: 4;
 	.content{
@@ -52,6 +53,7 @@
 		color: $marine-blue;
 		font-weight: 600;
 		font-size: 1.3em;
+		font-family: 'Noto Sans';
 	}
 
 	.card-title{

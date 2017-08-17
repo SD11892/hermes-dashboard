@@ -61,13 +61,14 @@
 				<h2 class="title">HERMES</h2>
 				<p class="category">Bootstrap 4 Admin Dashboard</p>
 			</div>
+			<div id="chartPresentation"></div>
 			<div class="laptopWindow">
 				<img src="images/Macbook.png">
 				<img src="images/productscreen.jpg" class="productscreen">
 			</div>
 			<div class="waves">
 				<div class="wave">
-					<<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
 					  <defs>
 					    <linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
 					      <stop stop-color="white" stop-opacity=".25" offset="0%"/>
@@ -81,8 +82,8 @@
 					<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
 					  <defs>
 					    <linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
-					      <stop stop-color="blue" stop-opacity=".25" offset="0%"/>
-					      <stop stop-color="blue" offset="100%"/>
+					      <stop stop-color="white" stop-opacity=".25" offset="0%"/>
+					      <stop stop-color="white" offset="100%"/>
 					    </linearGradient>
 					  </defs>
 					  <path fill="url(#a)" fill-rule="evenodd" d="M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z" transform="matrix(-1 0 0 1 1600 0)"/>
@@ -140,23 +141,12 @@
 								<p>Fully Responsive</p>
 							</div>
 							<div class="content">
-								<p>HERMES Dashboard is built on top of Bootstrap 4, so it fully supports it. Most of the elements from the framework are re-designed to resemble sheets of paper and color pastels. If the are elements that we have not touched, they will gracefully fall back to the Bootstrap 4 default.</p>
+								<p>HERMES Dashboard is built mobile-first and looks amazing on any device. Regardless of the screen size, the website content will naturally fit the given resolution. </p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-8 screenSizes">
-						<div class="desktopResponsive">
-							<img src="images/desktop.png" class="desktop">
-							<img src="images/desktop-ps.png" class="desktop-ps">
-						</div>
-						<div class="iphoneResponsive">
-							<img src="images/iphone.png"  class="iphone">
-							<img src="images/iphone-ps.png" class="iphone-ps">
-						</div>
-						<div class="ipadResponsive">
-							<img src="images/ipad.png" class="ipad">
-							<img src="images/ipad-ps.png" class="ipad-ps">
-						</div>
+						<img src="images/responsive.png" class="responsive">
 					</div>
 				</div>
 			</div>
@@ -239,14 +229,16 @@
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chartist.min.js"></script>
+	<script src="js/chartist-plugin-tooltip.js"></script>
 	<script src="js/spec-tooltip.js"></script>
-	<script src="js/demo.js"></script>
 	<script src="js/hd.js"></script>
+	<script src="js/demo.js"></script>
 	<script>
 
 		$(document).ready(function(){
 
-
+			demo.initChartist();
 
 			window_width = $(window).width();
 

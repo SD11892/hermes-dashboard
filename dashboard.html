@@ -195,7 +195,7 @@
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chartPreferences3">THIS WEEK</a></li>
 								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chartPreferences2">THIS MONTH</a></li>
 								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#chartPreferences1">THIS YEAR</a></li>
-								<li class="nav-item"><a class="nav-link"><i class="fa fa-calendar"></i></a></li>
+								<li class="nav-item"><a class="nav-link"><i class="fa fa-calendar" id="datepicker"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -291,16 +291,10 @@
 	
 	<script>
 
+
 		$(document).ready(function(){
 
-		/*$(document).foundation();
-
-		$('.nav-tabs').on('toggled', function(event, tab){
-			tab.find('.ct-chart').each(function(i, e){
-				e.__chartist__.update();
-			});
-		});*/
-
+			
 			demo.initChartist();
 
 			window_width = $(window).width();

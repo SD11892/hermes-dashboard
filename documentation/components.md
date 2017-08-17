@@ -8,7 +8,8 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
 ### Colors
 
 We worked over the original Bootstrap classes, choosing a different, slightly intense color pallete:
-
+  <link rel="stylesheet" type="text/css" href="../css/hd.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <button class="btn btn-default">Default</button>
 ![alt text](img/button_colors.png)
 

@@ -248,6 +248,7 @@ body > .navbar-collapse{
 	width: calc(100% - 230px);
 	float: right;
 	min-height: 100%;
+	height: 100%;
 	background-color: rgba(203, 203, 210, .15);
 	button{
 		cursor: pointer;
@@ -477,5 +478,13 @@ body > .navbar-collapse{
     .perfect-scrollbar-on &,
     &{
         overflow: hidden;
+        height: 100%;
     }
+}
+
+.ps-scrollbar-y-rail{
+	z-index: 1001;
+	.ps-scrollbar-y{
+		height: 100px;
+	}
 }

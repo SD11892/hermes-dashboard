@@ -187,6 +187,7 @@ body > .navbar-collapse {
   width: calc(100% - 230px);
   float: right;
   min-height: 100%;
+  height: 100%;
   background-color: rgba(203, 203, 210, 0.15); }
   .main-panel button {
     cursor: pointer; }
@@ -417,7 +418,13 @@ body > .navbar-collapse {
 .perfect-scrollbar-on .sidebar .sidebar-wrapper, .sidebar .sidebar-wrapper, .perfect-scrollbar-on
 .main-panel,
 .main-panel {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
+
+.ps-scrollbar-y-rail {
+  z-index: 1001; }
+  .ps-scrollbar-y-rail .ps-scrollbar-y {
+    height: 100px; }
 
 .dropdown-menu {
   visibility: hidden;
@@ -503,7 +510,8 @@ body > .navbar-collapse {
   padding: 85px 25px 60px; }
 
 .main {
-  padding: 15px 5px; }
+  padding: 15px 5px;
+  margin-bottom: 60px; }
   .main > .container-fluid {
     margin: 0; }
   .main > h4:first-child {
@@ -515,7 +523,7 @@ body > .navbar-collapse {
   background: white;
   border: none;
   border-radius: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
   z-index: 4; }
   .card .content {
@@ -543,7 +551,8 @@ body > .navbar-collapse {
   .card .text-blue {
     color: #4cbaeb;
     font-weight: 600;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    font-family: 'Noto Sans'; }
   .card .card-title {
     margin: 5px 0 0 0;
     color: #333333;
@@ -890,27 +899,6 @@ hr {
     -ms-transform: translateY(-10px);
     -moz-transform: translateY(-10px); }
 
-.ct-series-a .ct-slice-pie {
-  fill: #1dc7ea; }
-.ct-series-a .ct-area {
-  fill: rgba(29, 199, 234, 0.8); }
-.ct-series-a .ct-bar {
-  stroke: #1DC7EA;
-  stroke-width: 10px; }
-
-.ct-series-b .ct-slice-pie {
-  fill: #FB404B; }
-.ct-series-b .ct-area {
-  fill: #FB404B; }
-.ct-series-b .ct-bar {
-  stroke: #FB404B;
-  stroke-width: 10px; }
-
-.ct-series-c .ct-slice-pie {
-  fill: #fba440; }
-.ct-series-c .ct-area {
-  fill: #fba440; }
-
 .ct-label {
   font-size: 0.72em;
   fill: rgba(0, 0, 0, 0.4);
@@ -929,21 +917,22 @@ hr {
   stroke: rgba(0, 0, 0, 0.2);
   stroke-dasharray: 2px; }
 
-#chartPreferences1 .ct-line, #chartPreferences2 .ct-line, #chartPreferences3 .ct-line {
+#chartPreferences1 .ct-line, #chartPreferences2 .ct-line, #chartPreferences3 .ct-line, #chartPresentation .ct-line {
   fill: none;
   stroke: #0098ff;
   stroke-width: 4px; }
-#chartPreferences1 .ct-circle, #chartPreferences2 .ct-circle, #chartPreferences3 .ct-circle {
+#chartPreferences1 .ct-circle, #chartPreferences2 .ct-circle, #chartPreferences3 .ct-circle, #chartPresentation .ct-circle {
   stroke: white;
   fill: #0084de;
   stroke-width: 3px; }
-#chartPreferences1 .ct-grid, #chartPreferences2 .ct-grid, #chartPreferences3 .ct-grid {
+#chartPreferences1 .ct-grid, #chartPreferences2 .ct-grid, #chartPreferences3 .ct-grid, #chartPresentation .ct-grid {
   stroke: #bbb9b9;
   stroke-dasharray: 0;
   stroke-width: 0.5px; }
-  #chartPreferences1 .ct-grid:nth-child(even), #chartPreferences2 .ct-grid:nth-child(even), #chartPreferences3 .ct-grid:nth-child(even) {
+  #chartPreferences1 .ct-grid:nth-child(even), #chartPreferences2 .ct-grid:nth-child(even), #chartPreferences3 .ct-grid:nth-child(even), #chartPresentation .ct-grid:nth-child(even) {
     display: none; }
-#chartPreferences1 foreignObject:nth-child(14), #chartPreferences1 foreignObject:nth-child(16), #chartPreferences1 foreignObject:nth-child(18), #chartPreferences2 foreignObject:nth-child(14), #chartPreferences2 foreignObject:nth-child(16), #chartPreferences2 foreignObject:nth-child(18), #chartPreferences3 foreignObject:nth-child(14), #chartPreferences3 foreignObject:nth-child(16), #chartPreferences3 foreignObject:nth-child(18) {
+
+#chartPreferences1 foreignObject[y="115"], #chartPreferences1 foreignObject[y="65"], #chartPreferences1 foreignObject[y="15"] {
   display: none; }
 
 #chartHours .ct-line {
@@ -982,6 +971,21 @@ hr {
 #chartActivity foreignObject {
   font-size: 20px; }
   #chartActivity foreignObject:nth-child(even) {
+    display: none; }
+
+#chartPresentation {
+  position: absolute;
+  width: 100%;
+  top: 290px;
+  left: -100px;
+  z-index: 3; }
+  #chartPresentation .ct-area {
+    fill: rgba(0, 0, 255, 0.2); }
+  #chartPresentation .ct-line {
+    stroke: transparent; }
+  #chartPresentation .ct-circle {
+    stroke-width: 2px; }
+  #chartPresentation .ct-labels {
     display: none; }
 
 /*           Font Smoothing      */
@@ -2372,56 +2376,36 @@ input:focus {
 
 .responsivePage {
   position: relative;
-  height: 1000px;
   padding: 150px 0;
+  margin-bottom: 100px;
   background: white;
   background: -moz-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(50%, rgba(112, 177, 202, 0.25)), color-stop(100%, white));
   background: -webkit-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
   background: -o-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
   background: -ms-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
-  background: linear-gradient(to bottom, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%); }
+  background: linear-gradient(to bottom, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
+  overflow: hidden;
+  height: 700px; }
   .responsivePage img {
     position: absolute; }
   .responsivePage .screenSizes {
     position: relative; }
-    .responsivePage .screenSizes .desktopResponsive {
-      width: 100%;
-      height: 100%;
-      position: absolute; }
-      .responsivePage .screenSizes .desktopResponsive .desktop {
-        width: 80%;
-        left: 20%; }
-      .responsivePage .screenSizes .desktopResponsive .desktop-ps {
-        width: 74%;
-        height: 70%;
-        left: 23%;
-        top: 5%; }
-    .responsivePage .screenSizes .iphoneResponsive {
-      width: 50%;
-      height: 50%;
-      position: absolute; }
-      .responsivePage .screenSizes .iphoneResponsive .iphone {
-        width: 60%;
-        left: 60%;
-        top: 125%;
-        z-index: 3; }
-      .responsivePage .screenSizes .iphoneResponsive .iphone-ps {
-        width: 25%;
-        left: 77.4%;
-        z-index: 3;
-        top: 138%; }
-    .responsivePage .screenSizes .ipadResponsive {
-      width: 70%;
-      height: 70%;
-      position: absolute; }
-      .responsivePage .screenSizes .ipadResponsive .ipad {
-        width: 85%;
-        top: 12%; }
-      .responsivePage .screenSizes .ipadResponsive .ipad-ps {
-        width: 42%;
-        left: 21%;
-        top: 36%; }
+    .responsivePage .screenSizes .desktop {
+      width: 500px;
+      left: 190px; }
+    .responsivePage .screenSizes .ipad {
+      width: 350px;
+      left: 100px;
+      top: 85px; }
+    .responsivePage .screenSizes .iphone {
+      width: 170px;
+      left: 280px;
+      top: 240px; }
+    .responsivePage .screenSizes .responsive {
+      width: 900px;
+      margin-top: -50px;
+      margin-left: -50px; }
   .responsivePage .header {
     margin-bottom: 10px; }
     .responsivePage .header i {
@@ -2439,7 +2423,8 @@ input:focus {
       font-size: 15px; }
 
 .iconsPage {
-  position: relative; }
+  position: relative;
+  margin-top: 200px; }
   .iconsPage .card-simple {
     max-width: 500px;
     margin: auto; }
@@ -2596,7 +2581,14 @@ input:focus {
 
 @media (max-width: 767px) {
   .laptopWindow {
-    width: 70%; } }
+    width: 70%; }
+
+  .responsivePage {
+    text-align: center; }
+    .responsivePage .screenSizes .responsive {
+      width: 400px;
+      margin-top: -50px;
+      margin-left: -190px; } }
 @media (max-width: 991px) {
   .iconsPage i {
     color: rgba(86, 84, 84, 0.2); }
