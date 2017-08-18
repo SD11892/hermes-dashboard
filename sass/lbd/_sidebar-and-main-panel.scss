@@ -253,6 +253,10 @@ body > .navbar-collapse{
 	button{
 		cursor: pointer;
 	}
+	.navbar-toggler{
+		position: absolute;
+		right: 20px;
+	}
 }
 
 .page-header{
@@ -329,7 +333,7 @@ body > .navbar-collapse{
 	}
 }
 .navbar{
-	padding: 15px;
+	padding: 15px 30px 15px 15px;
 	width: 100%;
 	z-index: 1000;
 	min-height: 60px;
@@ -383,7 +387,7 @@ body > .navbar-collapse{
 	font-size: 12px;
 	font-weight: 800;
 	top: 5px;
-	right: 26px;
+	right: 15px;
 	border: 1px solid rgba(255,255,255,0.7);
 }
 
@@ -397,7 +401,6 @@ body > .navbar-collapse{
 	}
 }
 .caret{
-	display: inline-block;
 	width: 0;
 	height: 0;
 	vertical-align: middle;
@@ -405,6 +408,9 @@ body > .navbar-collapse{
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent;
 	margin-top: -5px;
+	position: absolute;
+	top: 30px;
+	margin-left: 5px;
 }
 
 

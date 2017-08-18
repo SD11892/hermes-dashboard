@@ -90,8 +90,8 @@
 		</div><!--sidebar-->
 
 		<div class="main-panel">
-			<nav class="navbar navbar-toggleable-md">
-				 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse">
+			<nav class="navbar navbar-expand-md">
+				 <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
 				   	<i class="fa fa-bars"></i>
 				  </button>
 				  <div class="collapse navbar-collapse">
@@ -103,44 +103,46 @@
 				  	</ul><!--navbar left-->
 
 				  	<ul class="navbar-nav ml-auto">
-				  		<li class="dropdown nav-item">
-				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-					  			<div class="notification hidden-md-down"></div>
+
+				  		<li class="nav-item dropdown">
+				  			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+					  			<div class="notification d-none d-lg-block d-xl-block"></div>
 				  				<i class="nc-icon nc-notification-70"></i>
-				  				<b class="caret hidden-md-down"></b>
-					  			<p class="hidden-lg-up">
+				  				<b class="caret d-none d-lg-block d-xl-block"></b>
+
+					  			<p class="d-lg-none">
 									New Notifications
 									<b class="caret"></b>
 								</p>
 				  			</a>
 				  			<ul class="dropdown-menu">
-				  				<li><a href="#">Notification 1</a></li>
-	                            <li><a href="#">Notification 2</a></li>
-	                            <li><a href="#">Notification 3</a></li>
-	                            <li><a href="#">Notification 4</a></li>
-	                            <li><a href="#">Another Notification</a></li>
+				  				<li><a href="#"  class="dropdown-item">Notification 1</a></li>
+	                            <li><a href="#" class="dropdown-item">Notification 2</a></li>
+	                            <li><a href="#" class="dropdown-item">Notification 3</a></li>
+	                            <li><a href="#" class="dropdown-item">Notification 4</a></li>
+	                            <li><a href="#" class="dropdown-item">Another Notification</a></li>
 				  			</ul>
 				  		</li>
 
 				  		<li class="nav-item">
-				  			<a href="#" class="nav-link" data-toggle="dropdown">
+				  			<a href="#" class="nav-link">
 				  				<i class="nc-icon nc-map-big"></i>	
-				  				<p class="hidden-lg-up">Contacts</p>	
+				  				<p class="d-lg-none">Contacts</p>	
 				  			</a>
 				  		</li>
 
 				  		<li class="nav-item">
 				  			<a href="#" class="nav-link">
 				  				<i class="nc-icon nc-bell-55"></i>
-				  				<p class="hidden-lg-up">Messages</p>
+				  				<p class="d-lg-none">Messages</p>
 				  			</a>
 				  		</li>
 
 				  		<li class="dropdown nav-item">
 				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
 		  					<i class="nc-icon nc-circle-08"></i>
-		  					<b class="caret hidden-md-down"></b>
-		  					<p class="hidden-lg-up">
+		  					<b class="caret d-none d-lg-block d-xl-block"></b>
+		  					<p class="d-lg-none">
 									Log out
 									<b class="caret"></b>
 								</p>
@@ -155,8 +157,9 @@
 	                            <li><a href="#">Separated link</a></li>
 				  			</ul>
 				  		</li>
-				  		<li class="separator hidden-lg-up"></li>
+				  		<li class="separator d-lg-none"></li>
 				  	</ul><!--navbar right-->
+				  	
 				  </div>  
 				</nav>
 			<div class="page-header" data-color="orange" data-image="images/freedom.jpg">
@@ -282,7 +285,7 @@
 
 
 	</div><!--wrapper-->
-  
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

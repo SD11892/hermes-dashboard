@@ -150,7 +150,6 @@ var big_image;
 hermesdashboard = {
 	checkScrollForParallax: debounce(function(){
 		var curent_scroll = $('.main-panel').scrollTop();
-		console.log(curent_scroll);
 		oVal = ($('.main-panel').scrollTop() / 3);
 		big_image.css({
             'transform':'translate3d(0,' + oVal +'px,0)',

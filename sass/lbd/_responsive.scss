@@ -27,11 +27,22 @@
         line-height: normal;
         margin: 0;
     }
+
+    .main-panel{
+        .caret{
+            position: absolute;
+            left: 80%;
+            top: 45%;
+            margin-left: 0;
+        }
+    }
 }
 
 /*          Changes for small display      */
 
 @media (max-width: 991px){
+
+
     .sidebar{
         display: none;
     }
@@ -245,7 +256,7 @@
         float:none;
     }
     .navbar-nav .show .dropdown-menu {
-        position: static;
+        position: static !important;
         float: none;
         width: auto;
         margin-top: 0;
