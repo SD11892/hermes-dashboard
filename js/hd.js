@@ -31,7 +31,7 @@ $(document).ready(function(){
 	$(document).scroll(function(){
 		scroll_start = $(this).scrollTop();
 		if(scroll_start > offset.top){
-			$(".navbar").css('background-color', '#6b6fe4');
+			$(".navbar").css('background-color', 'black');
 		} else {
 			$(".navbar").css('background-color', 'transparent');
 		}

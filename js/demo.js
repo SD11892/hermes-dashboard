@@ -277,7 +277,7 @@ demo = {
     	
     	$.notify({
         	icon: "nc-icon nc-bell-55",
-        	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+        	message: "Welcome to <b>Hermes Dashboard</b> - a beautiful freebie for every web developer."
         	
         },{
             type: type[color],

@@ -2317,31 +2317,12 @@ input:focus {
   z-index: 5;
   width: 400px;
   height: 198px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0); }
 
 .wave:nth-of-type(2) {
   top: -175px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 1; }
 
-/*@keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -1600px;
-  }
-}
-
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-25px,0);
-  }
-  50% {
-    transform: translate3d(0,5px,0);
-  }
-}*/
 .mainTitle {
   z-index: 10;
   position: absolute;
@@ -2381,58 +2362,155 @@ input:focus {
     margin: 0;
     font-weight: 600; }
   .card-simple .header p {
-    font-size: 22px; }
+    font-size: 2.3em; }
   .card-simple .content {
     color: #9A9A9A;
     padding-top: 0; }
 
-.responsivePage {
+.notificationsPage .image-container {
   position: relative;
+  height: 600px; }
+  .notificationsPage .image-container img {
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2); }
+  .notificationsPage .image-container .ipad-screen {
+    width: 100%;
+    right: 15%;
+    box-shadow: none; }
+  .notificationsPage .image-container .danger-notification {
+    width: 40%;
+    animation: first-animation 15s ease-in-out infinite; }
+@keyframes first-animation {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  50% {
+    transform: translate3d(15%, 0, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+  .notificationsPage .image-container .warning-notification {
+    left: 10%;
+    width: 50%;
+    animation: second-animation 20s ease-in-out infinite; }
+@keyframes second-animation {
+  0% {
+    transform: translate3d(-10%, 0, 0); }
+  50% {
+    transform: translate3d(10%, 0, 0); }
+  100% {
+    transform: translate3d(-10%, 0, 0); } }
+  .notificationsPage .image-container .info-icon-notification {
+    width: 45%;
+    left: 35%;
+    animation: third-animation 15s ease-in-out infinite; }
+@keyframes third-animation {
+  0% {
+    transform: translate3d(20%, 0, 0); }
+  50% {
+    transform: translate3d(8%, 0, 0); }
+  100% {
+    transform: translate3d(20%, 0, 0); } }
+  .notificationsPage .image-container .success-icon-notification {
+    width: 50%;
+    animation: forth-animation 10s ease-in-out infinite; }
+@keyframes forth-animation {
+  0% {
+    transform: translate3d(50%, 0, 0); }
+  50% {
+    transform: translate3d(35%, 0, 0); }
+  100% {
+    transform: translate3d(50%, 0, 0); } }
+  .notificationsPage .image-container .info-icon-small-notification {
+    width: 50%;
+    animation: fifth-animation 30s ease-in-out infinite; }
+@keyframes fifth-animation {
+  0% {
+    transform: translate3d(40%, 0, 0); }
+  50% {
+    transform: translate3d(25%, 0, 0); }
+  100% {
+    transform: translate3d(40%, 0, 0); } }
+  .notificationsPage .image-container .warning-simple {
+    width: 40%;
+    animation: sixth-animation 20s ease-in-out infinite; }
+@keyframes sixth-animation {
+  0% {
+    transform: translate3d(15%, 0, 0); }
+  50% {
+    transform: translate3d(30%, 0, 0); }
+  100% {
+    transform: translate3d(15%, 0, 0); } }
+  .notificationsPage .image-container:after {
+    content: '';
+    position: absolute; }
+.notificationsPage span {
+  color: #FF9500; }
+.notificationsPage .content {
+  padding-left: 15px; }
+
+.tablesPage {
+  background: #f0c601;
+  background: -webkit-radial-gradient(#f0c601, #ff9500);
+  background: -o-radial-gradient(#f0c601, #ff9500);
+  background: -moz-radial-gradient(#f0c601, #ff9500);
+  background: radial-gradient(#f0c601, #ff9500);
+  margin-top: -150px;
   padding: 150px 0;
   margin-bottom: 100px;
-  background: white;
-  background: -moz-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(50%, rgba(112, 177, 202, 0.25)), color-stop(100%, white));
-  background: -webkit-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
-  background: -o-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
-  background: -ms-linear-gradient(top, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
-  background: linear-gradient(to bottom, white 0%, rgba(112, 177, 202, 0.25) 50%, white 100%);
   overflow: hidden;
-  height: 700px; }
-  .responsivePage img {
+  height: 800px; }
+  .tablesPage img {
     position: absolute; }
-  .responsivePage .screenSizes {
-    position: relative; }
-    .responsivePage .screenSizes .desktop {
-      width: 500px;
-      left: 190px; }
-    .responsivePage .screenSizes .ipad {
-      width: 350px;
-      left: 100px;
-      top: 85px; }
-    .responsivePage .screenSizes .iphone {
-      width: 170px;
-      left: 280px;
-      top: 240px; }
-    .responsivePage .screenSizes .responsive {
-      width: 900px;
-      margin-top: -50px;
-      margin-left: -50px; }
-  .responsivePage .header {
+  .tablesPage .header {
     margin-bottom: 10px; }
-    .responsivePage .header i {
+    .tablesPage .header i {
       width: 50px;
       font-size: 30px;
       color: white !important; }
-    .responsivePage .header p {
+    .tablesPage .header p {
       color: black;
       margin-top: 5px;
       font-size: 24px; }
-  .responsivePage .content {
+  .tablesPage .content {
     padding-left: 15px;
     color: rgba(0, 0, 0, 0.7); }
-    .responsivePage .content p {
-      font-size: 15px; }
+    .tablesPage .content p {
+      font-size: 1.3em; }
+  .tablesPage .image-container {
+    height: 600px;
+    position: relative;
+    margin-top: -60px; }
+  .tablesPage .table-desktop {
+    width: 90%;
+    left: 20%; }
+  .tablesPage .simple-table, .tablesPage .plain-table {
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 6px rgba(0, 0, 0, 0.5); }
+  .tablesPage .simple-table {
+    top: 310px;
+    left: 115px;
+    animation: up-down-1 20s ease-in-out infinite; }
+@keyframes up-down-1 {
+  0% {
+    transform: translate3d(0, 0%, 0); }
+  50% {
+    transform: translate3d(0, 15%, 0); }
+  100% {
+    transform: translate3d(0, 0%, 0); } }
+  .tablesPage .plain-table {
+    left: 370px;
+    top: 160px;
+    animation: up-down-2 25s ease-in-out infinite; }
+@keyframes up-down-2 {
+  0% {
+    transform: translate3d(0, 0%, 0); }
+  50% {
+    transform: translate3d(0, -15%, 0); }
+  100% {
+    transform: translate3d(0, 0%, 0); } }
+  .tablesPage span {
+    color: white; }
 
 .iconsPage {
   position: relative;
@@ -2591,16 +2669,32 @@ input:focus {
     padding-top: 100px;
     bottom: auto; }
 
-@media (max-width: 767px) {
-  .laptopWindow {
-    width: 70%; }
-
-  .responsivePage {
-    text-align: center; }
-    .responsivePage .screenSizes .responsive {
-      width: 400px;
-      margin-top: -50px;
-      margin-left: -190px; } }
+@media (min-width: 1200px) {
+  .notificationsPage .success-icon-notification {
+    top: 470px; }
+  .notificationsPage .info-icon-notification {
+    top: 350px; }
+  .notificationsPage .info-icon-small-notification {
+    top: 240px; }
+  .notificationsPage .warning-notification {
+    top: 100px; }
+  .notificationsPage .danger-notification {
+    top: 190px; }
+  .notificationsPage .warning-simple {
+    top: 300px; } }
+@media (max-width: 1200px) {
+  .notificationsPage .success-icon-notification {
+    top: 408px; }
+  .notificationsPage .info-icon-notification {
+    top: 335px; }
+  .notificationsPage .info-icon-small-notification {
+    top: 240px; }
+  .notificationsPage .warning-notification {
+    top: 83px; }
+  .notificationsPage .danger-notification {
+    top: 180px; }
+  .notificationsPage .warning-simple {
+    top: 300px; } }
 @media (max-width: 991px) {
   .iconsPage i {
     color: rgba(86, 84, 84, 0.2); }
@@ -2608,6 +2702,57 @@ input:focus {
   .card-simple {
     margin: 0; }
     .card-simple:first-child {
-      margin-top: 50px; } }
+      margin-top: 50px; }
+
+  .tablesPage {
+    margin: 10px 0;
+    height: 600px; }
+    .tablesPage .simple-table {
+      top: 175px;
+      left: 50px; }
+    .tablesPage .plain-table {
+      left: 260px;
+      top: 110px; }
+    .tablesPage .card-simple {
+      margin-top: 0; } }
+@media (max-width: 991px) and (min-width: 768px) {
+  .notificationsPage .danger-notification {
+    top: 265px; }
+  .notificationsPage .success-icon-notification {
+    top: 190px; }
+  .notificationsPage .info-icon-notification {
+    top: 120px; } }
+@media (max-width: 767px) {
+  .laptopWindow {
+    width: 70%; }
+
+  .tablesPage {
+    text-align: center;
+    margin-top: 0; }
+    .tablesPage .screenSizes .responsive {
+      width: 400px;
+      margin-top: -50px;
+      margin-left: -190px; }
+
+  .notificationsPage .ipad-screen {
+    right: 0 !important; }
+  .notificationsPage .card-simple {
+    text-align: center;
+    margin-top: -50px; } }
+@media (max-width: 576px) {
+  .ipad-screen {
+    min-width: 500px; }
+
+  .tablesPages .plain-table {
+    left: 200px; } }
+.card-simple {
+  margin-top: 150px; }
+  .card-simple .header p {
+    margin-bottom: 0;
+    line-height: 1.2; }
+  .card-simple .header span {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 900; }
 
 /*# sourceMappingURL=hd.css.map */

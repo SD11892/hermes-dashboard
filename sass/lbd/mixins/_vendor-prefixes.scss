@@ -19,6 +19,14 @@
     background: linear-gradient(to bottom,  $top-color 0%,$middle-color 50%,$bottom-color 100%);
     
 }
+
+@mixin radial-gradient($center-color, $margin-color){
+  background: $center-color; 
+  background: -webkit-radial-gradient($center-color, $margin-color); 
+  background: -o-radial-gradient($center-color, $margin-color); 
+  background: -moz-radial-gradient($center-color, $margin-color); 
+  background: radial-gradient($center-color, $margin-color); 
+}
 @mixin box-shadow($shadow...)
 {
 	-webkit-box-shadow: $shadow;
