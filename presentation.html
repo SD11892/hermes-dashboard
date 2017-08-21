@@ -13,40 +13,53 @@
 </head>
 <body>
 	<div class="hermes-wrapper">
+		<div class="sidebar d-lg-none">
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="#">
+					Hermes
+					</a>
+				</div>
+				<ul class="nav">
+				</ul>
+			</div>
+		</div>
 			<nav class="navbar navbar-expand-md">
-				 <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
-				   	<i class="fa fa-bars"></i>
-				  </button>
-				  <div class="collapse navbar-collapse" id="navbar">
-				  	<ul class="nav navbar-nav navbar-left">
-				  		<li class="nav-item">
-				  			<a href="dashboard.html" class="hermes-title nav-link">hermes</a>
-				  		</li>
-				  	</ul><!--navbar left-->
+				<div class="container">
+					 <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
+					   	<i class="fa fa-bars"></i>
+					  </button>
+					  <div class="collapse navbar-collapse">
+					  	<ul class="nav navbar-nav navbar-left">
+					  		<li class="nav-item">
+					  			<a href="dashboard.html" class="hermes-title nav-link d-none d-lg-block">hermes</a>
+					  		</li>
+					  	</ul><!--navbar left-->
 
-				  	<ul class="navbar-nav ml-auto social-icons">
-				  		<li class="nav-item">
-				  			<a href="#" class="nav-link" >
-				  				<i class="fa fa-facebook-square"></i>
-				  			</a>
-				  		</li>
+					  	<ul class="navbar-nav ml-auto social-icons">
+					  		<li class="nav-item">
+					  			<a href="#" class="nav-link" >
+					  				<i class="fa fa-facebook-square"></i>
+					  				<p class="d-lg-none facebook-logo">facebook</p>
+					  			</a>
+					  		</li>
 
-				  		<li class="nav-item">
-				  			<a href="#" class="nav-link">
-				  				<i class="fa fa-twitter"></i>
-				  			</a>
-				  		</li>
+					  		<li class="nav-item">
+					  			<a href="#" class="nav-link">
+					  				<i class="fa fa-twitter"></i>
+					  				<p class="d-lg-none twitter-logo">twitter</p>
+					  			</a>
+					  		</li>
 
-				  		<li class="nav-item">
-				  			<a href="#" class="nav-link" >
-				  				<i class="fa fa-dribbble"></i>
-				  			</a>
-				  		</li>
-
-				  	
-				  		<li class="separator hidden-lg-up"></li>
-				  	</ul><!--navbar right-->
-				  </div>  
+					  		<li class="nav-item">
+					  			<a href="#" class="nav-link" >
+					  				<i class="fa fa-dribbble"></i>
+					  				<p class="d-lg-none dribbble-logo">dribbble</p>
+					  			</a>
+					  		</li>
+					  	</ul><!--navbar right-->
+					  </div>  
+					 </div>
 				</nav>
 		<section class="productPage">
 			<div class="image" style="background-image: url('images/example.jpg')"></div>
@@ -161,6 +174,7 @@
 			</div>
 		</section>
 		<section class="tablesPage">
+			<div class="white-geometric d-none d-lg-block"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
@@ -185,6 +199,50 @@
 			</div>
 		</section>
 		<section class="gradientPage">
+			<div class="orange-geometric"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="image-container">
+							<img src="images/orange-ps.png" class="orange-ps">
+							<img src="images/green-ps.png" class="green-ps">
+							<img src="images/red-ps.png" class="red-ps">
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="card-simple">
+							<div class="header">
+								<p>Beautiful Gradients</p>
+								<span>Awesome tables to get out of ordinary</span>
+							</div>
+							<div class="content">
+								<p>HERMES Dashboard is built mobile-first and looks amazing on any device. Regardless of the screen size, the website content will naturally fit the given resolution. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="responsivePage">
+			<div class="orange-geometric"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="card-simple">
+							<div class="header">
+								<p>Fully Responsive</p>
+								<span>Awesome tables to get out of ordinary</span>
+							</div>
+							<div class="content">
+								<p>HERMES Dashboard is built mobile-first and looks amazing on any device. Regardless of the screen size, the website content will naturally fit the given resolution. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="images/iphone6-vertical.png">
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="iconsPage text-center">
 			<div class="card-simple">
@@ -258,11 +316,13 @@
 			<p>
 		  </div>
 	   </footer><!--footer-->
-		</section>
+	</section>
 		
 </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.sharrre.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chartist.min.js"></script>
 	<script src="js/chartist-plugin-tooltip.js"></script>

@@ -4,6 +4,11 @@
 		position: fixed;
 	}
 
+	.navbar-toggler{
+		position: absolute;
+		right: 20px;
+	}
+
 }
 
 .hermes-title{
@@ -110,13 +115,14 @@
 			font-weight: 600;
 		}
 		p{
-			font-size: 2.3em;
+			font-size: 1.7em;
 		}
 	}
 
 	.content{
 		color: $grey-text-main-panel;
 		padding-top: 0;
+		padding-left: 15px;
 	}
 }
 
@@ -126,6 +132,7 @@
 		height: 600px;
 		img{
 			position: absolute;
+			z-index: 2;
 			border-radius: 4px;
 			box-shadow: 0px 0px 6px 0 rgba(0,0,0,0.2);
 		}
@@ -256,10 +263,6 @@
 	span{
 		color: $warning-color;
 	}
-
-	.content{
-		padding-left: 15px;
-	}
 }
 
 .tablesPage{
@@ -272,23 +275,25 @@
 	img{
 		position: absolute;
 	}
+
+	.white-geometric{
+			position: absolute;
+			width: 600px;
+			height: 510px;
+			left: 200px;
+			top: 2410px;
+			border: 5px solid rgba(255, 255, 255, 0.2);
+			transform: rotate(-39deg);
+		}
 	
 	.header{
-		margin-bottom: 10px;
-		i{
-			width: 50px;
-			font-size: 30px;
-			color: white !important;
-		}
 		p{
 			color: black;
 			margin-top: 5px;
-			font-size: 24px;
 		}
 	}
 
 	.content{
-		padding-left: 15px;
 		color: rgba(black, 0.7);
 		p{
 			font-size: 1.3em;
@@ -296,7 +301,6 @@
 	}
 
 	.image-container{
-		height: 600px;
 		position: relative;
 		margin-top: -60px;
 
@@ -357,6 +361,68 @@
 	
 }
 
+.gradientPage{
+	.image-container{
+		position: relative;
+		img{
+			position: absolute;
+			border-radius: 5px;
+			box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
+		}
+	}
+	.card-simple{
+		margin-top: 0;
+
+		&:after{
+			content: '';
+			position: absolute;
+			height: 400px;
+			width: 400px;
+			border: 5px solid rgba($warning-color, 0.3);
+			top: 0;
+			right: 330px;
+			transform: rotate(45deg);
+		}
+	}
+
+	.orange-ps{
+		z-index: 1;
+	}
+
+	.green-ps{
+		z-index: 2;
+	}
+	.red-ps{
+		z-index: 3;
+	}
+
+	span{
+		color: $warning-color;
+	}
+}
+
+.responsivePage{
+	margin-top: 100px;
+	span{
+		color: $primary-color;
+	}
+	img{
+		width: 100%;
+	}
+	.card-simple{
+		&:after{
+			content: '';
+			position: absolute;
+			height: 400px;
+			width: 400px;
+			border: 5px solid rgba($primary-color, 0.1);
+			top: 0;
+			left: -300px;
+			transform: rotate(65deg);
+		}
+	}
+
+}
 .iconsPage{
 	position: relative;
 	margin-top: 200px;
@@ -580,6 +646,26 @@
 		}
 	}
 
+	.gradientPage{
+		.image-container{
+			height: 450px;
+		}
+		.orange-ps{
+			top: -30%;
+			left: 100px;
+		}
+
+		.green-ps{
+			left: -35px;
+			top: -3%;
+		}
+
+		.red-ps{
+			left: 200px;
+			top: 10%;
+		}
+	}
+
 }
 @media (max-width: 1200px){
 	.notificationsPage{
@@ -610,6 +696,27 @@
 
 	}
 
+	.gradientPage{
+		img{
+			width: 70%;
+		}
+
+		.orange-ps{
+			top: -70px;
+			left: 100px;
+		}
+
+		.green-ps{
+			left: -35px;
+			top: -3%;
+		}
+
+		.red-ps{
+			left: 150px;
+			top: 60px;
+		}
+	}
+
 
 }
 
@@ -625,7 +732,11 @@
 			margin-top: 50px;
 		}
 	}
-
+	.notificationsPage{
+		.image-container{
+			height: 450px;
+		}
+	}
 	.tablesPage{
 		margin: 10px 0;
 		height: 600px;
@@ -643,6 +754,58 @@
 			margin-top: 0;
 		}
 	}
+
+	.gradientPage{
+		img{
+			width: 50%;
+		}
+		.image-container{
+			height: 400px;
+		}
+		.orange-ps{
+			top: 10%;
+			left: 22%;
+		}
+
+		.green-ps{
+			left: -35px;
+			top: 30%;
+		}
+
+		.red-ps{
+			left: 345px;
+			top: 20%;
+		}
+		.card-simple{
+			text-align: center;
+		}
+	}
+
+	.card-simple{
+		.content{
+			p{
+				font-size: 1em;
+			}
+		}
+	}
+
+	.facebook-logo, .twitter-logo, .dribbble-logo{
+		text-transform: uppercase;
+		font-weight: 600 !important;
+	}
+
+	.fa-twitter{
+		color: $info-color  !important;
+	}
+
+	.fa-facebook-square{
+		color: #2d1abb !important;
+	}
+
+	.fa-dribbble{
+		color: pink !important;
+	}
+
 }
 
 @media (max-width: 991px) and (min-width: 768px){
@@ -683,10 +846,32 @@
 
 		.card-simple{
 			text-align: center;
-			margin-top: -50px;
+			margin-top: 250px;
 		}
 	}
 
+	.image-container{
+		height: 250px !important;
+	}
+	.gradientPage{
+		.red-ps{
+			left: 250px;
+		}
+	}
+
+	.responsivePage{
+		.card-simple{
+			text-align: center;
+		}
+	}
+
+	.card-simple{
+		.content{
+			p{
+				font-size: 1em;
+			}
+		}
+	}
 }
 
 @media (max-width: 576px)
@@ -699,20 +884,37 @@
 			left: 200px;
 		}
 	}
-}
-.card-simple{
-		margin-top: 150px;
 
-		.header{
-			p{
-				margin-bottom: 0;
-				line-height: 1.2;
-			}
-			span{
-				font-size: 0.9em;
-				text-transform: uppercase;
-				font-weight: 900;
-			}
+	.gradientPage{
+		.image-container{
+		height: 150px;
+		margin-top: 50px;
+		}
+
+		.red-ps{
+			left: 215px;
+		}
+
+		img{
+			width: 40%;
 		}
 	}
+
+
+}
+.card-simple{
+	margin-top: 150px;
+
+	.header{
+		p{
+			margin-bottom: 0;
+			line-height: 1.2;
+		}
+		span{
+			font-size: 0.9em;
+			text-transform: uppercase;
+			font-weight: 900;
+		}
+	}
+}
 

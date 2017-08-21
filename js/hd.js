@@ -71,14 +71,12 @@ hd = {
 			$navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
 			$sidebar = $('.sidebar');
-			sidebar_color = $sidebar;//.data('color');
 
 			$logo = $sidebar.find('.logo').first();
 			logo_content = $logo[0].outerHTML;
 
 			ul_content = '';
 
-			//$navbar.attr('data-color',sidebar_color);
 
 			//add the content from the regular header to the right
 			$navbar.children('ul').each(function(){
@@ -102,14 +100,6 @@ hd = {
 			$navbar.html(navbar_content);
 
 			$('body').append($navbar);
-
-			/*background_image = $sidebar.data('image');
-			 if(background_image != undefined){
-                $navbar.css('background',"url('" + background_image + "')")
-                       .removeAttr('data-nav-image')
-                       .addClass('has-image');
-            }*/
-
 
             $toggle = $('.navbar-toggler');
 

@@ -983,7 +983,7 @@ hr {
 #chartPresentation {
   position: absolute;
   width: 100%;
-  top: 290px;
+  bottom: 0;
   left: -100px;
   z-index: 3; }
   #chartPresentation .ct-area {
@@ -2272,6 +2272,9 @@ input:focus {
   background: white; }
   .hermes-wrapper .navbar {
     position: fixed; }
+  .hermes-wrapper .navbar-toggler {
+    position: absolute;
+    right: 20px; }
 
 .hermes-title {
   color: white !important;
@@ -2362,16 +2365,18 @@ input:focus {
     margin: 0;
     font-weight: 600; }
   .card-simple .header p {
-    font-size: 2.3em; }
+    font-size: 1.7em; }
   .card-simple .content {
     color: #9A9A9A;
-    padding-top: 0; }
+    padding-top: 0;
+    padding-left: 15px; }
 
 .notificationsPage .image-container {
   position: relative;
   height: 600px; }
   .notificationsPage .image-container img {
     position: absolute;
+    z-index: 2;
     border-radius: 4px;
     box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2); }
   .notificationsPage .image-container .ipad-screen {
@@ -2445,8 +2450,6 @@ input:focus {
     position: absolute; }
 .notificationsPage span {
   color: #FF9500; }
-.notificationsPage .content {
-  padding-left: 15px; }
 
 .tablesPage {
   background: #f0c601;
@@ -2461,23 +2464,22 @@ input:focus {
   height: 800px; }
   .tablesPage img {
     position: absolute; }
-  .tablesPage .header {
-    margin-bottom: 10px; }
-    .tablesPage .header i {
-      width: 50px;
-      font-size: 30px;
-      color: white !important; }
-    .tablesPage .header p {
-      color: black;
-      margin-top: 5px;
-      font-size: 24px; }
+  .tablesPage .white-geometric {
+    position: absolute;
+    width: 600px;
+    height: 510px;
+    left: 200px;
+    top: 2410px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    transform: rotate(-39deg); }
+  .tablesPage .header p {
+    color: black;
+    margin-top: 5px; }
   .tablesPage .content {
-    padding-left: 15px;
     color: rgba(0, 0, 0, 0.7); }
     .tablesPage .content p {
       font-size: 1.3em; }
   .tablesPage .image-container {
-    height: 600px;
     position: relative;
     margin-top: -60px; }
   .tablesPage .table-desktop {
@@ -2511,6 +2513,48 @@ input:focus {
     transform: translate3d(0, 0%, 0); } }
   .tablesPage span {
     color: white; }
+
+.gradientPage .image-container {
+  position: relative; }
+  .gradientPage .image-container img {
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.2); }
+.gradientPage .card-simple {
+  margin-top: 0; }
+  .gradientPage .card-simple:after {
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border: 5px solid rgba(255, 149, 0, 0.3);
+    top: 0;
+    right: 330px;
+    transform: rotate(45deg); }
+.gradientPage .orange-ps {
+  z-index: 1; }
+.gradientPage .green-ps {
+  z-index: 2; }
+.gradientPage .red-ps {
+  z-index: 3; }
+.gradientPage span {
+  color: #FF9500; }
+
+.responsivePage {
+  margin-top: 100px; }
+  .responsivePage span {
+    color: #6b6fe4; }
+  .responsivePage img {
+    width: 100%; }
+  .responsivePage .card-simple:after {
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border: 5px solid rgba(107, 111, 228, 0.1);
+    top: 0;
+    left: -300px;
+    transform: rotate(65deg); }
 
 .iconsPage {
   position: relative;
@@ -2681,7 +2725,19 @@ input:focus {
   .notificationsPage .danger-notification {
     top: 190px; }
   .notificationsPage .warning-simple {
-    top: 300px; } }
+    top: 300px; }
+
+  .gradientPage .image-container {
+    height: 450px; }
+  .gradientPage .orange-ps {
+    top: -30%;
+    left: 100px; }
+  .gradientPage .green-ps {
+    left: -35px;
+    top: -3%; }
+  .gradientPage .red-ps {
+    left: 200px;
+    top: 10%; } }
 @media (max-width: 1200px) {
   .notificationsPage .success-icon-notification {
     top: 408px; }
@@ -2694,7 +2750,19 @@ input:focus {
   .notificationsPage .danger-notification {
     top: 180px; }
   .notificationsPage .warning-simple {
-    top: 300px; } }
+    top: 300px; }
+
+  .gradientPage img {
+    width: 70%; }
+  .gradientPage .orange-ps {
+    top: -70px;
+    left: 100px; }
+  .gradientPage .green-ps {
+    left: -35px;
+    top: -3%; }
+  .gradientPage .red-ps {
+    left: 150px;
+    top: 60px; } }
 @media (max-width: 991px) {
   .iconsPage i {
     color: rgba(86, 84, 84, 0.2); }
@@ -2703,6 +2771,9 @@ input:focus {
     margin: 0; }
     .card-simple:first-child {
       margin-top: 50px; }
+
+  .notificationsPage .image-container {
+    height: 450px; }
 
   .tablesPage {
     margin: 10px 0;
@@ -2714,7 +2785,39 @@ input:focus {
       left: 260px;
       top: 110px; }
     .tablesPage .card-simple {
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  .gradientPage img {
+    width: 50%; }
+  .gradientPage .image-container {
+    height: 400px; }
+  .gradientPage .orange-ps {
+    top: 10%;
+    left: 22%; }
+  .gradientPage .green-ps {
+    left: -35px;
+    top: 30%; }
+  .gradientPage .red-ps {
+    left: 345px;
+    top: 20%; }
+  .gradientPage .card-simple {
+    text-align: center; }
+
+  .card-simple .content p {
+    font-size: 1em; }
+
+  .facebook-logo, .twitter-logo, .dribbble-logo {
+    text-transform: uppercase;
+    font-weight: 600 !important; }
+
+  .fa-twitter {
+    color: #1dc7ea !important; }
+
+  .fa-facebook-square {
+    color: #2d1abb !important; }
+
+  .fa-dribbble {
+    color: pink !important; } }
 @media (max-width: 991px) and (min-width: 768px) {
   .notificationsPage .danger-notification {
     top: 265px; }
@@ -2738,13 +2841,33 @@ input:focus {
     right: 0 !important; }
   .notificationsPage .card-simple {
     text-align: center;
-    margin-top: -50px; } }
+    margin-top: 250px; }
+
+  .image-container {
+    height: 250px !important; }
+
+  .gradientPage .red-ps {
+    left: 250px; }
+
+  .responsivePage .card-simple {
+    text-align: center; }
+
+  .card-simple .content p {
+    font-size: 1em; } }
 @media (max-width: 576px) {
   .ipad-screen {
     min-width: 500px; }
 
   .tablesPages .plain-table {
-    left: 200px; } }
+    left: 200px; }
+
+  .gradientPage .image-container {
+    height: 150px;
+    margin-top: 50px; }
+  .gradientPage .red-ps {
+    left: 215px; }
+  .gradientPage img {
+    width: 40%; } }
 .card-simple {
   margin-top: 150px; }
   .card-simple .header p {
