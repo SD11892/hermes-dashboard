@@ -2529,7 +2529,7 @@ input:focus {
     width: 400px;
     border: 5px solid rgba(255, 149, 0, 0.3);
     top: 0;
-    right: 330px;
+    right: 395px;
     transform: rotate(45deg); }
 .gradientPage .orange-ps {
   z-index: 1; }
@@ -2713,6 +2713,10 @@ input:focus {
     padding-top: 100px;
     bottom: auto; }
 
+.githubPage .github-logo i {
+  width: 100%;
+  color: rgba(193, 193, 193, 0.3); }
+
 @media (min-width: 1200px) {
   .notificationsPage .success-icon-notification {
     top: 470px; }
@@ -2734,10 +2738,10 @@ input:focus {
     left: 100px; }
   .gradientPage .green-ps {
     left: -35px;
-    top: -3%; }
+    top: 6%; }
   .gradientPage .red-ps {
     left: 200px;
-    top: 10%; } }
+    top: 25%; } }
 @media (max-width: 1200px) {
   .notificationsPage .success-icon-notification {
     top: 408px; }
@@ -2759,10 +2763,15 @@ input:focus {
     left: 100px; }
   .gradientPage .green-ps {
     left: -35px;
-    top: -3%; }
+    top: 80px; }
   .gradientPage .red-ps {
     left: 150px;
-    top: 60px; } }
+    top: 170px; } }
+@media (min-width: 991px) {
+  .github-logo {
+    margin-left: -350px; }
+    .github-logo i {
+      font-size: 600px; } }
 @media (max-width: 991px) {
   .iconsPage i {
     color: rgba(86, 84, 84, 0.2); }
@@ -2796,7 +2805,7 @@ input:focus {
     left: 22%; }
   .gradientPage .green-ps {
     left: -35px;
-    top: 30%; }
+    top: 40%; }
   .gradientPage .red-ps {
     left: 345px;
     top: 20%; }
@@ -2817,7 +2826,14 @@ input:focus {
     color: #2d1abb !important; }
 
   .fa-dribbble {
-    color: pink !important; } }
+    color: pink !important; }
+
+  .githubPage .card-simple {
+    text-align: center; }
+  .githubPage .github-logo {
+    text-align: center; }
+    .githubPage .github-logo i {
+      font-size: 250px !important; } }
 @media (max-width: 991px) and (min-width: 768px) {
   .notificationsPage .danger-notification {
     top: 265px; }

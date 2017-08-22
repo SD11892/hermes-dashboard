@@ -1,6 +1,7 @@
 
 var navbar_initialized = false;
 
+var seq = 0, delays = 80, durations = 500;
 (function(){
 
        // if we are on windows OS we activate the perfectScrollbar function
@@ -24,6 +25,7 @@ $(document).ready(function(){
 
 	$(document).on('ps-scroll-x', function () {
   		hermesdashboard.checkScrollForParallax();
+  		presentationPage.checkScrollForParallax();
 	});
 	var scroll_start = 0;
 	var startchange=$('.wave');
@@ -133,7 +135,49 @@ hd = {
             });
          	navbar_initialized = true;
 		}
-	}
+	},
+
+	startAnimationForLineChart: function(chart){
+        chart.on('draw', function(data) {
+          if(data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+              d: {
+                begin: 600,
+                dur: 700,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: Chartist.Svg.Easing.easeOutQuint
+              }
+            });
+          } else if(data.type === 'circle') {
+                seq++;
+                data.element.animate({
+                  opacity: {
+                    begin: seq * delays,
+                    dur: durations,
+                    from: 0,
+                    to: 1,
+                    easing: 'ease'
+                  }
+                });
+            }
+        });
+
+        seq = 0;
+    },
+    //replace the point with a circle so you can add border
+    chartistPointWithMargin: function(chart){
+	    	chart.on('draw', function(data) {
+		      if(data.type === 'point') {
+		        var circle = new Chartist.Svg('circle', {
+		          cx: [data.x], cy:[data.y], r:[7],
+		        }, 'ct-circle');
+		        data.element.replace(circle);
+	      }
+	    });
+    }
+
+
 }
  
 var big_image;
@@ -148,8 +192,24 @@ hermesdashboard = {
             '-o-transform':'translate3d(0,' + oVal +'px,0)'
         });
 	}, 6)
+};
+
+var image;
+presentationPage = {
+	checkScrollForParallax: debounce(function(){
+		var curent_scroll = $(window).scrollTop();
+		oVal = ($(window).scrollTop() / 3);
+		image.css({
+            'transform':'translate3d(0,' + oVal +'px,0)',
+            '-webkit-transform':'translate3d(0,' + oVal +'px,0)',
+            '-ms-transform':'translate3d(0,' + oVal +'px,0)',
+            '-o-transform':'translate3d(0,' + oVal +'px,0)'
+        });
+	}, 6)
 }
  
+
+
 function debounce(func, wait, immediate) {
 	var timeout;
 	return function() {

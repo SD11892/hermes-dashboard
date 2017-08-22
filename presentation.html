@@ -244,6 +244,28 @@
 				</div>
 			</div>
 		</section>
+		<section class="githubPage">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="github-logo">
+							<i class="fa fa-github"></i>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card-simple">
+							<div class="header">
+								<p>Free Demo</p>
+								<span>Awesome tables to get out of ordinary</span>
+							</div>
+							<div class="content">
+								<p>HERMES Dashboard is built mobile-first and looks amazing on any device. Regardless of the screen size, the website content will naturally fit the given resolution. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="iconsPage text-center">
 			<div class="card-simple">
 				<i class="first-element-left nc-icon nc-active-40"></i>
@@ -269,10 +291,10 @@
 				</div>
 				<div class="content">
 					<p>
-	                    Paper Kit 2 PRO comes with 100 custom demo icons made by our friends from <a href="https://nucleoapp.com/?ref=1712" target="_blank">NucleoApp</a>. The official package contains over 20.729 icons which are looking great in combination with Paper Kit 2 PRO. Make sure you check all of them and use those that you like the most.
+	                    Paper Kit 2 PRO comes with 100 custom demo icons made by our friends from <a href="https://nucleoapp.com/?ref=1712" target="_blank" class="text-warning">NucleoApp</a>. The official package contains over 20.729 icons which are looking great in combination with Paper Kit 2 PRO. Make sure you check all of them and use those that you like the most.
 	                </p>
-	                <a href="icons.html" class="btn btn-info btn-fill btn-round" target="_blank">VIEW DEMO ICONS</a>
-	                <a href="https://nucleoapp.com/premium-icons" class="btn btn-info btn-round" target="_blank">VIEW ALL ICONS</a>
+	                <a href="icons.html" class="btn btn-warning btn-fill btn-round" target="_blank">VIEW DEMO ICONS</a>
+	                <a href="https://nucleoapp.com/premium-icons" class="btn btn-warning btn-round" target="_blank">VIEW ALL ICONS</a>
 				</div>
 			</div>
 		</section>
@@ -338,9 +360,9 @@
 			window_width = $(window).width();
 
 			if(window_width >= 992){
-				big_image = $('.productPage > .image');
+				image = $('.productPage > .image');
 
-				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+				$(window).on('scroll', presentationPage.checkScrollForParallax);
 			}
 		});
 

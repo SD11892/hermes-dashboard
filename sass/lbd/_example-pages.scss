@@ -380,7 +380,7 @@
 			width: 400px;
 			border: 5px solid rgba($warning-color, 0.3);
 			top: 0;
-			right: 330px;
+			right: 395px;
 			transform: rotate(45deg);
 		}
 	}
@@ -619,6 +619,15 @@
 
 }
 
+.githubPage{
+	.github-logo{
+		i{
+			width: 100%;
+			color: rgba(193, 193, 193, 0.3);
+		}
+	}
+}
+
 @media (min-width: 1200px){
 	.notificationsPage{
 		.success-icon-notification{
@@ -657,12 +666,12 @@
 
 		.green-ps{
 			left: -35px;
-			top: -3%;
+			top: 6%;
 		}
 
 		.red-ps{
 			left: 200px;
-			top: 10%;
+			top: 25%;
 		}
 	}
 
@@ -708,16 +717,25 @@
 
 		.green-ps{
 			left: -35px;
-			top: -3%;
+			top: 80px;
 		}
 
 		.red-ps{
 			left: 150px;
-			top: 60px;
+			top: 170px;
 		}
 	}
 
 
+}
+
+@media (min-width: 991px){
+	.github-logo{
+		margin-left: -350px;
+		i{
+			font-size: 600px;
+		}
+	}
 }
 
 @media (max-width: 991px){
@@ -769,7 +787,7 @@
 
 		.green-ps{
 			left: -35px;
-			top: 30%;
+			top: 40%;
 		}
 
 		.red-ps{
@@ -805,6 +823,20 @@
 	.fa-dribbble{
 		color: pink !important;
 	}
+
+	.githubPage{
+		.card-simple{
+			text-align: center;
+		}
+
+		.github-logo{
+			text-align: center;
+			i{
+			font-size: 250px !important;
+			}
+		}
+	}
+
 
 }
 
