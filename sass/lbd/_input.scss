@@ -7,16 +7,16 @@ label{
 	position: relative;
 }
 .form-control::-moz-placeholder{
-   @include placeholder(white);
+   @include placeholder($light-gray);
 }
 .form-control:-moz-placeholder{
-   @include placeholder(white);
+   @include placeholder($light-gray);
 }  
 .form-control::-webkit-input-placeholder{
-   @include placeholder(white); 
+   @include placeholder($light-gray); 
 } 
 .form-control:-ms-input-placeholder{
-   @include placeholder(white);
+   @include placeholder($light-gray);
 }
 
 .form-control{

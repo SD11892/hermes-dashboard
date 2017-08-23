@@ -5,7 +5,7 @@
 	<title>Hermes-Dashboard</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/hd.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -291,7 +291,7 @@
 				</div>
 				<div class="content">
 					<p>
-	                    Paper Kit 2 PRO comes with 100 custom demo icons made by our friends from <a href="https://nucleoapp.com/?ref=1712" target="_blank" class="text-warning">NucleoApp</a>. The official package contains over 20.729 icons which are looking great in combination with Paper Kit 2 PRO. Make sure you check all of them and use those that you like the most.
+	                    Hermes Dashboard comes with 100 custom demo icons made by our friends from <a href="https://nucleoapp.com/?ref=1712" target="_blank" class="text-warning">NucleoApp</a>. The official package contains over 20.729 icons which are looking great in combination with Hermes Dashboard. Make sure you check all of them and use those that you like the most.
 	                </p>
 	                <a href="icons.html" class="btn btn-warning btn-fill btn-round" target="_blank">VIEW DEMO ICONS</a>
 	                <a href="https://nucleoapp.com/premium-icons" class="btn btn-warning btn-round" target="_blank">VIEW ALL ICONS</a>
@@ -303,9 +303,7 @@
 			<div class="separator">♦</div>
 			<a class="btn btn-default btn-wd">Free Demo</a>
 			<h3>Thank you for sharing!</h3>
-			<button class="btn btn-social btn-wd"><i class="fa fa-facebook"></i></button>
-			<button class="btn btn-social btn-wd"><i class="fa fa-twitter"></i></button>
-			<button class="btn btn-social btn-wd"><i class="fa fa-google"></i></button>
+			<div id="share" class="clearfix" ></div>
 			<footer class="final-footer">
 			<div class="container-fluid">
 				<nav>
@@ -339,12 +337,14 @@
 		  </div>
 	   </footer><!--footer-->
 	</section>
-		
 </div>
+
+
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.sharrre.js"></script>
+	<script src="js/jquery.sharrre.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chartist.min.js"></script>
 	<script src="js/chartist-plugin-tooltip.js"></script>
@@ -367,5 +367,52 @@
 		});
 
 	</script>
+
+
+<script>
+    var list = ['facebook', 'twitter', 'linkedin'];
+    $(function () {
+        $('#share').sharrre({
+            share: {
+                facebook: true,
+                twitter: true,
+                linkedin: true
+            },
+            buttons: {
+                facebook: {
+                    popup: {
+                        width: 1200,
+                        height: 900
+                    }
+                },
+                twitter: {},
+                linkedin: {}
+            },
+            url: 'http://sharrre.com',
+
+            title: 'da',
+
+            enableCounter: false,
+            enableHover: false,
+            template: function () {
+                content = '';
+                for (i in list) {
+                    service = list[i];
+                    content += '<a class="' + service + '"><i class="fa fa-' + service + '"></i></a>';
+                }
+                return content;
+            }(),
+            render: function (api, options) {
+                for (i in list) {
+                    service = list[i];
+                    $(api.element).on('click', '.' + service, function () {
+                        api.openPopup(this.className);
+                    });
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

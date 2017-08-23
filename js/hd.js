@@ -149,7 +149,7 @@ hd = {
                 easing: Chartist.Svg.Easing.easeOutQuint
               }
             });
-          } else if(data.type === 'circle') {
+          } else if(data.type === 'point') {
                 seq++;
                 data.element.animate({
                   opacity: {
