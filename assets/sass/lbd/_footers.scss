@@ -1,0 +1,30 @@
+.final-footer{
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	padding: 20px 0;
+	border-top: 1px solid #e7e7e7;
+		ul{
+			list-style-type: none;
+			display: flex;
+			padding: 0;
+			margin: 0;
+		}
+	a{
+		text-decoration: none;
+		color: $grey-text-main-panel;
+		font-size: 14px;
+		&:hover{
+			color:#4a4747;
+		}
+	}
+	li{
+		margin: 0 10px;
+	}
+	p{
+		margin: 0 20px 0 0;
+		color: $grey-text-main-panel;
+		font-size: 14px;
+	}
+	
+}

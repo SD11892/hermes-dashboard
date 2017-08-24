@@ -1,0 +1,92 @@
+
+.alert{
+    border: 0;
+    border-radius: 0;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    font-size: 14px;
+    position: relative;
+    .container &{
+        border-radius: 4px;
+    
+    }
+    .navbar &{
+        border-radius: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 85px;
+        width: 100%;
+        z-index: 3;
+    }
+    .navbar:not(.navbar-transparent) &{
+        top: 70px;
+    }
+    
+    span[data-notify="icon"]{
+        font-size: 30px;
+        display: block;
+        left: 15px;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+    }
+    span[data-notify="message"]{
+    	margin-left: 40px;
+    	margin-right: 30px;
+    }
+
+
+    button.close{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -13px;
+        background-color: #FFFFFF;
+        display: block;
+        border-radius: 50%;
+        opacity: .4;
+        line-height: 11px;
+        width: 25px;
+        height: 25px;
+        outline: 0 !important;
+        text-align: center;
+        padding: 3px;
+        font-weight: 300;
+        
+        &:hover{
+            opacity: .55;
+        }
+    }
+    
+    .close ~ span{
+        display: block;
+        max-width: 89%;
+    }
+    
+    &[data-notify="container"]{
+        padding: 10px 10px 10px 20px;
+        border-radius: $border-radius-base;
+    }
+    
+    &.alert-with-icon{
+        padding-left: 65px;
+    }
+}
+.alert-info{
+     background-color: $info-color;
+}
+.alert-success {
+    background-color: $success-color;
+}
+.alert-warning {
+     background-color: $warning-color;
+}
+.alert-danger {
+     background-color: $danger-color;
+}
+
+button.close[data-notify="dismiss"]
+{
+	margin-top: 15px;
+}

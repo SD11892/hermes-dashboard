@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Hermes Dashboard</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+	<!--	Bootstrap Core CSS    -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+
+	<!--	Hermes Dashboard CSS   -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/hd.css">
+
+	<!--	Nucleo Icons CSS    -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+	<!--	Font Awesome Icons   -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<div class="sidebar-wrapper">
+				<div class="logo">
+					<a href="http://www.creative-tim.com">
+						Hermes
+					</a>
+				</div><!--logo-->
+				<ul class="nav">
+					<li class="nav-item">
+						<a href="dashboard.html" class="nav-link nav-link-blue">
+							<i class="nc-icon nc-bullet-list-67"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="user.html" class="nav-link nav-link-light-blue">
+							<i class="nc-icon nc-badge"></i>
+							<p>User Profile</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="table.html" class="nav-link nav-link-pink">
+							<i class="nc-icon nc-calendar-grid-58"></i>
+							<p>Table List</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="typography.html" class="nav-link nav-link-orange">
+							<i class="nc-icon nc-book-bookmark"></i>
+							<p>Typography</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="icons.html" class="nav-link nav-link-purple active">
+							<i class="nc-icon nc-palette"></i>
+							<p>Icons</p>
+						</a>
+					</li>
+ 					<li class="nav-item">
+						<a href="maps.html" class="nav-link nav-link-red">
+							<div class="i">
+							<i class="nc-icon nc-pin-3"></i>
+							</div>
+							<p>Maps</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="notifications.html" class="nav-link nav-link-green">
+							<i class="nc-icon nc-bell-55"></i>
+							<p>Notifications</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="Components.html" class="nav-link nav-link-dark-red">
+							<i class="nc-icon nc-chart-pie-35"></i>
+							<p>Components</p>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="cards.html" class="nav-link nav-link-light-purple">
+							<i class="nc-icon nc-credit-card"></i>
+							<p>Cards</p>
+						</a>
+					</li>
+				</ul>
+				
+			</div><!--sidebar-wrapper-->
+		</div><!--sidebar-->
+
+		<div class="main-panel">
+			<nav class="navbar navbar-expand-md">
+				 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse">
+				   	<i class="fa fa-bars"></i>
+				  </button>
+				  <div class="collapse navbar-collapse">
+				  	<ul class="nav navbar-nav navbar-left">
+				  		<div class="input-group">
+				  			<div class="input-group-addon"><i class="fa fa-search"></i></div>
+	    					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search anything you want">
+				  		</div>
+				  	</ul><!--navbar left-->
+				  	<ul class="navbar-nav ml-auto">
+
+				  		<li class="nav-item dropdown">
+				  			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+					  			<div class="notification d-none d-lg-block d-xl-block"></div>
+				  				<i class="nc-icon nc-notification-70"></i>
+				  				<b class="caret d-none d-lg-block d-xl-block"></b>
+
+					  			<p class="d-lg-none">
+									New Notifications
+									<b class="caret"></b>
+								</p>
+				  			</a>
+				  			<ul class="dropdown-menu">
+				  				<li><a href="#"  class="dropdown-item">Notification 1</a></li>
+	                            <li><a href="#" class="dropdown-item">Notification 2</a></li>
+	                            <li><a href="#" class="dropdown-item">Notification 3</a></li>
+	                            <li><a href="#" class="dropdown-item">Notification 4</a></li>
+	                            <li><a href="#" class="dropdown-item">Another Notification</a></li>
+				  			</ul>
+				  		</li>
+
+				  		<li class="nav-item">
+				  			<a href="#" class="nav-link">
+				  				<i class="nc-icon nc-map-big"></i>	
+				  				<p class="d-lg-none">Contacts</p>	
+				  			</a>
+				  		</li>
+
+				  		<li class="nav-item">
+				  			<a href="#" class="nav-link">
+				  				<i class="nc-icon nc-bell-55"></i>
+				  				<p class="d-lg-none">Messages</p>
+				  			</a>
+				  		</li>
+
+				  		<li class="dropdown nav-item">
+				  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+		  					<i class="nc-icon nc-circle-08"></i>
+		  					<b class="caret d-none d-lg-block d-xl-block"></b>
+		  					<p class="d-lg-none">
+									Log out
+									<b class="caret"></b>
+								</p>
+				  			</a>
+				  			<ul class="dropdown-menu menu-2">
+				  				<li><a href="#">Action</a></li>
+	                            <li><a href="#">Another action</a></li>
+	                            <li><a href="#">Something</a></li>
+	                            <li><a href="#">Another action</a></li>
+	                            <li><a href="#">Something</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="#">Separated link</a></li>
+				  			</ul>
+				  		</li>
+				  		<li class="separator d-lg-none"></li>
+				  	</ul><!--navbar right-->
+				  	
+				  </div>  
+				</nav>
+			<div class="page-header" data-color="purple" data-image="../assets/images/example.jpg">
+			</div><!--page-header-->
+			<div class="content">
+				<div class="card over-header">
+					<div class="header">
+						<h4 class="title">100 Awesome Icons</h4>
+						<p class="category">Handcrafted by our friends from <a class="link-rel" href="https://nucleoapp.com/">Nucleo</a></p>
+					</div>
+					<div class="content">
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-active-40"></i>
+									<input type="text" value="nc-active-40">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-air-baloon"></i>
+									<input type="text" value="nc-air-baloon">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-align-center"></i>
+									<input type="text" value="nc-align-center">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-align-left-2"></i>
+									<input type="text" value="nc-align-left-2">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-ambulance"></i>
+									<input type="text" value="nc-ambulance">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-app"></i>
+									<input type="text" value="nc-app">
+								</div>
+							</div>
+						</div><!--row1-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-atom"></i>
+									<input type="text" value="nc-atom">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-badge"></i>
+									<input type="text" value="nc-badge">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bag-17"></i>
+									<input type="text" value="nc-bag-17">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bars"></i>
+									<input type="text" value="nc-bars">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bell-55"></i>
+									<input type="text" value="nc-bell-55">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bold-down"></i>
+									<input type="text" value="nc-bold-down">
+								</div>
+							</div>
+						</div><!--row2-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bold-left"></i>
+									<input type="text" value="nc-bold-left">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bold-right"></i>
+									<input type="text" value="nc-bold-right">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bold-up"></i>
+									<input type="text" value="nc-bold-up">				
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bold"></i>
+									<input type="text" value="nc-bold">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-book-bookmark"></i>
+									<input type="text" value="nc-book-bookmark">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-books"></i>
+									<input type="text" value="nc-books">
+								</div>
+							</div>
+						</div><!--row3-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-box-2"></i>
+									<input type="text" value="nc-box-2">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-briefcase-24"></i>
+									<input type="text" value="nc-briefcase-24">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-building"></i>
+									<input type="text" value="nc-building">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bulb-61"></i>
+									<input type="text" value="nc-bulb-61">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bullet-list-67"></i>
+									<input type="text" value="nc-bullet-list-67">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-bus-front-12"></i>
+									<input type="text" value="nc-bus-front-12">
+								</div>
+							</div>
+						</div><!--row4-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-button-pause"></i>
+									<input type="text" value="nc-button-pause">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-button-play"></i>
+									<input type="text" value="nc-button-play">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-button-power"></i>
+									<input type="text" value="nc-button-power">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-calendar-grid-58"></i>
+									<input type="text" value="nc-calendar-grid-58">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-camera-compact"></i>
+									<input type="text" value="nc-camera-compact">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-caps-small"></i>
+									<input type="text" value="nc-caps-small">
+								</div>
+							</div>
+						</div><!--row5-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-chart-bar-32"></i>
+									<input type="text" value="nc-chart-bar-32">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-chart-pie-35"></i>
+									<input type="text" value="nc-chart-pie-35">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-chat-round"></i>
+									<input type="text" value="nc-chat-round">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-check-bold"></i>
+									<input type="text" value="nc-check-bold">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-circle-08"></i>
+									<input type="text" value="nc-circle-08">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-compass-04"></i>
+									<input type="text" value="nc-compass-04">
+								</div>
+							</div>
+						</div><!--row6-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-controller"></i>
+									<input type="text" value="nc-controller">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-credit-card"></i>
+									<input type="text" value="nc-credit-card">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-delivery-fast"></i>
+									<input type="text" value="nc-delivery-fast">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-diamond"></i>
+									<input type="text" value="nc-diamond">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-email-83"></i>
+									<input type="text" value="nc-email-83">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-fat-add"></i>
+									<input type="text" value="nc-fat-add">
+								</div>
+							</div>
+						</div><!--row7-->	
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-fat-delete"></i>
+									<input type="text" value="nc-fat-delete">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-fat-remove"></i>
+									<input type="text" value="nc-fat-remove">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-favourite-28"></i>
+									<input type="text" value="nc-favourite-28">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-glasses-2"></i>
+									<input type="text" value="nc-glasses-2">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-hat-3"></i>
+									<input type="text" value="nc-hat-3">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-headphones"></i>
+									<input type="text" value="nc-headphones">
+								</div>
+							</div>
+						</div><!--row8-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-html5"></i>
+									<input type="text" value="nc-html5">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-istanbul"></i>
+									<input type="text" value="nc-istanbul">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-key-25"></i>
+									<input type="text" value="nc-key-25">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-laptop"></i>
+									<input type="text" value="nc-laptop">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-like-2"></i>
+									<input type="text" value="nc-like-2">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-lock-circle-open"></i>
+									<input type="text" value="nc-lock-circle-open">
+								</div>
+							</div>
+						</div><!--row9-->	
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-map-big"></i>
+									<input type="text" value="nc-map-big">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-mobile-button"></i>
+									<input type="text" value="nc-mobile-button">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-money-coins"></i>
+									<input type="text" value="nc-money-coins">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-note-03"></i>
+									<input type="text" value="nc-note-03">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-notification-70"></i>
+									<input type="text" value="nc-notification-70">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-palette"></i>
+									<input type="text" value="nc-palette">
+								</div>
+							</div>
+						</div><!--row10-->
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-pin-3"></i>
+									<input type="text" value="nc-pin-3">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-planet"></i>
+									<input type="text" value="nc-planet">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-refresh-02"></i>
+									<input type="text" value="nc-refresh-02">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-ruler-pencil"></i>
+									<input type="text" value="nc-ruler-pencil">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-satisfied"></i>
+									<input type="text" value="nc-satisfied">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-scissors"></i>
+									<input type="text" value="nc-scissors">
+								</div>
+							</div>
+						</div><!--row11-->	
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-send"></i>
+									<input type="text" value="nc-send">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-settings-gear-65"></i>
+									<input type="text" value="nc-settings-gear-65">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-settings"></i>
+									<input type="text" value="nc-settings">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-single-02"></i>
+									<input type="text" value="nc-single-02">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-single-copy-04"></i>
+									<input type="text" value="nc-single-copy-04">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-sound-wave"></i>
+									<input type="text" value="nc-sound-wave">
+								</div>
+							</div>
+						</div><!--row12-->	
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-spaceship"></i>
+									<input type="text" value="nc-spaceship">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-support-16"></i>
+									<input type="text" value="nc-support-16">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-tablet-button"></i>
+									<input type="text" value="nc-tablet-button">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-time-alarm"></i>
+									<input type="text" value="nc-time-alarm">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-trophy"></i>
+									<input type="text" value="nc-trophy">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-tv-2"></i>
+									<input type="text" value="nc-tv-2">
+								</div>
+							</div>
+						</div><!--row13-->	
+
+						<div class="row">
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-umbrella-13"></i>
+									<input type="text" value="nc-umbrella-13">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-user-run"></i>
+									<input type="text" value="nc-user-run">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-watch-time"></i>
+									<input type="text" value="nc-watch-time">
+								</div>
+							</div>
+							<div class="font-icon-list col-xl-2 col-md-4 col-6">
+								<div class="font-icon-detail">
+									<i class="nc-icon nc-zoom-split-in"></i>
+									<input type="text" value="nc-zoom-split-in">
+								</div>
+							</div>
+						</div><!--row14-->	
+					</div>
+				</div>
+			</div><!--content-->
+
+				<footer class="final-footer">
+					<div class="container-fluid">
+						<nav>
+							<ul>
+							  <li>
+	                            <a href="#">
+	                                Home
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                Company
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                                Portfolio
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="#">
+	                               Blog
+	                            </a>
+	                        </li>
+						</ul>
+					</nav>
+					<p>
+						&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com" class="text-info">Hermes </a>
+						, made with love for a better web
+					<p>
+				</div>
+			</footer><!--footer-->	
+		</div><!--main-panel-->
+
+
+
+	</div><!--wrapper-->
+
+	<!--Core JS Files-->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+
+	<!-- Hermes Dashboard javascript methods -->
+	<script src="../assets/js/hd.js"></script>
+
+	<script>
+	$(document).ready(function(){
+
+			window_width = $(window).width();
+
+			if(window_width >= 992){
+				big_image = $('.main-panel > .page-header');
+
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
+			}
+		});
+	</script>
+</body>
+</html>

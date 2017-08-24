@@ -1,0 +1,137 @@
+
+
+.ct-label{
+	font-size: 0.72em;
+	fill: rgba(0,0,0,0.4);
+	color: rgba(0,0,0,0.4);
+}
+
+.ct-chart{
+	margin:10px 0 40px 0;
+}
+.ct-chart-line{
+	padding: 10px 0;
+}
+.ct-chart-bar{
+	padding: 10px 0;
+}
+.ct-grid{
+	stroke:rgba(0, 0, 0, 0.2);
+	stroke-dasharray: 2px;
+}
+
+#chartPreferences1, #chartPreferences2, #chartPreferences3, #chartPresentation{
+	.ct-line{
+		fill: none;
+		stroke: #0098ff;
+		stroke-width:4px;
+	}
+
+	.ct-point{
+		stroke-linecap: round;
+		stroke: red;
+		stroke-width: 10px;
+	}
+	.ct-circle{
+		stroke: white;
+		fill: #0084de;
+		stroke-width: 3px;
+	}
+
+	.ct-grid{
+		stroke: #bbb9b9;
+		stroke-dasharray: 0;
+		stroke-width: 0.5px;
+		&:nth-child(even){
+			display: none;
+		}
+	}
+
+}
+
+#chartPreferences1{
+	foreignObject[y="115"], foreignObject[y="65"], foreignObject[y="15"]{
+		display: none;
+	}
+}
+
+#chartHours{
+		.ct-line{
+		fill: none;
+		stroke: #0098ff;
+		stroke-width:3px;
+	}
+
+	.ct-circle{
+		stroke: white;
+		fill: #0084de;
+		stroke-width: 3px;
+	}
+
+	.ct-grid{
+		stroke: #bbb9b9;
+		stroke-dasharray: 0;
+		stroke-width:0.5px;
+		&:nth-child(odd){
+			display: none;
+		}
+	}
+	foreignObject{
+		font-size: 20px;
+		&:nth-child(odd){
+			display: none;
+		}
+	}
+}
+
+#chartActivity{
+	.ct-line{
+		fill: none;
+		stroke: #0098ff;
+		stroke-width:3px;	}
+
+	.ct-circle{
+		stroke: white;
+		fill: #0084de;
+		stroke-width: 3px;
+	}
+
+	.ct-grid{
+		stroke: #bbb9b9;
+		stroke-dasharray: 0;
+		stroke-width:0.5px;
+		&:nth-child(odd){
+			display: none;
+		}
+	}
+	foreignObject{
+		font-size: 20px;
+		&:nth-child(even){
+			display: none;
+		}
+	}
+
+}
+
+
+#chartPresentation{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: -100px;
+	z-index: 3;
+	.ct-area{
+		fill: rgba(0, 0, 255, 0.2);
+	}
+	.ct-line{
+		stroke: transparent;
+	}
+
+	.ct-circle{
+		stroke-width: 2px;
+	}
+
+	.ct-labels{
+		display: none;
+	}
+}

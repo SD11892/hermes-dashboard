@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Montserrat:400,500,600|Pacifico|Lobster|');
+body{
+	font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
+	font-size: 14px;
+}
+.sidebar,
+body > .navbar-collapse{
+	height: 100%;
+	width: 230px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	background: white;
+	box-shadow:0px 0px 30px 0px rgba(0,0,0,0.1);
+.sidebar-wrapper{
+	width: 100%;
+	min-height: 100%;
+	max-height: calc(100vh - 75px);
+	z-index: 4;
+	position: relative;
+	overflow: auto;
+}
+ .sidebar-background{
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+	.logo{
+		padding: 25px 15px 10px;
+		text-align: center;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		a{
+			text-decoration: none;
+			color: $logo-gray;
+			font-weight:400;
+			font-size: 24px;
+			line-height: 30px;
+			padding: 5px 0;
+			display: block;
+			font-family: 'Lobster', cursive;
+		}
+	}
+	.nav{
+			display: block;
+			width: 100%;
+			margin-top: 25px;
+			z-index: 1000;
+			position: absolute;
+			li{
+				padding: 2px;
+				margin: 10px 15px;
+				transition: 0.2s ease;
+				a{
+				text-decoration: none;
+				color: white;
+				border-radius: 6px;
+					i{
+						float: left;
+						font-size: 18px;
+						margin-right: 15px;
+						line-height: 30px;
+						width: 30px;
+						text-align: center;
+					}
+					p{
+						color: $grey-text-main-panel;
+						font-size: 12px;
+						line-height: 30px;
+						font-weight: 400;
+						margin-bottom: 0;
+						margin-left: 45px;
+						font-family: 'Montserrat';
+					}
+
+					&.nav-link-blue{
+						//background: $primary-color;
+						opacity: 1;
+						i{
+							color: $primary-color;
+						}
+
+						&:hover{
+							background: rgba($primary-color, 0.2);
+						}
+
+						&.active{
+							background: $primary-color;
+						}
+					}
+
+					&.nav-link-light-blue{
+						//background: $info-color;
+							i{
+							color: $info-color;
+						}
+
+						&:hover{
+							background: rgba($info-color, 0.2);
+						}
+
+						&.active{
+							background: $info-color;
+						}
+					}
+
+					&.nav-link-purple{
+						//background: $text-purple;
+						i{
+							color: $text-purple;
+						}
+
+						&:hover{
+							background: rgba($text-purple, 0.2);
+						}
+
+						&.active{
+							background: $text-purple;
+						}
+					}
+
+					&.nav-link-pink{
+						//background: $text-pink;
+						i{
+							color: $text-pink;
+						}
+
+						&:hover{
+							background: rgba($text-pink, 0.2);
+						}
+
+						&.active{
+							background: $text-pink;
+						}
+					}
+
+					&.nav-link-orange{
+						//background: $warning-color;
+						i{
+							color: $warning-color;
+						}
+
+						&:hover{
+							background: rgba($warning-color, 0.2);
+						}
+
+						&.active{
+							background: $warning-color;
+						}
+					}
+
+					&.nav-link-red{
+						//background: $danger-color;
+						i{
+							color: $danger-color;
+						}
+
+						&:hover{
+							background: rgba($danger-color, 0.2);
+						}
+
+						&.active{
+							background: $danger-color;
+						}
+
+					}
+
+					&.nav-link-green{
+						//background: $success-color;
+						i{
+							color: $success-color;
+						}
+
+						&:hover{
+							background: rgba($success-color, 0.2);
+						}
+
+						&.active{
+							background: $success-color;
+						}
+					}
+
+					&.nav-link-dark-red{
+						//background: $red-color-bottom;
+						i{
+							color: $red-color-bottom;
+						}
+
+						&:hover{
+							background: rgba($red-color-bottom, 0.2);
+						}
+						&.active{
+							background:$red-color-bottom;
+						}
+					}
+
+					&.nav-link-light-purple{
+						//background: $bottom-purple-gradient;
+						i{
+							color: $bottom-purple-gradient;
+						}
+
+						&:hover{
+							background: rgba($bottom-purple-gradient, 0.2);
+						}
+
+						&.active{
+							background: $bottom-purple-gradient;
+						}
+
+					}
+
+
+					&.active{
+						i,p{
+							color: white;
+						}
+					}
+				}
+		
+			}
+	}
+	.nav-link{
+		padding-left: 13px;
+		padding-right: 50px;
+	}
+}
+
+.upgrade{
+		position: absolute;
+		width: 220px;
+		bottom:10px;
+	}
+
+.main-panel{
+	position: relative;
+	width: calc(100% - 230px);
+	float: right;
+	min-height: 100%;
+	height: 100%;
+	background-color: rgba(203, 203, 210, .15);
+	button{
+		cursor: pointer;
+	}
+	.navbar-toggler{
+		position: absolute;
+		right: 20px;
+	}
+}
+
+.page-header{
+		background-color: white;
+		padding: 70px 0 150px 0;
+		position: relative;
+	&:after,
+	&:before{
+		display: block;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	&:before{
+		opacity: .33;
+		background: #000000;
+	}
+
+	&:after{
+		@include icon-gradient($black-color-top, $black-color-bottom);
+		z-index: 2;
+		opacity: 0.9;
+	}
+	&[data-image]:after,
+	&.has-image:after{
+		opacity: .77;
+	}
+	&[data-color="blue"]:after{
+		@include icon-gradient($top-blue-gradient, $bottom-blue-gradient);
+	}
+
+	&[data-color="light-blue"]:after{
+		@include icon-gradient($top-lightblue-gradient, $bottom-lightblue-gradient);
+	}
+
+	&[data-color="purple"]:after{
+		@include icon-gradient($top-purple-gradient, $bottom-purple-gradient);
+	}
+
+	&[data-color="pink"]:after{
+		@include icon-gradient($top-pink-gradient, $bottom-pink-gradient);
+	}
+
+	&[data-color="orange"]:after{
+		@include icon-gradient($top-orange-gradient, $bottom-orange-gradient);
+	}
+
+	&[data-color="green"]:after{
+		@include icon-gradient($top-green-gradient, $bottom-green-gradient);
+	}
+
+	&[data-color="red"]:after{
+		@include icon-gradient($red-color-bottom, $danger-color);
+	}
+
+	&[data-color="light-purple"]:after{
+		@include icon-gradient($bottom-purple-gradient, white);
+	}
+
+	.page-header-background{
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	background-position: center center;
+	background-size: cover;
+	}
+}
+.navbar{
+	padding: 15px 30px 15px 15px;
+	width: 100%;
+	z-index: 1000;
+	min-height: 60px;
+	position: absolute;
+
+}
+
+.navbar-nav{
+		a{
+			color: white;
+			text-decoration: none;
+			i{
+				font-size: 21px;
+			}
+			&:hover{
+				color: $light-gray;
+			}
+		}
+		li{
+			padding: 0 10px;
+		}
+}
+.navbar-brand{
+	color: white;
+	&:hover{
+		color: white;
+	}
+}
+
+.brand-red{
+		color: #d62727;
+		&:hover{
+			color: #d62727;
+		}
+		li{
+			a{
+				i,p{
+					color: #d62727;
+				}
+			}
+		}
+}
+.notification{
+	background:$new-orange;
+	color: white;
+	border-radius: 16px;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 800;
+	top: 5px;
+	right: 15px;
+	border: 1px solid rgba(255,255,255,0.7);
+}
+
+.dropdown-toggle:after{
+	display: none;
+}
+
+.ml-auto{
+	p{
+		margin: 0;
+	}
+}
+.caret{
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	border-top: 4px dashed;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	margin-top: -5px;
+	position: absolute;
+	top: 30px;
+	margin-left: 5px;
+}
+
+
+
+.divider{
+	margin: 0;
+	padding: 0 !important;
+	border-top: 1px solid #cecece;
+}
+
+.fa-bars{
+	color: white;
+}
+
+.input-group{
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	border-radius: 25px;
+	margin-left: 40px;
+	z-index: 4;
+	height: 43px;
+	.input-group-addon{
+		background: transparent;
+		border: none;
+		color: rgba(255, 255, 255, 0.7);
+		i{
+			font-size: 16px;
+		}
+	}
+	input{
+		background: transparent;
+		border:none;
+		padding-left: 15px;
+		font-size: 12px;
+		opacity: 0.5;
+		font-family: 'Montserrat';
+		width: 590px !important;
+		&:focus{
+			background: transparent;
+		}
+	}
+	.form-control{
+		color: white;
+		opacity: 1;
+	}
+}
+
+.info{
+	position: relative;
+	z-index: 4;
+	margin-right: 300px;
+	.info-title{
+		color: white;
+		font-weight: 500;
+		font-size: 1.85em;
+		margin: 30px 0 10px 0;
+		font-family: 'Noto Sans';
+	}
+	.info-category{
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 1.2em;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+}
+
+.over-header{
+	margin-top: -210px;
+}
+
+.sidebar .sidebar-wrapper,
+.main-panel{
+    .perfect-scrollbar-on &,
+    &{
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+.ps-scrollbar-y-rail{
+	z-index: 1001;
+	.ps-scrollbar-y{
+		height: 100px;
+	}
+}
