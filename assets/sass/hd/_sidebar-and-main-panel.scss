@@ -92,7 +92,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($primary-color, 0.2);
+							background: rgba($primary-color, 0.08);
 						}
 
 						&.active{
@@ -107,7 +107,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($info-color, 0.2);
+							background: rgba($info-color, 0.08);
 						}
 
 						&.active{
@@ -122,7 +122,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($text-purple, 0.2);
+							background: rgba($text-purple, 0.08);
 						}
 
 						&.active{
@@ -137,7 +137,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($text-pink, 0.2);
+							background: rgba($text-pink, 0.08);
 						}
 
 						&.active{
@@ -152,7 +152,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($warning-color, 0.2);
+							background: rgba($warning-color, 0.08);
 						}
 
 						&.active{
@@ -167,7 +167,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($danger-color, 0.2);
+							background: rgba($danger-color, 0.08);
 						}
 
 						&.active{
@@ -183,7 +183,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($success-color, 0.2);
+							background: rgba($success-color, 0.08);
 						}
 
 						&.active{
@@ -198,7 +198,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($red-color-bottom, 0.2);
+							background: rgba($red-color-bottom, 0.08);
 						}
 						&.active{
 							background:$red-color-bottom;
@@ -212,7 +212,7 @@ body > .navbar-collapse{
 						}
 
 						&:hover{
-							background: rgba($bottom-purple-gradient, 0.2);
+							background: rgba($bottom-purple-gradient, 0.08);
 						}
 
 						&.active{

@@ -257,6 +257,7 @@
     }
     .navbar-nav .show .dropdown-menu {
         position: static !important;
+        transform: translate3d(0, 0, 0) !important;
         float: none;
         width: auto;
         margin-top: 0;

@@ -365,12 +365,13 @@
 
 			demo.initChartist();
 
+			$("html").removeClass("perfect-scrollbar-on");
 			window_width = $(window).width();
 
 			if(window_width >= 992){
-				image = $('.productPage > .image');
+				big_image = $('.productPage > .image');
 
-				$(window).on('scroll', presentationPage.checkScrollForParallax);
+				$(window).on('scroll', hermesdashboard.checkScrollForParallax);
 			}
 		});
 

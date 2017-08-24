@@ -92,7 +92,7 @@ body > .navbar-collapse {
             color: #6b6fe4; }
           .sidebar .nav li a.nav-link-blue:hover,
           body > .navbar-collapse .nav li a.nav-link-blue:hover {
-            background: rgba(107, 111, 228, 0.2); }
+            background: rgba(107, 111, 228, 0.08); }
           .sidebar .nav li a.nav-link-blue.active,
           body > .navbar-collapse .nav li a.nav-link-blue.active {
             background: #6b6fe4; }
@@ -101,7 +101,7 @@ body > .navbar-collapse {
           color: #1dc7ea; }
         .sidebar .nav li a.nav-link-light-blue:hover,
         body > .navbar-collapse .nav li a.nav-link-light-blue:hover {
-          background: rgba(29, 199, 234, 0.2); }
+          background: rgba(29, 199, 234, 0.08); }
         .sidebar .nav li a.nav-link-light-blue.active,
         body > .navbar-collapse .nav li a.nav-link-light-blue.active {
           background: #1dc7ea; }
@@ -110,7 +110,7 @@ body > .navbar-collapse {
           color: #bf00fe; }
         .sidebar .nav li a.nav-link-purple:hover,
         body > .navbar-collapse .nav li a.nav-link-purple:hover {
-          background: rgba(191, 0, 254, 0.2); }
+          background: rgba(191, 0, 254, 0.08); }
         .sidebar .nav li a.nav-link-purple.active,
         body > .navbar-collapse .nav li a.nav-link-purple.active {
           background: #bf00fe; }
@@ -119,7 +119,7 @@ body > .navbar-collapse {
           color: #f190db; }
         .sidebar .nav li a.nav-link-pink:hover,
         body > .navbar-collapse .nav li a.nav-link-pink:hover {
-          background: rgba(241, 144, 219, 0.2); }
+          background: rgba(241, 144, 219, 0.08); }
         .sidebar .nav li a.nav-link-pink.active,
         body > .navbar-collapse .nav li a.nav-link-pink.active {
           background: #f190db; }
@@ -128,7 +128,7 @@ body > .navbar-collapse {
           color: #FF9500; }
         .sidebar .nav li a.nav-link-orange:hover,
         body > .navbar-collapse .nav li a.nav-link-orange:hover {
-          background: rgba(255, 149, 0, 0.2); }
+          background: rgba(255, 149, 0, 0.08); }
         .sidebar .nav li a.nav-link-orange.active,
         body > .navbar-collapse .nav li a.nav-link-orange.active {
           background: #FF9500; }
@@ -137,7 +137,7 @@ body > .navbar-collapse {
           color: #FB404B; }
         .sidebar .nav li a.nav-link-red:hover,
         body > .navbar-collapse .nav li a.nav-link-red:hover {
-          background: rgba(251, 64, 75, 0.2); }
+          background: rgba(251, 64, 75, 0.08); }
         .sidebar .nav li a.nav-link-red.active,
         body > .navbar-collapse .nav li a.nav-link-red.active {
           background: #FB404B; }
@@ -146,7 +146,7 @@ body > .navbar-collapse {
           color: #87CB16; }
         .sidebar .nav li a.nav-link-green:hover,
         body > .navbar-collapse .nav li a.nav-link-green:hover {
-          background: rgba(135, 203, 22, 0.2); }
+          background: rgba(135, 203, 22, 0.08); }
         .sidebar .nav li a.nav-link-green.active,
         body > .navbar-collapse .nav li a.nav-link-green.active {
           background: #87CB16; }
@@ -155,7 +155,7 @@ body > .navbar-collapse {
           color: #bb0502; }
         .sidebar .nav li a.nav-link-dark-red:hover,
         body > .navbar-collapse .nav li a.nav-link-dark-red:hover {
-          background: rgba(187, 5, 2, 0.2); }
+          background: rgba(187, 5, 2, 0.08); }
         .sidebar .nav li a.nav-link-dark-red.active,
         body > .navbar-collapse .nav li a.nav-link-dark-red.active {
           background: #bb0502; }
@@ -164,7 +164,7 @@ body > .navbar-collapse {
           color: #e9d3ec; }
         .sidebar .nav li a.nav-link-light-purple:hover,
         body > .navbar-collapse .nav li a.nav-link-light-purple:hover {
-          background: rgba(233, 211, 236, 0.2); }
+          background: rgba(233, 211, 236, 0.08); }
         .sidebar .nav li a.nav-link-light-purple.active,
         body > .navbar-collapse .nav li a.nav-link-light-purple.active {
           background: #e9d3ec; }
@@ -697,7 +697,7 @@ body > .navbar-collapse {
 
 .rounded-image {
   position: absolute;
-  background-image: url("../images/face.jpg");
+  background-image: url("../assets/images/face.jpg");
   height: 100px;
   width: 100px;
   border-radius: 60px;
@@ -1490,6 +1490,7 @@ h1 .subtitle {
 
   .navbar-nav .show .dropdown-menu {
     position: static !important;
+    transform: translate3d(0, 0, 0) !important;
     float: none;
     width: auto;
     margin-top: 0;
@@ -2894,7 +2895,7 @@ input:focus {
     color: #1dc7ea !important; }
 
   .fa-facebook-square {
-    color: #2d1abb !important; }
+    color: #6455d6 !important; }
 
   .fa-dribbble {
     color: pink !important; }

@@ -9,7 +9,7 @@ var seq = 0, delays = 80, durations = 500;
 
        $('html').addClass('perfect-scrollbar-on');
   	
-  		if($('body').hasClass('nav-open')){
+  		if($("html").hasClass("nav-open")){
   			$('.collapse').perfectScrollbar();
   		}
 })();
@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 	$(document).on('ps-scroll-x', function () {
   		hermesdashboard.checkScrollForParallax();
-  		presentationPage.checkScrollForParallax();
+  		//presentationPage.checkScrollForParallax();
 	});
 	var scroll_start = 0;
 	var startchange=$('.wave');
@@ -138,6 +138,7 @@ hd = {
 	},
 
 	startAnimationForLineChart: function(chart){
+
         chart.on('draw', function(data) {
           if(data.type === 'line' || data.type === 'area') {
             data.element.animate({
@@ -184,7 +185,11 @@ var big_image;
 hermesdashboard = {
 	checkScrollForParallax: debounce(function(){
 		var curent_scroll = $('.main-panel').scrollTop();
-		oVal = ($('.main-panel').scrollTop() / 3);
+		if($("html").hasClass("perfect-scrollbar-on")){
+			oVal = ($('.main-panel').scrollTop() / 3);
+		} else {
+			oVal = ($(window).scrollTop() / 3);	
+		}
 		big_image.css({
             'transform':'translate3d(0,' + oVal +'px,0)',
             '-webkit-transform':'translate3d(0,' + oVal +'px,0)',
