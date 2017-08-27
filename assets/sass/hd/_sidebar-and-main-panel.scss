@@ -40,7 +40,6 @@ body > .navbar-collapse{
 	.logo{
 		padding: 25px 15px 10px;
 		text-align: center;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		a{
 			text-decoration: none;
 			color: $logo-gray;
@@ -49,7 +48,7 @@ body > .navbar-collapse{
 			line-height: 30px;
 			padding: 5px 0;
 			display: block;
-			font-family: 'Lobster', cursive;
+			font-family: 'Lobster', sans-serif;
 		}
 	}
 	.nav{
@@ -466,7 +465,7 @@ body > .navbar-collapse{
 		font-weight: 500;
 		font-size: 1.85em;
 		margin: 30px 0 10px 0;
-		font-family: 'Noto Sans';
+		font-family: 'Noto Sans', sans-serif, Arial;
 	}
 	.info-category{
 		color: rgba(255, 255, 255, 0.7);

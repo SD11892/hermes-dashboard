@@ -57,7 +57,7 @@
 		color: $marine-blue;
 		font-weight: 600;
 		font-size: 1.3em;
-		font-family: 'Noto Sans';
+		font-family: 'Noto Sans', sans-serif;
 	}
 
 	.card-title{
@@ -296,6 +296,7 @@
     }
     .title{
         line-height: 24px;
+        margin-bottom: 15px;
     }
     .content{
         min-height: 240px;

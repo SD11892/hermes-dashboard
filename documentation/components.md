@@ -8,59 +8,255 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
 ### Colors
 
 We worked over the original Bootstrap classes, choosing a different, slightly intense color pallete:
-  <link rel="stylesheet" type="text/css" href="../css/hd.css">
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<button class="btn btn-default">Default</button>
-![alt text](img/button_colors.png)
 
-<button class="btn btn-default">Default</button>
+<button class="btn btn-default btn-fill">Default</button>
+
+<button class="btn btn-primary btn-fill">Primary</button>
+
+<button class="btn btn-info btn-fill">Info</button>
+
+<button class="btn btn-success btn-fill">Success</button>
+
+<button class="btn btn-warning btn-fill">Warning</button>
+
+<button class="btn btn-danger btn-fill">Danger</button>
 
 ```html
-<button class="btn btn-default">Default</button>
+<button class="btn btn-default btn-fill">Default</button>
 
-<button class="btn btn-primary">Primary</button>
+<button class="btn btn-primary btn-fill">Primary</button>
 
-<button class="btn btn-info">Info</button>
+<button class="btn btn-info btn-fill">Info</button>
 
-<button class="btn btn-success">Success</button>
+<button class="btn btn-success btn-fill">Success</button>
 
-<button class="btn btn-warning">Warning</button>
+<button class="btn btn-warning btn-fill">Warning</button>
 
-<button class="btn btn-danger">Danger</button>
+<button class="btn btn-danger btn-fill">Danger</button>
 ```
 
 ### Sizes
 
 Buttons come in all needed sizes:
 
-![alt text](img/button_sizes.png)
+<button class="btn btn-lg btn-fill">Large</button>
+
+<button class="btn btn-fill">Default</button>
+
+<button class="btn btn-sm btn-fill">Small</button>
+
+<button class="btn btn-xs btn-fill">X-Small</button>
+
+<br>
+
+<button class="btn btn-round btn-lg btn-fill">Large</button>
+
+<button class="btn btn-round btn-fill">Default</button>
+
+<button class="btn btn-round btn-sm btn-fill">Small</button>
+
+<button class="btn btn-round btn-xs btn-fill">X-Small</button>
 
 ```html
-<button class="btn btn-primary btn-lg">Large</button>
+<button class="btn btn-lg btn-fill">Large</button>
 
-<button class="btn btn-primary">Normal</button>
+<button class="btn btn-fill">Default</button>
 
-<button class="btn btn-primary btn-sm">Small</button>
+<button class="btn btn-sm btn-fill">Small</button>
 
-<button class="btn btn-primary btn-xs">Extra Small</button>
+<button class="btn btn-xs btn-fill">X-Small</button>
+
+<br>
+
+<button class="btn btn-round btn-lg btn-fill">Large</button>
+
+<button class="btn btn-round btn-fill">Default</button>
+
+<button class="btn btn-round btn-sm btn-fill">Small</button>
+
+<button class="btn btn-round btn-xs btn-fill">X-Small</button>
 ```
 
 ### Styles
 
 We added extra classes that can help you better customise the look. You can use regular buttons, filled buttons, rounded corners buttons or plain link buttons. Let's see some examples:
 
-![alt text](img/button_styles.png)
+<button class="btn btn-wd">Default</button>
+
+<button class="btn btn-fill btn-wd">Fill</button>
+
+<button class="btn btn-fill btn-round btn-wd">Fill + Round </button>
+
+<button class="btn btn-round btn-wd">Round</button>
+
+<button class="btn btn-simple btn-wd">Simple</button>
+
 
 ```html
-<button class="btn btn-primary">Default</button>
 
-<button class="btn btn-primary btn-fill">Filled</button>
+<button class="btn btn-wd">Default</button>
 
-<button class="btn btn-primary btn-round">Round</button>
+<button class="btn btn-fill btn-wd">Fill</button>
 
-<button class="btn btn-primary btn-simple">Simple</button>
+<button class="btn btn-fill btn-round btn-wd">Fill + Round </button>
+
+<button class="btn btn-round btn-wd">Round</button>
+
+<button class="btn btn-simple btn-wd">Simple</button>
+
 ```
+### Buttons with label
 
+<button class="btn btn-wd btn-success">
+	<span class="btn-label">
+		<i class="fa fa-check"></i>
+	</span>
+	Success
+</button>
+
+<button class="btn btn-wd btn-danger">
+	<span class="btn-label">
+		<i class="fa fa-times">
+		</i>
+		Danger
+	</span>
+</button>
+
+<button class="btn btn-wd btn-info">
+	<span class="btn-label">
+		<i class="fa fa-exclamation">
+		</i>
+		Info
+	</span>
+</button>
+
+<button class="btn btn-wd btn-warning">
+	<span class="btn-label">
+		<i class="fa fa-warning">
+		</i>
+		Warning
+	</span>
+</button>
+
+<button class="btn btn-wd btn-default">
+	<span class="btn-label">
+		<i class="fa fa-arrow-left">
+		</i>
+		Left
+	</span>
+</button>
+
+<button class="btn btn-wd btn-default">
+	<span class="btn-label">
+		<i class="fa fa-arrow-right">
+		</i>
+		Right
+	</span>
+</button>
+
+```html
+
+<button class="btn btn-wd btn-success">
+	<span class="btn-label">
+		<i class="fa fa-check"></i>
+	</span>
+	Success
+</button>
+
+<button class="btn btn-wd btn-danger">
+	<span class="btn-label">
+		<i class="fa fa-times">
+		</i>
+		Danger
+	</span>
+</button>
+
+<button class="btn btn-wd btn-info">
+	<span class="btn-label">
+		<i class="fa fa-exclamation">
+		</i>
+		Info
+	</span>
+</button>
+
+<br>
+
+<button class="btn btn-wd btn-warning">
+	<span class="btn-label">
+		<i class="fa fa-warning">
+		</i>
+		Warning
+	</span>
+</button>
+
+<button class="btn btn-wd btn-default">
+	<span class="btn-label">
+		<i class="fa fa-arrow-left">
+		</i>
+		Left
+	</span>
+</button>
+
+<button class="btn btn-wd btn-default">
+	<span class="btn-label">
+		<i class="fa fa-arrow-right">
+		</i>
+		Right
+	</span>
+</button>
+
+```
+### Button Group
+
+<div class="btn-group">
+	<button type="button" class="btn btn-default">Left</button>
+	<button type="button" class="btn btn-default">Middle</button>
+	<button type="button" class="btn btn-default">Right</button>
+</div>
+<br>
+<br>
+<div class="btn-group">
+	<button type="button" class="btn btn-default">1</button>
+	<button type="button" class="btn btn-default">2</button>
+	<button type="button" class="btn btn-default">3</button>
+	<button type="button" class="btn btn-default">4</button>
+</div>
+
+<div class="btn-group">
+	<button type="button" class="btn btn-default">5</button>
+	<button type="button" class="btn btn-default">6</button>
+	<button type="button" class="btn btn-default">7</button>
+</div>
+
+<div class="btn-group">
+	<button type="button" class="btn btn-default">8</button>
+</div>
+
+```html
+<div class="btn-group">
+	<button type="button" class="btn btn-default">Left</button>
+	<button type="button" class="btn btn-default">Middle</button>
+	<button type="button" class="btn btn-default">Right</button>
+</div>
+<br>
+<br>
+<div class="btn-group">
+	<button type="button" class="btn btn-default">1</button>
+	<button type="button" class="btn btn-default">2</button>
+	<button type="button" class="btn btn-default">3</button>
+	<button type="button" class="btn btn-default">4</button>
+</div>
+
+<div class="btn-group">
+	<button type="button" class="btn btn-default">5</button>
+	<button type="button" class="btn btn-default">6</button>
+	<button type="button" class="btn btn-default">7</button>
+</div>
+
+<div class="btn-group">
+	<button type="button" class="btn btn-default">8</button>
+</div>
+```
 ## Checkboxes
 
 We created customed checkboxes:
@@ -85,7 +281,20 @@ We are very proud to present the dropdown, we added a subtle animation for this 
 
 Here are an example and the code:
 
-![alt text](img/dropdown.png)
+<li class="nav-item dropdown">
+	<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+		<div class="notification d-none d-lg-block d-xl-block"></div>
+		<i class="fa fa-facebook"></i>
+		<b class="caret d-none d-lg-block d-xl-block"></b>
+	</a>
+	<ul class="dropdown-menu">
+		<li><a href="#"  class="dropdown-item">Notification 1</a></li>
+    <li><a href="#" class="dropdown-item">Notification 2</a></li>
+    <li><a href="#" class="dropdown-item">Notification 3</a></li>
+    <li><a href="#" class="dropdown-item">Notification 4</a></li>
+    <li><a href="#" class="dropdown-item">Another Notification</a></li>
+	</ul>
+</li>
 
 ```html
 <li class="dropdown nav-item">

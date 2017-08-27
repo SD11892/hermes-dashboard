@@ -29,7 +29,7 @@
 
 	.ct-point{
 		stroke-linecap: round;
-		stroke: red;
+		stroke: blue;
 		stroke-width: 10px;
 	}
 	.ct-circle{
@@ -76,6 +76,9 @@
 			display: none;
 		}
 	}
+	.ct-label{
+		font-size: 10px;
+	}
 	foreignObject{
 		font-size: 20px;
 		&:nth-child(odd){
@@ -103,6 +106,10 @@
 		&:nth-child(odd){
 			display: none;
 		}
+	}
+
+	.ct-label{
+		font-size: 10px;
 	}
 	foreignObject{
 		font-size: 20px;

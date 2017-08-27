@@ -48,7 +48,7 @@ body > .navbar-collapse {
       line-height: 30px;
       padding: 5px 0;
       display: block;
-      font-family: 'Lobster', sans-serif; }
+      font-family: 'Lobster', cursive; }
   .sidebar .nav,
   body > .navbar-collapse .nav {
     display: block;
@@ -410,7 +410,7 @@ body > .navbar-collapse {
     font-weight: 500;
     font-size: 1.85em;
     margin: 30px 0 10px 0;
-    font-family: 'Noto Sans', sans-serif, Arial; }
+    font-family: 'Noto Sans'; }
   .info .info-category {
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.2em;
@@ -559,7 +559,7 @@ body > .navbar-collapse {
     color: #4cbaeb;
     font-weight: 600;
     font-size: 1.3em;
-    font-family: 'Noto Sans', sans-serif; }
+    font-family: 'Noto Sans'; }
   .card .card-title {
     margin: 5px 0 0 0;
     color: #333333;
@@ -745,8 +745,7 @@ body > .navbar-collapse {
   .card-user .avatar.border-gray {
     border-color: #EEEEEE; }
 .card-user .title {
-  line-height: 24px;
-  margin-bottom: 15px; }
+  line-height: 24px; }
 .card-user .content {
   min-height: 240px; }
 .card-user a {
@@ -931,7 +930,7 @@ hr {
   stroke-width: 4px; }
 #chartPreferences1 .ct-point, #chartPreferences2 .ct-point, #chartPreferences3 .ct-point, #chartPresentation .ct-point {
   stroke-linecap: round;
-  stroke: blue;
+  stroke: red;
   stroke-width: 10px; }
 #chartPreferences1 .ct-circle, #chartPreferences2 .ct-circle, #chartPreferences3 .ct-circle, #chartPresentation .ct-circle {
   stroke: white;
@@ -1598,8 +1597,7 @@ label {
   opacity: 1; }
 
 .form-control {
-  color: grey;
-  font-size: 1em; }
+  color: grey; }
   .form-control:focus {
     border-color: #b9b9b9; }
   .form-control:placeholder {
@@ -2287,10 +2285,6 @@ input:focus {
   .hermes-wrapper .navbar-toggler {
     position: absolute;
     right: 20px; }
-  .hermes-wrapper .navbar-nav button {
-    margin-right: 15px; }
-  .hermes-wrapper .fa-heart {
-    color: #FB404B; }
 
 .hermes-title {
   color: white !important;
@@ -2328,7 +2322,7 @@ input:focus {
   width: 100%;
   z-index: 5;
   position: absolute;
-  bottom: -5;
+  bottom: 0;
   left: 0;
   background: white; }
 

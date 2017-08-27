@@ -5,7 +5,7 @@ var seq = 0, delays = 80, durations = 500;
 (function(){
 
        // if we are on windows OS we activate the perfectScrollbar function
-       $(' .sidebar-wrapper, .main-panel').perfectScrollbar();
+       $(' .sidebar-wrapper, .sidebar-wrapper, .main-panel').perfectScrollbar();
 
        $('html').addClass('perfect-scrollbar-on');
   	
@@ -25,7 +25,6 @@ $(document).ready(function(){
 
 	$(document).on('ps-scroll-x', function () {
   		hermesdashboard.checkScrollForParallax();
-  		//presentationPage.checkScrollForParallax();
 	});
 	var scroll_start = 0;
 	var startchange=$('.wave');
@@ -150,7 +149,7 @@ hd = {
                 easing: Chartist.Svg.Easing.easeOutQuint
               }
             });
-          } else if(data.type === 'circle') {
+          } else if(data.type === 'ct-circle') {
                 seq++;
                 data.element.animate({
                   opacity: {
@@ -166,7 +165,7 @@ hd = {
 
         seq = 0;
     },
-    //replace the point with a circle so you can add border
+    //replace the point with a circle so you can add outline
     chartistPointWithMargin: function(chart){
 	    	chart.on('draw', function(data) {
 		      if(data.type === 'point') {
@@ -199,20 +198,6 @@ hermesdashboard = {
 	}, 6)
 };
 
-var image;
-presentationPage = {
-	checkScrollForParallax: debounce(function(){
-		var curent_scroll = $(window).scrollTop();
-		oVal = ($(window).scrollTop() / 3);
-		image.css({
-            'transform':'translate3d(0,' + oVal +'px,0)',
-            '-webkit-transform':'translate3d(0,' + oVal +'px,0)',
-            '-ms-transform':'translate3d(0,' + oVal +'px,0)',
-            '-o-transform':'translate3d(0,' + oVal +'px,0)'
-        });
-	}, 6)
-}
- 
 
 
 function debounce(func, wait, immediate) {

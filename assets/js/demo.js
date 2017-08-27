@@ -21,7 +21,7 @@ demo = {
         var chart1 = new Chartist.Line('#chartPreferences1', {
          labels: ['JAN.', 'FEB.', 'MAR.', 'APR.', 'MAY.', 'JUN.', 'JUL.', 'AUG.', 'SEP.', 'OCT.', 'NOV.', 'DEC.'],
           series: [
-            [0, 180, 80, 320, 220, 420, 190, {meta: '$570', value:570}, 440, 370, 420, 260]
+            [0, 180, 80, 320, 220, 420, 190, 570, 440, 370, 420, 260]
           ]
         }, {
             lineSmooth: Chartist.Interpolation.simple({

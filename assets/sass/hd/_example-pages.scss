@@ -9,6 +9,16 @@
 		right: 20px;
 	}
 
+	.navbar-nav{
+		button{
+			margin-right: 15px;
+		}
+	}
+
+	.fa-heart{
+		color: $danger-color;
+	}
+
 	
 }
 
@@ -57,7 +67,7 @@
 	width: 100%;
 	z-index: 5;
 	position: absolute;
-	bottom: 0;
+	bottom: -5;
 	left: 0;
 	background: white;
 }
