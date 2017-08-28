@@ -179,8 +179,6 @@ We added extra classes that can help you better customise the look. You can use 
 	</span>
 </button>
 
-<br>
-
 <button class="btn btn-wd btn-warning">
 	<span class="btn-label">
 		<i class="fa fa-warning">
@@ -257,23 +255,7 @@ We added extra classes that can help you better customise the look. You can use 
 	<button type="button" class="btn btn-default">8</button>
 </div>
 ```
-## Checkboxes
 
-We created customed checkboxes:
-
-![alt text](img/checkboxes.png)
-
-```html
-<label class="checkbox">
-	<input type="checkbox">
-	<span class="checkbox_icon"></span>
-</label>
-
-<label class="checkbox">
-	<input type="checkbox" checked>
-	<span class="checkbox_icon"></span>
-</label>
-```
 
 ## Dropdown
 
@@ -281,20 +263,7 @@ We are very proud to present the dropdown, we added a subtle animation for this 
 
 Here are an example and the code:
 
-<li class="nav-item dropdown">
-	<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-		<div class="notification d-none d-lg-block d-xl-block"></div>
-		<i class="fa fa-facebook"></i>
-		<b class="caret d-none d-lg-block d-xl-block"></b>
-	</a>
-	<ul class="dropdown-menu">
-		<li><a href="#"  class="dropdown-item">Notification 1</a></li>
-    <li><a href="#" class="dropdown-item">Notification 2</a></li>
-    <li><a href="#" class="dropdown-item">Notification 3</a></li>
-    <li><a href="#" class="dropdown-item">Notification 4</a></li>
-    <li><a href="#" class="dropdown-item">Another Notification</a></li>
-	</ul>
-</li>
+![alt text](img/dropdown.png)
 
 ```html
 <li class="dropdown nav-item">
@@ -304,7 +273,7 @@ Here are an example and the code:
 			<b class="caret"></b>
 		</p>
 	</a>
-	<ul class="dropdown-menu menu-2">
+	<ul class="dropdown-menu">
 		<li><a href="#">Action</a></li>
 	    <li><a href="#">Another action</a></li>
 	    <li><a href="#">Something</a></li>
@@ -320,9 +289,24 @@ Here are an example and the code:
 
 We restyled the Bootstrap input to give it a more flat, minimal look. You can use the classic look and different colors.
 
-![alt text](img/classic.png)
-![alt text](img/success.png)
-![alt text](img/error.png)
+
+<div class="form-group">
+
+    <input type="text" placeholder="Input" class="form-control" />
+
+</div>
+
+<div class="form-group has-success">
+
+    <input type="text" value="Success" class="form-control" />
+
+</div>
+
+<div class="form-group has-error ">
+
+    <input type="text" value="Error" class="form-control" />
+
+</div>
 
 ```html
 <div class="form-group">
@@ -331,15 +315,11 @@ We restyled the Bootstrap input to give it a more flat, minimal look. You can us
 
 </div>
 
-
-
 <div class="form-group has-success">
 
     <input type="text" value="Success" class="form-control" />
 
 </div>
-
-
 
 <div class="form-group has-error ">
 
@@ -386,78 +366,70 @@ We restyled the classic Bootstrap Navbar:
 ![alt text](img/navbar.png)
 
 ```html
-<nav class="navbar navbar-toggleable-md">
-	<div class="navbar-header">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+<nav class="navbar navbar-expand-md">
+	 <button class="navbar-toggler d-sm-block d-lg-none" type="button" data-toggle="collapse"  aria-expanded="false" aria-label="Toggle navigation">
 	   	<i class="fa fa-bars"></i>
 	  </button>
-	  <a class="navbar-brand" href="#">Dashboard</a>
-  	</div>
-  	<div class="collapse navbar-collapse" id="navbar1">
-	  	<ul class=" nav navbar-nav navbar-left">
-	  		<li class="nav-item">
-	  			<a href="#" data-toggle="dropdown"
-	  			class="nav-link">
-	  				<i class="fa fa-tachometer" aria-hidden="true"></i>
-	  				<p class="hidden-lg-up">Dashboard</p>
-	  			</a>
-	  		</li>
-	  		<li class="dropdown nav-item">
-	  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-	  				<i class="fa fa-globe"></i>
-                    <b class="caret hidden-sm hidden-xs"></b>
-                    <span class="notification hidden-sm hidden-xs">5</span>
-					<p class="hidden-md-up">
-						5 Notifications
+	  <div class="collapse navbar-collapse">
+	  	<ul class="nav navbar-nav navbar-left">
+	  		<div class="input-group">
+	  			<div class="input-group-addon"><i class="fa fa-search"></i></div>
+				<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search anything you want">
+	  		</div>
+	  	</ul>
+	  	<ul class="navbar-nav ml-auto">
+	  		<li class="nav-item dropdown">
+	  			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+		  			<div class="notification d-none d-lg-block d-xl-block"></div>
+	  				<i class="nc-icon nc-notification-70"></i>
+	  				<b class="caret d-none d-lg-block d-xl-block"></b>
+		  			<p class="d-lg-none">
+						New Notifications
 						<b class="caret"></b>
 					</p>
 	  			</a>
-	  			<ul class="dropdown-menu" >
-	  				 <li><a href="#">Notification 1</a></li>
-                    <li><a href="#">Notification 2</a></li>
-                    <li><a href="#">Notification 3</a></li>
-                    <li><a href="#">Notification 4</a></li>
-                    <li><a href="#" style="font-size: 14px;">Another notification</a></li>
+	  			<ul class="dropdown-menu">
+	  				<li><a href="#"  class="dropdown-item">Notification 1</a></li>
+	                <li><a href="#" class="dropdown-item">Notification 2</a></li>
+	                <li><a href="#" class="dropdown-item">Notification 3</a></li>
+	                <li><a href="#" class="dropdown-item">Notification 4</a></li>
+	                <li><a href="#" class="dropdown-item">Another Notification</a></li>
 	  			</ul>
 	  		</li>
 	  		<li class="nav-item">
-	  			<a class="nav-link" href="#">
-	  				<i class="fa fa-search"></i>
-	  				<p class="hidden-lg-up">Search</p>
+	  			<a href="#" class="nav-link">
+	  				<i class="nc-icon nc-map-big"></i>	
+	  				<p class="d-lg-none">Contacts</p>	
 	  			</a>
 	  		</li>
-	  	</ul><!--navbar left-->
-	  	<ul class="navbar-nav ml-auto">
 	  		<li class="nav-item">
 	  			<a href="#" class="nav-link">
-	  				<p>Account</p>
+	  				<i class="nc-icon nc-bell-55"></i>
+	  				<p class="d-lg-none">Messages</p>
 	  			</a>
 	  		</li>
 	  		<li class="dropdown nav-item">
 	  			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-	  				<p>
-	  					Dropdown
-	  					<b class="caret"></b>
-	  				</p>
+					<i class="nc-icon nc-circle-08"></i>
+					<b class="caret d-none d-lg-block d-xl-block"></b>
+					<p class="d-lg-none">
+						Log out
+						<b class="caret"></b>
+					</p>
 	  			</a>
 	  			<ul class="dropdown-menu menu-2">
 	  				<li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+	                <li><a href="#">Another action</a></li>
+	                <li><a href="#">Something</a></li>
+	                <li><a href="#">Another action</a></li>
+	                <li><a href="#">Something</a></li>
+	                <li class="divider"></li>
+	                <li><a href="#">Separated link</a></li>
 	  			</ul>
 	  		</li>
-	  		<li class="nav-item">
-	  			<a href="#" class="nav-link">
-	  				<p>Log out</p>
-	  			</a>
-	  		</li>
-	  		<li class="separator hidden-sm-up"></li>
+	  		<li class="separator d-lg-none"></li>
 	  	</ul><!--navbar right-->
-  	</div>  
+	</div>  
 </nav>
 ```
 
@@ -465,66 +437,71 @@ We restyled the classic Bootstrap Navbar:
 
 We have created the class ".sidebar" for navigation. It contains the company title and a list of all the pages.
 
-If you want the sidebar to have the background as a solid color, you can use the 'data-color' attribute and add the color you like: data-color="blue | azure | green | orange | red | purple ". If you want the background to have a picture, you ca activate it like this: data-image="img/sidebar-background.jpg".
-You can see the fully-coded example for the sidebar inside the dashboard below, which has a background image and the color purple. 
-
 ![alt text](img/sidebar.png)
 
 ```html
-<div class="sidebar" data-color="purple" data-image="img/sidebar-background.jpg">
+<div class="sidebar">
 	<div class="sidebar-wrapper">
 		<div class="logo">
-			<a href="http://www.creative-tim.com">
+			<a href="#">
 				Hermes
 			</a>
 		</div><!--logo-->
 		<ul class="nav">
-			<li class="nav-item active">
-				<a href="dashboard.html" class="nav-link">
-					<i class="pe-7s-graph"></i>
+			<li class="nav-item">
+				<a href="dashboard.html" class="nav-link nav-link-blue active">
+					<i class="nc-icon nc-bullet-list-67"></i>
 					<p>Dashboard</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="user.html" class="nav-link">
-					<i class="pe-7s-user"></i>
+				<a href="user.html" class="nav-link nav-link-light-blue">
+					<i class="nc-icon nc-badge"></i>
 					<p>User Profile</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="table.html" class="nav-link">
-					<i class="pe-7s-note2"></i>
+				<a href="table.html" class="nav-link nav-link-pink">
+					<i class="nc-icon nc-calendar-grid-58"></i>
 					<p>Table List</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="typography.html" class="nav-link">
-					<i class="pe-7s-news-paper"></i>
+				<a href="typography.html" class="nav-link nav-link-orange">
+					<i class="nc-icon nc-book-bookmark"></i>
 					<p>Typography</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="icons.html" class="nav-link">
-					<i class="pe-7s-science"></i>
+				<a href="icons.html" class="nav-link nav-link-purple">
+					<i class="nc-icon nc-palette"></i>
 					<p>Icons</p>
 				</a>
 			</li>
 				<li class="nav-item">
-				<a href="maps.html" class="nav-link">
-					<i class="pe-7s-map-marker"></i>
+				<a href="maps.html" class="nav-link nav-link-red">
+					<div class="i">
+					<i class="nc-icon nc-pin-3"></i>
+					</div>
 					<p>Maps</p>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="notifications.html" class="nav-link">
-					<i class="pe-7s-bell"></i>
+				<a href="notifications.html" class="nav-link nav-link-green">
+					<i class="nc-icon nc-bell-55"></i>
 					<p>Notifications</p>
 				</a>
 			</li>
-			<li class="upgrade active nav-item">
-				<a href="#" class="nav-link">
-					<i class="pe-7s-rocket"></i>
-					<p>Upgrade to pro</p>
+			<li class="nav-item">
+				<a href="Components.html" class="nav-link nav-link-dark-red">
+					<i class="nc-icon nc-chart-pie-35"></i>
+					<p>Components</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="cards.html" class="nav-link nav-link-light-purple">
+					<i class="nc-icon nc-credit-card"></i>
+					<p>Cards</p>
 				</a>
 			</li>
 		</ul>
@@ -535,27 +512,20 @@ You can see the fully-coded example for the sidebar inside the dashboard below, 
 
 ## Card
 
-Cards are composed of header and content with a footer.
+Cards are composed of header and content.
 
 ![alt text](img/card.png)
 
 ```html
 <div class="card">
 	<div class="header">
-		<h4 class="title">2014 Sales</h4>
-		<p class="category">All products including Taxes</p>
+		<h4 class="title float-left text-green">GROSS VOLUME</h4>
+		<p class="category float-right text-blue">$3470.00 USD TOTAL</p>
 	</div><!--header-->
-	<div class="content">
-		<div id="chartActivity" class="ct-chart"></div>
-		<div class="footer">
-			<div class="legend">
-			<i class="fa fa-circle text-info"></i><span>Tesla Model S</span>
-			<i class="fa fa-circle text-danger"></i><span>BMW 5 Series</span>
-			</div>
-			<div class="stats">
-				<i class="fa fa-check"></i>Data information ceritified
-			</div>
-		</div><!--footer-->
+	<div class="content tab-content">
+		<div id="chartPreferences1" class="ct-chart tab-pane active" role="tabpanel"></div>
+		<div id="chartPreferences2" class="ct-chart tab-pane" role="tabpanel"></div>
+		<div id="chartPreferences3" class="ct-chart tab-pane" role="tabpanel"></div>
 	</div><!--content-->
 </div><!--card-->
 ```
@@ -564,127 +534,9 @@ Cards are composed of header and content with a footer.
 
 For the implementation of graphic charts, we used the Chartist plugin and added our custom styles. The plugin is free to download and use here. Gion Kunz is the guy behind the project; he did an awesome job and we recommend using it his stuff. Besides all the great customisation that you have using it, it is also fully responsive. We changed the colors, background and typography.
 
-#### Pie Chart
-
-A pie chart is the easiest way to represent an information. Use it whenever you want to show something understandable at once.
-
-![alt text](img/pie.png)
-
-```html
-<div class="card">
-	<div class="header">
-		<h4 class="title">Email Statistics</h4>
-		<p class="category">Last Campaign Performance</p>
-	</div><!--header-->
-	<div class="content">
-		<div id="chartPreferences" class="ct-chart ct-negative-labels"></div>
-		<div class="footer">
-			<div class="legend">
-				<i class="fa fa-circle text-info"></i><span>Open</span>
-	            <i class="fa fa-circle text-danger"></i><span>Bounce</span>
-	            <i class="fa fa-circle text-warning"></i><span>Unsubscribe</span>
-			</div>
-			<div class="stats">
-				<i class="fa fa-clock-o"></i>Campaign sent 2 days ago
-			</div>
-		</div><!--footer-->
-	</div><!--content-->
-</div><!--card-->
-
-<!-- javascript -->
-
-Chartist.Pie('#chartPreferences', {
-
-  labels: ['46%','28%','15%','11%'],
-
-  series: [46, 28, 15, 11]
-
-});
-```
-
-#### Multiple Bars Chart
-
-Go for multiple bars charts if you want to show two indicators side by side.
-
-![alt text](img/sales.png)
-
-```html
-<div class="card">
-	<div class="header">
-		<h4 class="title">2014 Sales</h4>
-		<p class="category">All products including Taxes</p>
-	</div><!--header-->
-	<div class="content">
-		<div id="chartActivity" class="ct-chart"></div>
-		<div class="footer">
-			<div class="legend">
-			<i class="fa fa-circle text-info"></i><span>Tesla Model S</span>
-			<i class="fa fa-circle text-danger"></i><span>BMW 5 Series</span>
-			</div>
-			<div class="stats">
-				<i class="fa fa-check"></i>Data information ceritified
-			</div>
-		</div><!--footer-->
-	</div><!--content-->
-</div><!--card-->
-
-
-<!-- javascript -->
-
-var data = {
-
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-
-  series: [
-
-    [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-
-    [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
-
-  ]
-
-};
 
 
 
-var options = {
-
-  seriesBarDistance: 10,
-
-   axisX: {
-
-        showGrid: false
-
-    }
-
-};
-
-
-
-var responsiveOptions = [
-
-  ['screen and (max-width: 640px)', {
-
-    seriesBarDistance: 5,
-
-    axisX: {
-
-      labelInterpolationFnc: function (value) {
-
-        return value[0];
-
-      }
-
-    }
-
-  }]
-
-];
-
-
-
-Chartist.Bar('#chartActivity', data, options, responsiveOptions);
-```
 
 #### Line Chart
 
@@ -695,60 +547,35 @@ We recommend using this chart when you have easy to understand information, that
 ```html
 <div class="card">
 	<div class="header">
-		<h4 class="title">Users Behavior</h4>
-		<p class="category">24 hours performance</p>
+		<h4 class="title float-left text-green">SUCCESSFUL CHARGES</h4>
+		<p class="category float-right text-blue">$34 USD TOTAL</p>
 	</div><!--header-->
 	<div class="content">
-		<div id="chartHours"></div>
-		<div class="footer">
-			<div class="legend">
-			<i class="fa fa-circle text-info"></i><span>Open</span>
-     		<i class="fa fa-circle text-danger"></i><span>Click</span>
-     		<i class="fa fa-circle text-warning"></i><span>Click Second Time</span>
-			</div>
-			<div class="stats">
-				<i class="fa fa-upload"></i>Updated 3 minutes ago
-			</div>
-		</div><!--footer-->
+		<div id="chartCharges"></div>
 	</div><!--content-->
 </div><!--card-->
 
 <!--javascript-->
-
-var dataSales = {
-          labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
-          series: [
-             [287, 385, 490, 492, 554, 586, 698, 695, 752, 788, 846, 944],
-            [67, 152, 143, 240, 287, 335, 435, 437, 539, 542, 544, 647],
-            [23, 113, 67, 108, 190, 239, 307, 308, 439, 410, 410, 509]
+var data_charges =  {
+        series: [
+            [7,9,7.3,7.7,8.6,10,9.1,8.9,9,8.6,7.3,7.8,8.2]
           ]
         };
-        
-        var optionsSales = {
-          lineSmooth: false,
-          low: 0,
-          high: 800,
-          showArea: true,
-          height: "245px",
-          axisX: {
-            showGrid: false,
-          },
-          lineSmooth: Chartist.Interpolation.simple({
-            divisor: 3
-          }),
-          showLine: false,
-          showPoint: false,
-        };
-        
-        var responsiveSales = [
-          ['screen and (max-width: 640px)', {
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
+      var options2 = {
+        lineSmooth: Chartist.Interpolation.simple({
+                divisor: 100
+              }),
+              showArea: false,
+              showPoint: true,
+              low: 6,
+              high:11,
+              showLine: true,
+              height: '150px',
+              axisX: {
+                showGrid: false
               }
-            }
-          }]
-        ];
-    
-        Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
+    };
+      
+
+    var chart_charges = new Chartist.Line('#chartCharges', data_charges, options2);
 ```

@@ -236,7 +236,7 @@
 										<p class="category float-right text-blue">$34 USD TOTAL</p>
 									</div><!--header-->
 									<div class="content">
-										<div id="chartHours"></div>
+										<div id="chartCharges"></div>
 								</div><!--content-->
 							</div><!--card-->
 						</div><!--col-md-8-->
@@ -248,7 +248,7 @@
 									<p class="category float-right text-blue">$98 TOTAL</p>
 								</div><!--header-->
 								<div class="content">
-									<div id="chartActivity"></div>
+									<div id="chartCustomers"></div>
 								</div><!--content-->
 							</div><!--card-->
 						</div><!--col-md-6-->
@@ -292,17 +292,20 @@
 	</div><!--main-panel-->
 
 </div><!--wrapper-->
-	<!-- Core JS Filess -->
+	<!-- Core JS Files -->
 	<script src="../assets/js/popper.min.js"></script>
 	<script src="../assets/js/jquery-2.1.4.min.js"></script>
 	<script src="../assets/js/jquery-ui.min.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 
-	<!-- Charts Plugin -->
+	<!-- Plugin for Charts, full documentation here: https://gionkunz.github.io/chartist-js/ -->
 	<script src="../assets/js/chartist.min.js"></script>
 
-	<!--  Notifications Plugin    -->
+	<!-- Plugin for Notifications, full documentation here: http://bootstrap-notify.remabledesigns.com/ -->
     <script src="../assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&YOUR_KEY_HEREcallback=myMap"></script>
 
 	<!-- Hermes Dashboard javascript methods -->
 	<script src="../assets/js/hd.js"></script>
@@ -315,7 +318,6 @@
 
 		$(document).ready(function(){
 
-			
 			demo.initChartist();
 
 			window_width = $(window).width();

@@ -18,12 +18,13 @@ demo = {
     
     initChartist: function(){    
         
-        var chart1 = new Chartist.Line('#chartPreferences1', {
+        var data_year =  {
          labels: ['JAN.', 'FEB.', 'MAR.', 'APR.', 'MAY.', 'JUN.', 'JUL.', 'AUG.', 'SEP.', 'OCT.', 'NOV.', 'DEC.'],
           series: [
             [0, 180, 80, 320, 220, 420, 190, 570, 440, 370, 420, 260]
           ]
-        }, {
+        };
+        var options = {
             lineSmooth: Chartist.Interpolation.simple({
                     divisor: 100
                   }),
@@ -34,60 +35,44 @@ demo = {
                   axisX: {
                     showGrid: false
                   }
-        });
+        };
 
-      hd.chartistPointWithMargin(chart1);
-      hd.startAnimationForLineChart(chart1);
+      var chart_year = new Chartist.Line('#chartPreferences1', data_year, options);
+      hd.chartistPointWithMargin(chart_year);
+      hd.startAnimationForLineChart(chart_year);
       
 
 
-      var chart2 = new Chartist.Line('#chartPreferences2', {
+      var data_month = {
          labels: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30'],
           series: [
             [12, 16, 21, 3, 12, 0, 22, 10, 6, 18, 9, 13, 36, 4, 12, 17, 19, 10, 10, 1, 8, 12, 2, 22, 50, 42, 2, 18, 10, 5]
           ]
-        }, {
-            lineSmooth: Chartist.Interpolation.simple({
-                    divisor: 100
-                  }),
-                  showArea: false,
-                  showPoint: true,
-                  showLine: true,
-                  height: '200px',
-                  axisX: {
-                    showGrid: false
-                  }
-        });
+        };
+     
 
-        hd.startAnimationForLineChart(chart2);
-        hd.chartistPointWithMargin(chart2);
+        var chart_month = new Chartist.Line('#chartPreferences2', data_month, options);
 
-        var chart3 = new Chartist.Line('#chartPreferences3', {
+        hd.startAnimationForLineChart(chart_month);
+        hd.chartistPointWithMargin(chart_month);
+
+        var data_day = {
          labels: ['1', '2', '3', '4', '5', '6', '7'],
           series: [
             [12, 3, 22, 16, 17, 2, 4]
           ]
-        }, {
-            lineSmooth: Chartist.Interpolation.simple({
-                    divisor: 100
-                  }),
-                  showArea: false,
-                  showPoint: true,
-                  showLine: true,
-                  height: '200px',
-                  axisX: {
-                    showGrid: false
-                  }
-        });
+        };
 
-      hd.startAnimationForLineChart(chart3);
-      hd.chartistPointWithMargin(chart3);
+      var chart_day = new Chartist.Line('#chartPreferences3', data_day, options);
+      hd.startAnimationForLineChart(chart_day);
+      hd.chartistPointWithMargin(chart_day);
 
-      var chart4 = new Chartist.Line('#chartHours', {
+      var data_charges =  {
         series: [
             [7,9,7.3,7.7,8.6,10,9.1,8.9,9,8.6,7.3,7.8,8.2]
           ]
-        }, {
+        };
+      var options2 = {
         lineSmooth: Chartist.Interpolation.simple({
                 divisor: 100
               }),
@@ -100,38 +85,32 @@ demo = {
               axisX: {
                 showGrid: false
               }
-    });
+    };
       
 
+    var chart_charges = new Chartist.Line('#chartCharges', data_charges, options2);
+    hd.chartistPointWithMargin(chart_charges);
 
-    hd.chartistPointWithMargin(chart4);
-
-    var chart5 = new Chartist.Line('#chartActivity', {
+    var data_customers =  {
     series: [
         [8.9, 9.5, 10,9.2, 8.9, 9, 8.7, 7.2, 8.8,9.8, 8.9,10]
       ]
-    }, {
-        lineSmooth: Chartist.Interpolation.simple({
-                divisor: 100
-              }),
-              showArea: false,
-              showPoint: true,
-              low: 6,
-              high: 11,
-              showLine: true,
-              height: '150px',
-              axisX: {
-                showGrid: false
-              }
-    });
-      
-    hd.chartistPointWithMargin(chart5);
+    };     
+    
+    var chart_customers = new Chartist.Line('#chartCustomers', data_customers, options2);
+    hd.chartistPointWithMargin(chart_customers);
 
-      var chart6 = new Chartist.Line('#chartPresentation', {
+    },
+
+    presentationChartist: function(){
+
+       var data_presentation =  {
     series: [
         [2, 5, 4.5, 6, 5, 7, 6, 7, 5.5, 6, 5, 4, 2]
       ]
-    }, {
+    };
+
+    var options_presentation = {
         lineSmooth: Chartist.Interpolation.simple({
                 divisor: 2
               }),
@@ -147,11 +126,12 @@ demo = {
               axisY: {
                 showGrid: false
               }
-    });
+    };
       
-      hd.startAnimationForLineChart(chart6);
-      hd.chartistPointWithMargin(chart6);
-
+      var chart_presentation = new Chartist.Line('#chartPresentation',data_presentation, options_presentation);
+      hd.startAnimationForLineChart(chart_presentation);
+      hd.chartistPointWithMargin(chart_presentation);
+      
     },
     
     initGoogleMaps: function(){

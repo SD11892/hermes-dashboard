@@ -947,46 +947,46 @@ hr {
 #chartPreferences1 foreignObject[y="115"], #chartPreferences1 foreignObject[y="65"], #chartPreferences1 foreignObject[y="15"] {
   display: none; }
 
-#chartHours .ct-line {
+#chartCharges .ct-line {
   fill: none;
   stroke: #0098ff;
   stroke-width: 3px; }
-#chartHours .ct-circle {
+#chartCharges .ct-circle {
   stroke: white;
   fill: #0084de;
   stroke-width: 3px; }
-#chartHours .ct-grid {
+#chartCharges .ct-grid {
   stroke: #bbb9b9;
   stroke-dasharray: 0;
   stroke-width: 0.5px; }
-  #chartHours .ct-grid:nth-child(odd) {
+  #chartCharges .ct-grid:nth-child(odd) {
     display: none; }
-#chartHours .ct-label {
+#chartCharges .ct-label {
   font-size: 10px; }
-#chartHours foreignObject {
+#chartCharges foreignObject {
   font-size: 20px; }
-  #chartHours foreignObject:nth-child(odd) {
+  #chartCharges foreignObject:nth-child(odd) {
     display: none; }
 
-#chartActivity .ct-line {
+#chartCustomers .ct-line {
   fill: none;
   stroke: #0098ff;
   stroke-width: 3px; }
-#chartActivity .ct-circle {
+#chartCustomers .ct-circle {
   stroke: white;
   fill: #0084de;
   stroke-width: 3px; }
-#chartActivity .ct-grid {
+#chartCustomers .ct-grid {
   stroke: #bbb9b9;
   stroke-dasharray: 0;
   stroke-width: 0.5px; }
-  #chartActivity .ct-grid:nth-child(odd) {
+  #chartCustomers .ct-grid:nth-child(odd) {
     display: none; }
-#chartActivity .ct-label {
+#chartCustomers .ct-label {
   font-size: 10px; }
-#chartActivity foreignObject {
+#chartCustomers foreignObject {
   font-size: 20px; }
-  #chartActivity foreignObject:nth-child(even) {
+  #chartCustomers foreignObject:nth-child(even) {
     display: none; }
 
 #chartPresentation {
