@@ -379,52 +379,5 @@
 		});
 
 	</script>
-
-
-<script>
-    var list = ['facebook', 'twitter', 'linkedin'];
-    $(function () {
-        $('#share').sharrre({
-            share: {
-                facebook: true,
-                twitter: true,
-                linkedin: true
-            },
-            buttons: {
-                facebook: {
-                    popup: {
-                        width: 1200,
-                        height: 900
-                    }
-                },
-                twitter: {},
-                linkedin: {}
-            },
-            url: 'http://sharrre.com',
-
-            title: 'da',
-
-            enableCounter: false,
-            enableHover: false,
-            template: function () {
-                content = '';
-                for (i in list) {
-                    service = list[i];
-                    content += '<a class="' + service + '"><i class="fa fa-' + service + '"></i></a>';
-                }
-                return content;
-            }(),
-            render: function (api, options) {
-                for (i in list) {
-                    service = list[i];
-                    $(api.element).on('click', '.' + service, function () {
-                        api.openPopup(this.className);
-                    });
-                }
-            }
-        });
-    });
-</script>
-
 </body>
 </html>
