@@ -261,22 +261,19 @@
 	<script src="../assets/js/core/bootstrap.min.js"></script>
 
 	<!--  Google Maps Plugin  -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&YOUR_KEY_HEREcallback=myMap"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?"></script>
 	
 	<!-- Hermes Dashboard javascript methods -->
-
 	<script src="../assets/js/hd.js"></script>
+
+	<!-- Hermes Dashboard DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/demo.js"></script>
+
 	<script>
-		function myMap(){
-			var mapOptions = {
-				center: new google.maps.LatLng(51.5, -0.12),
-				zoom: 10,
-				mapTypeid: google.maps.MapTypeId.HYBRID
-			}
-			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-		}
 
 		$(document).ready(function(){
+
+			demo.initGoogleMaps();
 
 			window_width = $(window).width();
 			if(window_width >= 992){
