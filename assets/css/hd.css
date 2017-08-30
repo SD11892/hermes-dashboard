@@ -2379,6 +2379,14 @@ input:focus {
 
 .overviewPage {
   margin-top: 100px; }
+  .overviewPage i {
+    width: 60px;
+    margin-bottom: 20px !important;
+    font-weight: 300 !important; }
+  .overviewPage .header p {
+    font-size: 1.5em !important; }
+  .overviewPage .content p {
+    font-size: 1em; }
 
 .card-simple {
   margin: 50px 0; }
