@@ -916,7 +916,8 @@ hr {
   margin: 10px 0 40px 0; }
 
 .ct-chart-line {
-  padding: 10px 0; }
+  padding: 10px 0;
+  overflow: visible !important; }
 
 .ct-chart-bar {
   padding: 10px 0; }
