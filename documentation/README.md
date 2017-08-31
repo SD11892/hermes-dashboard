@@ -1,6 +1,8 @@
+# [Hermes Dashboard](https://www.facebook.com/) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
+
 ## Short desciption and usage
 
-[Hermes Dashboard](https://www.facebook.com/) is a beautiful resource built over Bootstrap to allow you to create powerful and beautiful dashboards. We have redesigned all the usual components in Bootstrap to make it look flat, minimalist and easy to use.
+**[Hermes Dashboard](https://www.facebook.com/)** is a beautiful resource built over Bootstrap to allow you to create powerful and beautiful dashboards. We have redesigned all the usual components in Bootstrap to make it look flat, minimalist and easy to use.
 
 
 ## Getting started
@@ -19,3 +21,8 @@ To jump start your project, you can use our start-up template where all the file
 2. Scroll to the "Get an API key" Title and press "Get a Key" Button
 3. Choose a name for your project then press on Create and Enable API
 4. Get the Key and place it in your project where is this script:```<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"><script>```
+
+[CHANGELOG]: ./CHANGELOG.md
+[LICENSE]: ./LICENSE
+[version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
