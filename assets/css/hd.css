@@ -907,7 +907,7 @@ hr {
     -ms-transform: translateY(-10px);
     -moz-transform: translateY(-10px); }
 
-.ct-label {
+.ct-labels {
   font-size: 0.72em;
   fill: rgba(0, 0, 0, 0.4);
   color: rgba(0, 0, 0, 0.4); }
@@ -2643,7 +2643,7 @@ input:focus {
 
 .iconsPage {
   position: relative;
-  margin-top: 200px; }
+  margin-top: 100px; }
   .iconsPage .card-simple {
     max-width: 500px;
     margin: auto; }
@@ -2890,7 +2890,8 @@ input:focus {
   .gradientPage img {
     width: 50%; }
   .gradientPage .image-container {
-    height: 400px; }
+    height: 400px;
+    margin-top: 70px; }
   .gradientPage .orange-ps {
     top: 10%;
     left: 22%; }
@@ -2961,7 +2962,15 @@ input:focus {
     text-align: center; }
 
   .card-simple .content p {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  .github-logo {
+    margin-top: 100px;
+    margin-left: -60px;
+    position: absolute; }
+
+  .githubPage .card-simple {
+    margin-top: 125px; } }
 @media (max-width: 576px) {
   .ipad-screen {
     min-width: 500px; }
@@ -2972,8 +2981,12 @@ input:focus {
   .gradientPage .image-container {
     height: 150px;
     margin-top: 50px; }
+  .gradientPage .orange-ps {
+    left: 90px; }
+  .gradientPage .green-ps {
+    left: 55px; }
   .gradientPage .red-ps {
-    left: 215px; }
+    left: 145px; }
   .gradientPage img {
     width: 40%; }
 
