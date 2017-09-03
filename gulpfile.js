@@ -8,7 +8,7 @@ const
 
   // source and build folders
   dir = {
-    src         : '_site/',
+    src         : './',
     build       : 'dist/'
   },
 
@@ -73,14 +73,14 @@ gulp.task('move_js', () => {
 });
 
 gulp.task('move_css', () => {
-  return gulp.src('_site/assets/css/**/*')
+  return gulp.src('./assets/css/**/*')
     .pipe(newer(dir.build + '/assets/css/'))
     .pipe(gulp.dest(dir.build + '/assets/css/'));
 });
 
 
 gulp.task('move_fonts', () => {
-  return gulp.src('_site/assets/fonts/**/*')
+  return gulp.src('./assets/fonts/**/*')
     .pipe(newer(dir.build + '/assets/fonts/'))
     .pipe(gulp.dest(dir.build + '/assets/fonts/'));
 });
@@ -152,8 +152,22 @@ gulp.task('zip', function () {
 //     .pipe(gulp.dest('dist/'))
 // });
 
-gulp.task('prettify', function() {
-  gulp.src(['_site/**/*.html', '_site/assets/css/*.css', '_site/assets/js/**/*'])
+
+
+// Move HTML settings
+const live_demo = {
+  src           : 'dist/**/*',
+  build         : '../ct-freebies/public/' + productname + '/'
+};
+
+gulp.task('move_live_demo', () => {
+  return gulp.src(live_demo.src)
+    .pipe(newer(live_demo.build))
+    .pipe(gulp.dest(live_demo.build));
+});
+
+gulp.task('prettify-html', function() {
+  gulp.src(['./**/*.html'])
     .pipe(prettify({
         "html": {
             "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg"],
@@ -168,7 +182,14 @@ gulp.task('prettify', function() {
             "preserve_newlines": true, // Whether existing line breaks before elements should be preserved (only works before elements, not inside tags or for text)
             "unformatted": ["sub", "sup", "em", "strong", "i", "u", "strike", "big", "pre"], // List of tags that should not be reformatted
             "wrap_line_length": 0 // Lines should wrap at next opportunity after this number of characters (0 disables)
-        },
+        }
+    }))
+    .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('prettify-css', function() {
+  gulp.src(['./assets/css/**/*.css'])
+    .pipe(prettify({
         "css": {
             "allowed_file_extensions": ["css", "scss", "sass", "less"],
             "end_with_newline": false, // End output with newline
@@ -177,7 +198,14 @@ gulp.task('prettify', function() {
             "newline_between_rules": true, // Add a new line after every css rule
             "selector_separator": " ",
             "selector_separator_newline": true // Separate selectors with newline or not (e.g. "a,\nbr" or "a, br")
-        },
+        }
+    }))
+    .pipe(gulp.dest('dist/assets/css/'));
+});
+
+gulp.task('prettify-js', function() {
+  gulp.src(['./assets/js/**/*.js'])
+    .pipe(prettify({
         "js": {
             "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
             "brace_style": "collapse", // [collapse|expand|end-expand|none] Put braces on the same line as control statements (default), or put braces on own line (Allman / ANSI style), or just put end braces on own line, or attempt to keep them where they are
@@ -201,70 +229,17 @@ gulp.task('prettify', function() {
             "wrap_line_length": 0 // Lines should wrap at next opportunity after this number of characters (0 disables)
         }
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/assets/js'));
 });
 
 
-// compiles less files and outputs them to css
-// gulp.task('compile-less', function() {
-//     return gulp.src(path.join(cssPath, '*.less'))
-//         .pipe(less())
-//         .pipe(gulp.dest(cssPath));
-// });
-
-// Builds the static website with Jekyll
-// gulp.task('jekyll', ['compile-less'], function(done) {
-//     execute('jekyll build --future --destination '
-//         + path.join('..', websiteOutputDirectory), {
-//         cwd: websiteInputDirectory
-//     }, done);
-// });
-//
-// function execute (cmd, opts, done) {
-//     util.log(util.colors.cyan(cmd));
-//     exec(cmd, opts,
-//         function (error, stdout, stderr) {
-//             util.log(util.colors.cyan(stdout));
-//             util.log(util.colors.red(stderr));
-//             done(error);
-//         }
-//     );
-// }
-
-// // Validates html and links
-// gulp.task('html-proofer', function(done) {
-//     execute('htmlproof ' +
-//         buildOutputDirectory +
-//         // html-proofer options
-//     , done());
-// });
-//
-// function execute (cmd, opts, done) {
-//     util.log(util.colors.cyan(cmd));
-//     exec(cmd, opts,
-//         function (error, stdout, stderr) {
-//             util.log(util.colors.cyan(stdout));
-//             util.log(util.colors.red(stderr));
-//             done(error);
-//         }
-//     );
-// }
-
-// Move HTML settings
-const live_demo = {
-  src           : 'dist/**/*',
-  build         : '../ct-freebies/public/' + productname + '/'
-};
-
-gulp.task('move_live_demo', () => {
-  return gulp.src(live_demo.src)
-    .pipe(newer(live_demo.build))
-    .pipe(gulp.dest(live_demo.build));
+gulp.task('prettify',['prettify-html','prettify-css','prettify-js'], () => {
+    gutil.log('Finished prettify');
 });
 
 
 // run all tasks
-gulp.task('build', ['move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts','clean_scss']);
+gulp.task('build', ['prettify','move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts']);
 
 // run all tasks
 // gulp.task('live_demo', ['move_html', 'move_css','move_js','move_sass_parent','move_sass', 'images', 'move_fonts','clean_scss']);
