@@ -19,6 +19,12 @@ $(document).ready(function(){
 
 	hd.checkHeaderImage();
 	
+	if(window_width >= 992){
+		$(document).on('ps-scroll-x', function () {
+	  		hermesdashboard.checkScrollForParallax();
+		});
+	}
+	
 	if(window_width <= 991){
 		hd.initRightMenu();
 	}
