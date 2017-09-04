@@ -8,7 +8,7 @@ a{
   color: $info-color;
     
   &:hover, &:focus{
-     color: white; 
+     color: $grey-text-main-panel; 
      text-decoration: none; 
   }
 }
