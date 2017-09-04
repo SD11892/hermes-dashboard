@@ -22,9 +22,6 @@
 	margin-bottom: 30px;
 	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
 	z-index: 4;
-	.card-block{
-		padding: 10px;
-	}
 	.content{
 		padding: 15px;
 	}
@@ -90,69 +87,7 @@
 		text-decoration: none;
 		color: $light-black;
 	}
-	&[data-background="image"]{
-		text-align: center;
-		background-position: center center;
-		background-size: cover;
-		@include card-transition;
-		&:hover{
-			@include card-hover;
-		}
 
-		button{
-			border-radius: 15px;
-			text-transform: uppercase;
-			font-size: 9px;
-			font-weight: 600;
-			margin-top: 15px;
-		}
-		.card-block{
-			z-index: 2;
-		}
-		.card-title{
-			color: white;
-			margin-top: 16px;
-		}
-
-		.card-description{
-			color: rgba(white, 0.7);
-			margin: 30px 0;
-		}
-
-		.card-footer{
-			text-transform: uppercase;
-			a{
-				font-size: 1em;
-				font-weight: 600;
-			}
-		}
-		a{
-			color: white;
-		}
-		&:after{
-			position: absolute;
-			z-index: 1;
-			width: 100%;
-			height: 100%;
-			display: block;
-			left: 0;
-			top: 0;
-			content: "";
-			background-color: rgba(black, 0.5);
-			border-radius: 10px;
-		}
-	}
-	&[data-color="purple"]{
-		background: $card-purple;
-	}
-
-	&[data-color="green"]{
-		background: $card-green;
-	}
-
-	&[data-color="blue"]{
-		background: $card-blue;
-	}
 }
 
 .card-content{
@@ -372,94 +307,6 @@ hr{
 	}
 }
 
-.card[data-color]{
-	margin: 10px auto;
-	.card-category, .card-title{
-		color: white;
-	}
-	a{
-		text-decoration: none;
-		color: white;
-	}
-	.card-category{
-		i{
-			margin-right: 5px;
-		}
-	}
-
-	.card-description{
-		font-family: 'Montserrat';
-		color: rgba(255, 255, 255, 0.5);
-		font-size: 1em;
-	}
-
-	.card-footer{
-		a{
-			color: $light-black;
-			font-weight: 600;
-			font-size: 1em;
-			text-transform: uppercase;
-		}
-		.btn{
-			border-color: white;
-		}
-		.btn-fill{
-			background: white;
-			i{
-				color: $light-black;
-				font-size: 0.9em;
-			}
-		}
-	}
-
-}
-
-.card-profile{
-	max-width: 250px;
-	@include card-transition;
-	margin-top: 70px;
-	margin: 70px auto 10px auto;
-
-	&:hover{
-		@include card-hover;
-	}
-	.card-avatar{
-		max-width: 120px;
-		max-height: 120px;
-		overflow: hidden;
-		margin: -60px auto 0;
-		border-radius: 50%;
-		img{
-			width: 100%;
-		}
-	}
-	.border-white{
-		border:4px solid white;
-	}
-
-	.card-block{
-		.card-category{
-			color: $grey-text-main-panel;
-			margin-top: 5px;
-		}
-		.card-description{
-			font-size: 1em;
-		}
-
-	}
-
-	.btn-just-icon{
-		border-radius: 50%;
-		border-width: 2px;
-		padding: 10px 12px;
-		border-color: $grey-text-main-panel;
-		&:hover{
-			background: $grey-text-main-panel;
-			border-color: $grey-text-main-panel;
-			color: $light-gray;
-		}
-	}
-}
 
 .card-pricing{
 	@include card-transition;
@@ -469,10 +316,10 @@ hr{
 		max-width: 120px;
 		max-height: 120px;
 		border-radius: 50%;
-		border: 2px solid rgba(255, 255, 255, 0.4);
+		border: 2px solid rgba(0, 0, 0, 0.4);
 		margin: auto;
 		i{
-			color: white;
+			color: #000;
 			font-size: 30px;
 			padding: 40px;
 		}
@@ -483,4 +330,11 @@ hr{
 	&:hover{
 		@include card-hover;
 	}	
+}
+
+.card-user{
+	@include card-transition;
+	&:hover{
+		@include card-hover;
+	}
 }

@@ -95,4 +95,12 @@
 	}
 }
 
+.dropdown-item{
+	&:active{
+		background-color: white;
+	}
 
+	&:hover{
+		background-color: $smoke-bg;
+	}
+}
