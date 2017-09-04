@@ -368,6 +368,15 @@
     }
 }
 
+@media (min-width: 576px){
+    .text-green{
+        float: left;
+    }
+
+    .text-blue{
+        float: right;
+    }
+}
 @media (max-width: 480px){
     body{
         font-size: 12px;
